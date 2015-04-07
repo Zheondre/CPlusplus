@@ -15,16 +15,32 @@
 #include "RingBuffer.hpp"
 #include "GuitarString.hpp"
 
-int main(int argc, char *argv[]) {
+#define SAMPLES_PER_SEC 44100
 
-  int i; vector< vector< Int16 >  > ado_smpl_strm ;
-  double freq ; 
+vector<sf::Int16> makeSamplesFromString(GuitarString gs) {
+  std::vector<sf::Int16> samples;
+  gs.pluck();
+  int duration = 8; // seconds
+  int i;
+  for (i= 0; i < SAMPLES_PER_SEC * duration; i++) {
+    gs.tic();
+    samples.push_back(gs.sample());
+  }
+  return samples;
+}
+
+int main(int argc, char *argv[]) {
+  sf::RenderWindow window(sf::VideoMode(300, 200), "SFML Guitar Hero");
+  sf::Event event;
+double freq;
+int i;  
+  vector< vector< sf::Int16 >  > ado_smpl_strm;
   vector< sf::SoundBuffer > ado_smpl;
   vector< sf::Sounds > SndBffer;
-  vector< Int16 > samples ; 
-  String keyboard = "q2we4r5ty7u8i9op-[=zxdcfvgbnjmk,.;/' ";
+  vector< sf::Int16 > samples; 
+  string keyboard = "q2we4r5ty7u8i9op-[=zxdcfvgbnjmk,.;/' ";
 
-  for( i = 0; i < 37l i++ ) {
+  for (i = 0; i < 37; i++) {
     freq = 440*pow(2, (i-24)/12.0);
     samples = makeSamplesFromString(gs1);
     GuitarString gs1(freq);
@@ -37,7 +53,6 @@ int main(int argc, char *argv[]) {
     ado_smpl.push_back(buf1);
     SndBffer.push_back(sound1);
   }
-
   while (window.isOpen()) {
     while (window.pollEvent(event)) {
       switch (event.type) {
@@ -48,7 +63,7 @@ int main(int argc, char *argv[]) {
 	index::keyboard.find(event.txt.unicode);
 	if(index != std::string::npos)
 	  SndBffer[index].play();
-	beak;
+	break;
       default:
 	break;
       }
