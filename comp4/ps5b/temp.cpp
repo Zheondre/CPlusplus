@@ -15,9 +15,6 @@
 #include "RingBuffer.hpp"
 #include "GuitarString.hpp"
 
-#include <vector>
-#include <string>
-
 int main(int argc, char *argv[]) {
 
   int i; vector< vector< Int16 >  > ado_smpl_strm ;
