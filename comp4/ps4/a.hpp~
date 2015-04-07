@@ -1,0 +1,9 @@
+#ifndef _a 
+#define _a 
+
+#include <iostream>
+#include <string>
+#include <iostream>
+using namespace std;
+
+#endif 

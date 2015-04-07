@@ -1,0 +1,30 @@
+
+
+
+int OptDistance( char temp, char tb ){
+
+  if( temp == tb && temp == '-' ) return 0 ; 
+  if( temp == tb ) return 0 ; 
+  if( temp != tb && ((temp == '-') || (tb == '-'))) return 2 ; 
+  return 1 ; 
+
+} 
+
+int min( int a, int b, int c ) { 
+
+  int low ; 
+
+  low = a ; 
+
+  if( low < b && low < c  ) return low ; 
+
+  low = b ;  
+
+  if( low  < a && low < b ) return low ; 
+
+  low = c ; 
+
+  if( low < b && low < a ) return low ; 
+  
+
+} 

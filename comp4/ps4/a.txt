@@ -1,0 +1,8 @@
+Use Meoization method..
+
+This method will store the results of expensive function calls and returns the cached result when the same input occurs again ...<-- very important 
+
+this method remebers results correspoinding to some set of specific inputs rather than recalculating it. 
+
+it eliminates the primary cost of a call with given inputs from all but the first call made to the 
+function with that input. 
