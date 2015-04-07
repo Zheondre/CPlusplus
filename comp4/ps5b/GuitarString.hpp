@@ -1,10 +1,18 @@
 #ifndef _GuitarString_
 #define _GuitarString_ 
 
-#include <iostream> 
-#include <string>
 #include <cstdlib>
+#include <math.h>
+#include <limits.h>
 
+#include <iostream>
+#include <string>
+#include <exception>
+#include <stdexcept>
+#include <vector>
+
+#include "RingBuffer.hpp"
+#include "GuitarString.hpp"
 class GS{
   RingBuffer *_j; int _size, _ticCount;
   
