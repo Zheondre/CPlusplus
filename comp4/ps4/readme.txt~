@@ -49,7 +49,7 @@ tt0
  *  How much main memory does your computer have? Typical answers
  *  are 2 GB to 16 GB.
  **********************************************************************/
-4gb
+
 
 
 /**********************************************************************
@@ -64,9 +64,9 @@ tt0
  *  What is the largest N that your program can handle if it is
  *  limited to 8GB (billion bytes) of memory?
  **********************************************************************/
-a = 100000
-b = 100000
-largest N  = 2500
+a =
+b = 
+largest N =
 
 /**********************************************************************
  *  Were you able to run Valgrind's massif tool to verify that your
@@ -74,23 +74,12 @@ largest N  = 2500
  *
  *  Answer yes, no, I didn't try, I tried and failed, or I used a 
  *  different tool.
- *v
+ *
  *  If yes, paste in the ms_print top chart of memory use over time,
  *  and also indicate which file your code was solving.
  * 
  *  Explain if necessary.
 /**********************************************************************
-yes 
-
-bothgaps20.txt
-#-----------
-snapshot=89
-#-----------
-time=3569085
-mem_heap_B=1798
-mem_heap_extra_B=434
-mem_stacks_B=0
-heap_tree=empty
 
 
 
@@ -105,12 +94,12 @@ heap_tree=empty
 
 data file           distance       time (seconds)     memory (MB)
 ------------------------------------------------------------------
-ecoli2500.txt                         211.973    mem_heap_B=25061394
-ecoli5000.txt 
-ecoli7000.txt		-            took too long    -	
-ecoli10000.txt		- 	     - 	      	      - 
-ecoli20000.txt		- 	     - 		      -			
-ecoli28284.txt		- 	     - 		      - 
+ecoli2500.txt
+ecoli5000.txt
+ecoli7000.txt
+ecoli10000.txt
+ecoli20000.txt
+ecoli28284.txt
 
 Fill out the data here first, then go to the assignment web page for
 instructions on sharing your data on iSENSE.
@@ -154,23 +143,22 @@ ecoli20000.txt         3135            7.730
  *  What is the largest N your program can handle if it is limited to 1
  *  day of computation? Assume you have as much main memory as you need.
  **********************************************************************/
-a = 100 
-b = 200
-largest N = 2500 
+a = 
+b = 
+largest N = 
 
 /**********************************************************************
  *  List whatever help (if any) you received from the course TAs,
  *  instructor, classmates, or anyone else.
  **********************************************************************/
 
-Didn't ask for any help. 
+
 
 /**********************************************************************
  *  Describe any serious problems you encountered.                    
  **********************************************************************/
 
-Values were off, program kept segfaulting. Going to rewrite the main 
-code after submission.  
+
 
 /**********************************************************************
  *  List any other comments here.                                     

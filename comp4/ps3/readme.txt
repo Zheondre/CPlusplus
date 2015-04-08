@@ -1,30 +1,50 @@
 /**********************************************************************
- *  ps-readme template                                                   
- *  Hello World Assignment                       
+ *  N-Body Simulation readme.txt template
  **********************************************************************/
 
-Name: Angel Zheondre Calcano
 
-
+Name:
+Login:
+Precept:
+OS:
+Machine (e.g., Dell Latitude, MacBook Pro):
+Text editor:
 Hours to complete assignment (optional):
-About 20, Most of the time was spent on debugging: Had alot of math
-errors. Had issues with using sin() and cos(). 
+
+/**********************************************************************
+ *  If you created your own universe for extra credit, describe it
+ *  here and why it is interesting.
+ **********************************************************************/
 
 
 /**********************************************************************
- *  List whatever help (if any) you received from TAs, the instructor,
- *  classmates, or anyone else.
+ *  StdAudio survey
  **********************************************************************/
-Didn't need any help. 
+Did you try to add the line to play 2001.mid in your program?
+
+If you tried, were you successful?
+
+If unsuccessful, please describe what happened.
+
+If unsuccessful, please run StdAudio (java-introcs StdAudio). 
+Did you hear a scale?
+
+/**********************************************************************
+ *  Did you receive help from classmates, past COS 126 students, or
+ *  anyone else?  Please list their names.  ("A Sunday lab TA" or 
+ *  "Office hours on Thursday" is ok if you don't know their name.)
+ **********************************************************************/
+
 
 
 /**********************************************************************
  *  Describe any serious problems you encountered.                    
  **********************************************************************/
-Casting kept making my values go to zero for some strange reason 
+
 
 
 /**********************************************************************
  *  List any other comments here.                                     
  **********************************************************************/
+
 

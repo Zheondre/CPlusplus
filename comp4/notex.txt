@@ -1,7 +1,0 @@
-To compile with sfml use the following commands 
-
-g++ -c (name of file) 
-
-g++ (nameof file).o -o sfml-app -lsfml-graphics -lsfml-window -lsfml-system
-
-./sfml-app

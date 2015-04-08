@@ -17,7 +17,8 @@ public :
   Edist( string x, string y ): a(x), b(y) {
     int i, j ;
     maxCL = a.size() + 1 ;
-    maxRC = b.size() + 1 ;
+    maxRL = b.size() + 1 ;
+
     opt = new int*[maxRL] ;
 
     for( i = 0 ; i < maxRL ; i++ )
@@ -28,11 +29,14 @@ public :
         opt[i][j] = -1 ;
   } ;
 
+  ~Edist(){ 
+    delete opt ; 
+  } 
   int penalty( char a, char b) ;
   int min( int x, int y, int z ) ;
   int OptDistance() ;
   int Alignment(int x, int y) ;
   // make sure to delete 2d array in deconstructor..                                                                            
-}
+} ;
 
 #endif 
