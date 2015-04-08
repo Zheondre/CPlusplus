@@ -1,9 +1,41 @@
 #ifndef _a 
 #define _a 
 
-#include <iostream>
 #include <string>
 #include <iostream>
+
 using namespace std;
+
+class Edist{
+
+  string a, b ;
+  int maxCL, maxRL ;
+  int** opt ;
+
+public :
+
+  Edist( string x, string y ): a(x), b(y) {
+    int i, j ;
+    maxCL = a.size() + 1 ;
+    maxRL = b.size() + 1 ;
+    opt = new int*[maxRL] ;
+
+    for( i = 0 ; i < maxRL ; i++ )
+      opt[i] = new int[maxCL] ;
+
+    for( i = 0 ; i < maxRL ; i++ )
+      for( j = 0 ; j < maxCL ; j++ )
+        opt[i][j] = -1 ;
+  } ;
+
+  ~Edist(){ 
+    delete opt ; 
+  } 
+  int penalty( char a, char b) ;
+  int min( int x, int y, int z ) ;
+  int OptDistance() ;
+  int Alignment(int x, int y) ;
+  // make sure to delete 2d array in deconstructor..                                                                            
+} ;
 
 #endif 

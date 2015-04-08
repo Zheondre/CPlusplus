@@ -1,0 +1,1366 @@
+desc: (none)
+cmd: ./ps5a
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=2278239
+mem_heap_B=34
+mem_heap_extra_B=22
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=2285202
+mem_heap_B=134
+mem_heap_extra_B=58
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=2293751
+mem_heap_B=1192
+mem_heap_extra_B=544
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=2394975
+mem_heap_B=1231
+mem_heap_extra_B=561
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=2404292
+mem_heap_B=3967
+mem_heap_extra_B=897
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=2419630
+mem_heap_B=3983
+mem_heap_extra_B=905
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=2427643
+mem_heap_B=4247
+mem_heap_extra_B=969
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=2432647
+mem_heap_B=4453
+mem_heap_extra_B=1011
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=2440691
+mem_heap_B=5232
+mem_heap_extra_B=1248
+mem_stacks_B=0
+heap_tree=detailed
+n10: 5232 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1296 0x518B3B7: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+  n2: 1296 0x518CADF: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n1: 1039 0x518CEF6: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n0: 1039 in 29 places, all below massif's threshold (01.00%)
+   n2: 257 0x518CB9B: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n2: 215 0x4EAE6EB: boost::unit_test::test_unit::test_unit(boost::unit_test::basic_cstring<char const>, boost::unit_test::test_unit_type) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n1: 173 0x4EAE952: boost::unit_test::test_case::test_case(boost::unit_test::basic_cstring<char const>, boost::unit_test::callback0<boost::unit_test::ut_detail::unused> const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+      n1: 173 0x404EE5: boost::unit_test::make_test_case(boost::unit_test::callback0<boost::unit_test::ut_detail::unused> const&, boost::unit_test::basic_cstring<char const>) (in /home/zheondre/Desktop/p5/ps5a)
+       n0: 173 in 4 places, all below massif's threshold (01.00%)
+     n0: 42 in 1 place, below massif's threshold (01.00%)
+    n0: 42 in 1 place, below massif's threshold (01.00%)
+ n1: 1040 0x562742F: __new_exitfn (cxa_atexit.c:101)
+  n1: 1040 0x56274D7: __cxa_atexit (cxa_atexit.c:35)
+   n1: 1040 0x4E7019C: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 1040 0x4010138: call_init.part.0 (dl-init.c:78)
+     n1: 1040 0x4010221: _dl_init (dl-init.c:36)
+      n0: 1040 0x4001308: ??? (in /lib/x86_64-linux-gnu/ld-2.19.so)
+ n1: 1024 0x4EA85EE: std::vector<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> >, std::allocator<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> > > >::_M_insert_aux(__gnu_cxx::__normal_iterator<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> >*, std::vector<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> >, std::allocator<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> > > > >, std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> > const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n2: 1024 0x4EA87D2: boost::unit_test::fixed_mapping<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const>, std::less<boost::unit_test::basic_cstring<char const> > >::add_pair(boost::unit_test::basic_cstring<char const> const&, boost::unit_test::basic_cstring<char const> const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 1024 0x4E7082E: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 1024 0x4010138: call_init.part.0 (dl-init.c:78)
+     n1: 1024 0x4010221: _dl_init (dl-init.c:36)
+      n0: 1024 0x4001308: ??? (in /lib/x86_64-linux-gnu/ld-2.19.so)
+   n0: 0 in 5 places, all below massif's threshold (01.00%)
+ n1: 504 0x4E741AF: std::_Rb_tree<std::string, std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> >, std::_Select1st<std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> > >, std::less<std::string>, std::allocator<std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> > > >::_M_insert_unique_(std::_Rb_tree_const_iterator<std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> > >, std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> > const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 504 in 9 places, all below massif's threshold (01.00%)
+ n0: 464 in 21 places, all below massif's threshold (01.00%)
+ n4: 416 0x404EC8: boost::unit_test::make_test_case(boost::unit_test::callback0<boost::unit_test::ut_detail::unused> const&, boost::unit_test::basic_cstring<char const>) (in /home/zheondre/Desktop/p5/ps5a)
+  n1: 104 0x4047C1: __static_initialization_and_destruction_0(int, int) (in /home/zheondre/Desktop/p5/ps5a)
+   n1: 104 0x404996: _GLOBAL__sub_I__Z14init_unit_testv (in /home/zheondre/Desktop/p5/ps5a)
+    n1: 104 0x407BAB: __libc_csu_init (in /home/zheondre/Desktop/p5/ps5a)
+     n0: 104 0x560CE53: (below main) (libc-start.c:246)
+  n1: 104 0x404828: __static_initialization_and_destruction_0(int, int) (in /home/zheondre/Desktop/p5/ps5a)
+   n1: 104 0x404996: _GLOBAL__sub_I__Z14init_unit_testv (in /home/zheondre/Desktop/p5/ps5a)
+    n1: 104 0x407BAB: __libc_csu_init (in /home/zheondre/Desktop/p5/ps5a)
+     n0: 104 0x560CE53: (below main) (libc-start.c:246)
+  n1: 104 0x40488F: __static_initialization_and_destruction_0(int, int) (in /home/zheondre/Desktop/p5/ps5a)
+   n1: 104 0x404996: _GLOBAL__sub_I__Z14init_unit_testv (in /home/zheondre/Desktop/p5/ps5a)
+    n1: 104 0x407BAB: __libc_csu_init (in /home/zheondre/Desktop/p5/ps5a)
+     n0: 104 0x560CE53: (below main) (libc-start.c:246)
+  n1: 104 0x4048F6: __static_initialization_and_destruction_0(int, int) (in /home/zheondre/Desktop/p5/ps5a)
+   n1: 104 0x404996: _GLOBAL__sub_I__Z14init_unit_testv (in /home/zheondre/Desktop/p5/ps5a)
+    n1: 104 0x407BAB: __libc_csu_init (in /home/zheondre/Desktop/p5/ps5a)
+     n0: 104 0x560CE53: (below main) (libc-start.c:246)
+ n1: 192 0x4E79886: boost::unit_test::framework::register_test_unit(boost::unit_test::test_case*) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n1: 192 0x4EAE973: boost::unit_test::test_case::test_case(boost::unit_test::basic_cstring<char const>, boost::unit_test::callback0<boost::unit_test::ut_detail::unused> const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 192 0x404EE5: boost::unit_test::make_test_case(boost::unit_test::callback0<boost::unit_test::ut_detail::unused> const&, boost::unit_test::basic_cstring<char const>) (in /home/zheondre/Desktop/p5/ps5a)
+    n0: 192 in 4 places, all below massif's threshold (01.00%)
+ n1: 136 0x4E7A8E0: boost::unit_test::framework::master_test_suite() (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n1: 136 0x4EAEF23: boost::unit_test::ut_detail::auto_test_unit_registrar::curr_ts_store() (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 136 0x4EAF12F: boost::unit_test::ut_detail::auto_test_unit_registrar::auto_test_unit_registrar(boost::unit_test::test_case*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 136 0x4047D1: __static_initialization_and_destruction_0(int, int) (in /home/zheondre/Desktop/p5/ps5a)
+     n1: 136 0x404996: _GLOBAL__sub_I__Z14init_unit_testv (in /home/zheondre/Desktop/p5/ps5a)
+      n1: 136 0x407BAB: __libc_csu_init (in /home/zheondre/Desktop/p5/ps5a)
+       n0: 136 0x560CE53: (below main) (libc-start.c:246)
+ n1: 96 0x406976: boost::detail::shared_count::shared_count<boost::unit_test::ut_detail::callback0_impl_t<boost::unit_test::ut_detail::unused, void (*)()> >(boost::unit_test::ut_detail::callback0_impl_t<boost::unit_test::ut_detail::unused, void (*)()>*) (in /home/zheondre/Desktop/p5/ps5a)
+  n1: 96 0x40673D: void boost::detail::sp_pointer_construct<boost::unit_test::ut_detail::callback0_impl<boost::unit_test::ut_detail::unused>, boost::unit_test::ut_detail::callback0_impl_t<boost::unit_test::ut_detail::unused, void (*)()> >(boost::shared_ptr<boost::unit_test::ut_detail::callback0_impl<boost::unit_test::ut_detail::unused> >*, boost::unit_test::ut_detail::callback0_impl_t<boost::unit_test::ut_detail::unused, void (*)()>*, boost::detail::shared_count&) (in /home/zheondre/Desktop/p5/ps5a)
+   n1: 96 0x405F0D: boost::shared_ptr<boost::unit_test::ut_detail::callback0_impl<boost::unit_test::ut_detail::unused> >::shared_ptr<boost::unit_test::ut_detail::callback0_impl_t<boost::unit_test::ut_detail::unused, void (*)()> >(boost::unit_test::ut_detail::callback0_impl_t<boost::unit_test::ut_detail::unused, void (*)()>*) (in /home/zheondre/Desktop/p5/ps5a)
+    n1: 96 0x4054F6: boost::unit_test::callback0<boost::unit_test::ut_detail::unused>::callback0<void (*)()>(void (*)()) (in /home/zheondre/Desktop/p5/ps5a)
+     n0: 96 in 4 places, all below massif's threshold (01.00%)
+ n1: 64 0x4054D5: boost::unit_test::callback0<boost::unit_test::ut_detail::unused>::callback0<void (*)()>(void (*)()) (in /home/zheondre/Desktop/p5/ps5a)
+  n0: 64 in 4 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=10
+#-----------
+time=2450303
+mem_heap_B=6099
+mem_heap_extra_B=1501
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=2457267
+mem_heap_B=7604
+mem_heap_extra_B=1996
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=2463403
+mem_heap_B=9051
+mem_heap_extra_B=2437
+mem_stacks_B=0
+heap_tree=detailed
+n12: 9051 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 3051 0x518B3B7: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+  n1: 1562 0x518B544: std::string::_M_mutate(unsigned long, unsigned long, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n8: 1562 0x518BAEC: std::string::_M_replace_safe(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n2: 354 0x4E96C51: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n1: 182 0x4E96D0F: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+      n0: 182 in 2 places, all below massif's threshold (01.00%)
+     n1: 172 0x4E96DAF: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+      n0: 172 in 3 places, all below massif's threshold (01.00%)
+    n0: 311 in 6 places, all below massif's threshold (01.00%)
+    n1: 172 0x4E967B8: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 172 in 2 places, all below massif's threshold (01.00%)
+    n1: 162 0x4EA4C9A: boost::runtime::cla::dual_name_policy::dual_name_policy() (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 162 in 3 places, all below massif's threshold (01.00%)
+    n1: 156 0x4EA4C78: boost::runtime::cla::dual_name_policy::dual_name_policy() (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 156 in 3 places, all below massif's threshold (01.00%)
+    n1: 147 0x4E97051: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n1: 147 0x4E9710F: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+      n0: 147 in 2 places, all below massif's threshold (01.00%)
+    n1: 130 0x4E967D0: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 130 in 2 places, all below massif's threshold (01.00%)
+    n1: 130 0x4E9693A: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n1: 130 0x4E96B1E: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+      n0: 130 in 2 places, all below massif's threshold (01.00%)
+  n2: 1254 0x518CADF: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n1: 1039 0x518CEF6: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n0: 1039 in 29 places, all below massif's threshold (01.00%)
+   n2: 215 0x518CB9B: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n2: 215 0x4EAE6EB: boost::unit_test::test_unit::test_unit(boost::unit_test::basic_cstring<char const>, boost::unit_test::test_unit_type) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n1: 173 0x4EAE952: boost::unit_test::test_case::test_case(boost::unit_test::basic_cstring<char const>, boost::unit_test::callback0<boost::unit_test::ut_detail::unused> const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+      n1: 173 0x404EE5: boost::unit_test::make_test_case(boost::unit_test::callback0<boost::unit_test::ut_detail::unused> const&, boost::unit_test::basic_cstring<char const>) (in /home/zheondre/Desktop/p5/ps5a)
+       n0: 173 in 4 places, all below massif's threshold (01.00%)
+     n0: 42 in 1 place, below massif's threshold (01.00%)
+    n0: 0 in 1 place, below massif's threshold (01.00%)
+  n1: 235 0x518BF79: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n1: 235 0x518C012: std::string::reserve(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n1: 235 0x518C25D: std::string::append(char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+     n1: 235 0x4EA5A95: std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+      n0: 235 in 5 places, all below massif's threshold (01.00%)
+ n0: 1072 in 32 places, all below massif's threshold (01.00%)
+ n1: 1040 0x562742F: __new_exitfn (cxa_atexit.c:101)
+  n1: 1040 0x56274D7: __cxa_atexit (cxa_atexit.c:35)
+   n1: 1040 0x4E7019C: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 1040 0x4010138: call_init.part.0 (dl-init.c:78)
+     n1: 1040 0x4010221: _dl_init (dl-init.c:36)
+      n0: 1040 0x4001308: ??? (in /lib/x86_64-linux-gnu/ld-2.19.so)
+ n1: 1024 0x4EA85EE: std::vector<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> >, std::allocator<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> > > >::_M_insert_aux(__gnu_cxx::__normal_iterator<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> >*, std::vector<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> >, std::allocator<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> > > > >, std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> > const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n2: 1024 0x4EA87D2: boost::unit_test::fixed_mapping<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const>, std::less<boost::unit_test::basic_cstring<char const> > >::add_pair(boost::unit_test::basic_cstring<char const> const&, boost::unit_test::basic_cstring<char const> const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 1024 0x4E7082E: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 1024 0x4010138: call_init.part.0 (dl-init.c:78)
+     n1: 1024 0x4010221: _dl_init (dl-init.c:36)
+      n0: 1024 0x4001308: ??? (in /lib/x86_64-linux-gnu/ld-2.19.so)
+   n0: 0 in 5 places, all below massif's threshold (01.00%)
+ n3: 648 0x4EA5ADB: boost::shared_ptr<boost::runtime::cla::dual_name_parameter_t<bool> > boost::runtime::cla::dual_name_parameter<bool>(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n1: 216 0x4E99CFE: boost::unit_test::runtime_config::init(int&, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 216 0x4E7AB7D: boost::unit_test::framework::init(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 216 0x4E93E4B: boost::unit_test::unit_test_main(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 216 0x402C84: main (in /home/zheondre/Desktop/p5/ps5a)
+  n1: 216 0x4E99F93: boost::unit_test::runtime_config::init(int&, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 216 0x4E7AB7D: boost::unit_test::framework::init(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 216 0x4E93E4B: boost::unit_test::unit_test_main(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 216 0x402C84: main (in /home/zheondre/Desktop/p5/ps5a)
+  n1: 216 0x4E9A3F0: boost::unit_test::runtime_config::init(int&, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 216 0x4E7AB7D: boost::unit_test::framework::init(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 216 0x4E93E4B: boost::unit_test::unit_test_main(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 216 0x402C84: main (in /home/zheondre/Desktop/p5/ps5a)
+ n1: 504 0x4E741AF: std::_Rb_tree<std::string, std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> >, std::_Select1st<std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> > >, std::less<std::string>, std::allocator<std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> > > >::_M_insert_unique_(std::_Rb_tree_const_iterator<std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> > >, std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> > const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 504 in 9 places, all below massif's threshold (01.00%)
+ n2: 432 0x4EA62BB: boost::shared_ptr<boost::runtime::cla::dual_name_parameter_t<std::string> > boost::runtime::cla::dual_name_parameter<std::string>(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n1: 216 0x4E9A263: boost::unit_test::runtime_config::init(int&, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 216 0x4E7AB7D: boost::unit_test::framework::init(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 216 0x4E93E4B: boost::unit_test::unit_test_main(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 216 0x402C84: main (in /home/zheondre/Desktop/p5/ps5a)
+  n1: 216 0x4E9A580: boost::unit_test::runtime_config::init(int&, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 216 0x4E7AB7D: boost::unit_test::framework::init(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 216 0x4E93E4B: boost::unit_test::unit_test_main(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 216 0x402C84: main (in /home/zheondre/Desktop/p5/ps5a)
+ n1: 416 0x404EC8: boost::unit_test::make_test_case(boost::unit_test::callback0<boost::unit_test::ut_detail::unused> const&, boost::unit_test::basic_cstring<char const>) (in /home/zheondre/Desktop/p5/ps5a)
+  n0: 416 in 4 places, all below massif's threshold (01.00%)
+ n2: 320 0x4EA5D5F: boost::shared_ptr<boost::runtime::cla::named_parameter_t<bool> > boost::runtime::cla::named_parameter<bool>(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n1: 160 0x4E99E2D: boost::unit_test::runtime_config::init(int&, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 160 0x4E7AB7D: boost::unit_test::framework::init(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 160 0x4E93E4B: boost::unit_test::unit_test_main(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 160 0x402C84: main (in /home/zheondre/Desktop/p5/ps5a)
+  n1: 160 0x4E9A0E7: boost::unit_test::runtime_config::init(int&, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 160 0x4E7AB7D: boost::unit_test::framework::init(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 160 0x4E93E4B: boost::unit_test::unit_test_main(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 160 0x402C84: main (in /home/zheondre/Desktop/p5/ps5a)
+ n1: 216 0x4E9A70A: boost::unit_test::runtime_config::init(int&, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n1: 216 0x4E7AB7D: boost::unit_test::framework::init(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 216 0x4E93E4B: boost::unit_test::unit_test_main(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n0: 216 0x402C84: main (in /home/zheondre/Desktop/p5/ps5a)
+ n1: 192 0x4E79886: boost::unit_test::framework::register_test_unit(boost::unit_test::test_case*) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n1: 192 0x4EAE973: boost::unit_test::test_case::test_case(boost::unit_test::basic_cstring<char const>, boost::unit_test::callback0<boost::unit_test::ut_detail::unused> const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 192 0x404EE5: boost::unit_test::make_test_case(boost::unit_test::callback0<boost::unit_test::ut_detail::unused> const&, boost::unit_test::basic_cstring<char const>) (in /home/zheondre/Desktop/p5/ps5a)
+    n0: 192 in 4 places, all below massif's threshold (01.00%)
+ n1: 136 0x4E7A8E0: boost::unit_test::framework::master_test_suite() (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n1: 136 0x4EAEF23: boost::unit_test::ut_detail::auto_test_unit_registrar::curr_ts_store() (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 136 0x4EAF12F: boost::unit_test::ut_detail::auto_test_unit_registrar::auto_test_unit_registrar(boost::unit_test::test_case*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 136 0x4047D1: __static_initialization_and_destruction_0(int, int) (in /home/zheondre/Desktop/p5/ps5a)
+     n1: 136 0x404996: _GLOBAL__sub_I__Z14init_unit_testv (in /home/zheondre/Desktop/p5/ps5a)
+      n1: 136 0x407BAB: __libc_csu_init (in /home/zheondre/Desktop/p5/ps5a)
+       n0: 136 0x560CE53: (below main) (libc-start.c:246)
+#-----------
+snapshot=13
+#-----------
+time=2471058
+mem_heap_B=10502
+mem_heap_extra_B=2938
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=2477134
+mem_heap_B=11923
+mem_heap_extra_B=3373
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=2485476
+mem_heap_B=13835
+mem_heap_extra_B=3957
+mem_stacks_B=0
+heap_tree=detailed
+n14: 13835 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 5427 0x518B3B7: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+  n1: 3607 0x518B544: std::string::_M_mutate(unsigned long, unsigned long, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n9: 3607 0x518BAEC: std::string::_M_replace_safe(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n0: 913 in 14 places, all below massif's threshold (01.00%)
+    n2: 451 0x4E96C51: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n1: 279 0x4E96D0F: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+      n0: 279 in 3 places, all below massif's threshold (01.00%)
+     n0: 172 in 1 place, below massif's threshold (01.00%)
+    n1: 418 0x4E967B8: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 418 in 6 places, all below massif's threshold (01.00%)
+    n1: 351 0x4EA4C9A: boost::runtime::cla::dual_name_policy::dual_name_policy() (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 351 in 6 places, all below massif's threshold (01.00%)
+    n1: 338 0x4EA4C78: boost::runtime::cla::dual_name_policy::dual_name_policy() (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 338 in 6 places, all below massif's threshold (01.00%)
+    n1: 312 0x4E967D0: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 312 in 6 places, all below massif's threshold (01.00%)
+    n2: 312 0x4E9693A: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n1: 286 0x4E96B1E: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+      n0: 286 in 5 places, all below massif's threshold (01.00%)
+     n0: 26 in 1 place, below massif's threshold (01.00%)
+    n2: 286 0x4E96952: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n1: 260 0x4E96B1E: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+      n0: 260 in 5 places, all below massif's threshold (01.00%)
+     n0: 26 in 1 place, below massif's threshold (01.00%)
+    n1: 226 0x4E97051: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n1: 226 0x4E9710F: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+      n0: 226 in 3 places, all below massif's threshold (01.00%)
+  n2: 1254 0x518CADF: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n1: 1039 0x518CEF6: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n0: 1039 in 29 places, all below massif's threshold (01.00%)
+   n2: 215 0x518CB9B: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n1: 215 0x4EAE6EB: boost::unit_test::test_unit::test_unit(boost::unit_test::basic_cstring<char const>, boost::unit_test::test_unit_type) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 215 in 2 places, all below massif's threshold (01.00%)
+    n0: 0 in 1 place, below massif's threshold (01.00%)
+  n1: 566 0x518BF79: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n1: 566 0x518C012: std::string::reserve(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n1: 566 0x518C25D: std::string::append(char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+     n1: 566 0x4EA5A95: std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+      n0: 566 in 12 places, all below massif's threshold (01.00%)
+ n0: 1944 in 49 places, all below massif's threshold (01.00%)
+ n1: 1040 0x562742F: __new_exitfn (cxa_atexit.c:101)
+  n1: 1040 0x56274D7: __cxa_atexit (cxa_atexit.c:35)
+   n1: 1040 0x4E7019C: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 1040 0x4010138: call_init.part.0 (dl-init.c:78)
+     n1: 1040 0x4010221: _dl_init (dl-init.c:36)
+      n0: 1040 0x4001308: ??? (in /lib/x86_64-linux-gnu/ld-2.19.so)
+ n1: 1024 0x4EA85EE: std::vector<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> >, std::allocator<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> > > >::_M_insert_aux(__gnu_cxx::__normal_iterator<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> >*, std::vector<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> >, std::allocator<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> > > > >, std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> > const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n2: 1024 0x4EA87D2: boost::unit_test::fixed_mapping<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const>, std::less<boost::unit_test::basic_cstring<char const> > >::add_pair(boost::unit_test::basic_cstring<char const> const&, boost::unit_test::basic_cstring<char const> const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 1024 0x4E7082E: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 1024 0x4010138: call_init.part.0 (dl-init.c:78)
+     n1: 1024 0x4010221: _dl_init (dl-init.c:36)
+      n0: 1024 0x4001308: ??? (in /lib/x86_64-linux-gnu/ld-2.19.so)
+   n0: 0 in 5 places, all below massif's threshold (01.00%)
+ n4: 864 0x4EA5ADB: boost::shared_ptr<boost::runtime::cla::dual_name_parameter_t<bool> > boost::runtime::cla::dual_name_parameter<bool>(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n1: 216 0x4E99CFE: boost::unit_test::runtime_config::init(int&, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 216 0x4E7AB7D: boost::unit_test::framework::init(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 216 0x4E93E4B: boost::unit_test::unit_test_main(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 216 0x402C84: main (in /home/zheondre/Desktop/p5/ps5a)
+  n1: 216 0x4E99F93: boost::unit_test::runtime_config::init(int&, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 216 0x4E7AB7D: boost::unit_test::framework::init(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 216 0x4E93E4B: boost::unit_test::unit_test_main(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 216 0x402C84: main (in /home/zheondre/Desktop/p5/ps5a)
+  n1: 216 0x4E9A3F0: boost::unit_test::runtime_config::init(int&, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 216 0x4E7AB7D: boost::unit_test::framework::init(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 216 0x4E93E4B: boost::unit_test::unit_test_main(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 216 0x402C84: main (in /home/zheondre/Desktop/p5/ps5a)
+  n1: 216 0x4E9C2B3: boost::unit_test::runtime_config::init(int&, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 216 0x4E7AB7D: boost::unit_test::framework::init(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 216 0x4E93E4B: boost::unit_test::unit_test_main(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 216 0x402C84: main (in /home/zheondre/Desktop/p5/ps5a)
+ n3: 648 0x4EA62BB: boost::shared_ptr<boost::runtime::cla::dual_name_parameter_t<std::string> > boost::runtime::cla::dual_name_parameter<std::string>(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n1: 216 0x4E9A263: boost::unit_test::runtime_config::init(int&, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 216 0x4E7AB7D: boost::unit_test::framework::init(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 216 0x4E93E4B: boost::unit_test::unit_test_main(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 216 0x402C84: main (in /home/zheondre/Desktop/p5/ps5a)
+  n1: 216 0x4E9A580: boost::unit_test::runtime_config::init(int&, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 216 0x4E7AB7D: boost::unit_test::framework::init(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 216 0x4E93E4B: boost::unit_test::unit_test_main(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 216 0x402C84: main (in /home/zheondre/Desktop/p5/ps5a)
+  n1: 216 0x4E9B49D: boost::unit_test::runtime_config::init(int&, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 216 0x4E7AB7D: boost::unit_test::framework::init(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 216 0x4E93E4B: boost::unit_test::unit_test_main(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 216 0x402C84: main (in /home/zheondre/Desktop/p5/ps5a)
+ n3: 648 0x4EA602B: boost::shared_ptr<boost::runtime::cla::dual_name_parameter_t<boost::unit_test::output_format> > boost::runtime::cla::dual_name_parameter<boost::unit_test::output_format>(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n1: 216 0x4E9AC03: boost::unit_test::runtime_config::init(int&, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 216 0x4E7AB7D: boost::unit_test::framework::init(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 216 0x4E93E4B: boost::unit_test::unit_test_main(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 216 0x402C84: main (in /home/zheondre/Desktop/p5/ps5a)
+  n1: 216 0x4E9B300: boost::unit_test::runtime_config::init(int&, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 216 0x4E7AB7D: boost::unit_test::framework::init(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 216 0x4E93E4B: boost::unit_test::unit_test_main(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 216 0x402C84: main (in /home/zheondre/Desktop/p5/ps5a)
+  n1: 216 0x4E9BB03: boost::unit_test::runtime_config::init(int&, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 216 0x4E7AB7D: boost::unit_test::framework::init(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 216 0x4E93E4B: boost::unit_test::unit_test_main(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 216 0x402C84: main (in /home/zheondre/Desktop/p5/ps5a)
+ n1: 504 0x4E741AF: std::_Rb_tree<std::string, std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> >, std::_Select1st<std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> > >, std::less<std::string>, std::allocator<std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> > > >::_M_insert_unique_(std::_Rb_tree_const_iterator<std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> > >, std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> > const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 504 in 9 places, all below massif's threshold (01.00%)
+ n1: 480 0x4EA5D5F: boost::shared_ptr<boost::runtime::cla::named_parameter_t<bool> > boost::runtime::cla::named_parameter<bool>(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 480 in 3 places, all below massif's threshold (01.00%)
+ n1: 416 0x404EC8: boost::unit_test::make_test_case(boost::unit_test::callback0<boost::unit_test::ut_detail::unused> const&, boost::unit_test::basic_cstring<char const>) (in /home/zheondre/Desktop/p5/ps5a)
+  n0: 416 in 4 places, all below massif's threshold (01.00%)
+ n1: 216 0x4E9B632: boost::unit_test::runtime_config::init(int&, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n1: 216 0x4E7AB7D: boost::unit_test::framework::init(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 216 0x4E93E4B: boost::unit_test::unit_test_main(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n0: 216 0x402C84: main (in /home/zheondre/Desktop/p5/ps5a)
+ n1: 216 0x4E9A70A: boost::unit_test::runtime_config::init(int&, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n1: 216 0x4E7AB7D: boost::unit_test::framework::init(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 216 0x4E93E4B: boost::unit_test::unit_test_main(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n0: 216 0x402C84: main (in /home/zheondre/Desktop/p5/ps5a)
+ n1: 216 0x4E9AD92: boost::unit_test::runtime_config::init(int&, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n1: 216 0x4E7AB7D: boost::unit_test::framework::init(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 216 0x4E93E4B: boost::unit_test::unit_test_main(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n0: 216 0x402C84: main (in /home/zheondre/Desktop/p5/ps5a)
+ n1: 192 0x4E79886: boost::unit_test::framework::register_test_unit(boost::unit_test::test_case*) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n1: 192 0x4EAE973: boost::unit_test::test_case::test_case(boost::unit_test::basic_cstring<char const>, boost::unit_test::callback0<boost::unit_test::ut_detail::unused> const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 192 0x404EE5: boost::unit_test::make_test_case(boost::unit_test::callback0<boost::unit_test::ut_detail::unused> const&, boost::unit_test::basic_cstring<char const>) (in /home/zheondre/Desktop/p5/ps5a)
+    n0: 192 in 4 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=16
+#-----------
+time=2490182
+mem_heap_B=14797
+mem_heap_extra_B=4259
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=2497909
+mem_heap_B=15841
+mem_heap_extra_B=4599
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=2505394
+mem_heap_B=15969
+mem_heap_extra_B=4631
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=2510520
+mem_heap_B=16033
+mem_heap_extra_B=4647
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=2520488
+mem_heap_B=16129
+mem_heap_extra_B=4671
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=2527403
+mem_heap_B=16193
+mem_heap_extra_B=4687
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=2534990
+mem_heap_B=16257
+mem_heap_extra_B=4703
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=2544216
+mem_heap_B=15656
+mem_heap_extra_B=4520
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=2551500
+mem_heap_B=15657
+mem_heap_extra_B=4543
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=2559068
+mem_heap_B=16048
+mem_heap_extra_B=4712
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=2568641
+mem_heap_B=16859
+mem_heap_extra_B=4933
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=2574534
+mem_heap_B=17274
+mem_heap_extra_B=5038
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=2580648
+mem_heap_B=17609
+mem_heap_extra_B=5119
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=2609747
+mem_heap_B=25825
+mem_heap_extra_B=5143
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=2621183
+mem_heap_B=25825
+mem_heap_extra_B=5143
+mem_stacks_B=0
+heap_tree=detailed
+n13: 25825 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8192 0x4E71501: boost::execution_monitor::catch_signals(boost::unit_test::callback0<int> const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n1: 8192 0x4E71D81: boost::execution_monitor::execute(boost::unit_test::callback0<int> const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 8192 0x4E7ACD7: boost::unit_test::framework::init(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 8192 0x4E93E4B: boost::unit_test::unit_test_main(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 8192 0x402C84: main (in /home/zheondre/Desktop/p5/ps5a)
+ n3: 6416 0x518B3B7: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+  n1: 4937 0x518B544: std::string::_M_mutate(unsigned long, unsigned long, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n10: 4937 0x518BAEC: std::string::_M_replace_safe(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n0: 1011 in 17 places, all below massif's threshold (01.00%)
+    n2: 694 0x4E96C51: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n1: 415 0x4E96DAF: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+      n0: 415 in 6 places, all below massif's threshold (01.00%)
+     n0: 279 in 1 place, below massif's threshold (01.00%)
+    n1: 536 0x4E967B8: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 536 in 6 places, all below massif's threshold (01.00%)
+    n1: 431 0x4EA8B7E: boost::runtime::environment::rt_env_detail::new_var_record(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 431 in 6 places, all below massif's threshold (01.00%)
+    n1: 405 0x4EA4C9A: boost::runtime::cla::dual_name_policy::dual_name_policy() (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 405 in 6 places, all below massif's threshold (01.00%)
+    n1: 390 0x4EA4C78: boost::runtime::cla::dual_name_policy::dual_name_policy() (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 390 in 6 places, all below massif's threshold (01.00%)
+    n1: 390 0x4E967D0: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 390 in 6 places, all below massif's threshold (01.00%)
+    n2: 390 0x4E9693A: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n1: 364 0x4E96B1E: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+      n0: 364 in 5 places, all below massif's threshold (01.00%)
+     n0: 26 in 1 place, below massif's threshold (01.00%)
+    n2: 364 0x4E96952: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n1: 338 0x4E96B1E: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+      n0: 338 in 5 places, all below massif's threshold (01.00%)
+     n0: 26 in 1 place, below massif's threshold (01.00%)
+    n1: 326 0x4E97051: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 326 in 2 places, all below massif's threshold (01.00%)
+  n2: 1254 0x518CADF: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n1: 1039 0x518CEF6: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n0: 1039 in 29 places, all below massif's threshold (01.00%)
+   n0: 215 in 1 place, below massif's threshold (01.00%)
+  n0: 225 in 1 place, below massif's threshold (01.00%)
+ n0: 3657 in 69 places, all below massif's threshold (01.00%)
+ n1: 1296 0x4EA5ADB: boost::shared_ptr<boost::runtime::cla::dual_name_parameter_t<bool> > boost::runtime::cla::dual_name_parameter<bool>(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 1296 in 6 places, all below massif's threshold (01.00%)
+ n1: 1040 0x562742F: __new_exitfn (cxa_atexit.c:101)
+  n1: 1040 0x56274D7: __cxa_atexit (cxa_atexit.c:35)
+   n1: 1040 0x4E7019C: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 1040 0x4010138: call_init.part.0 (dl-init.c:78)
+     n1: 1040 0x4010221: _dl_init (dl-init.c:36)
+      n0: 1040 0x4001308: ??? (in /lib/x86_64-linux-gnu/ld-2.19.so)
+ n1: 1024 0x4EA85EE: std::vector<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> >, std::allocator<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> > > >::_M_insert_aux(__gnu_cxx::__normal_iterator<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> >*, std::vector<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> >, std::allocator<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> > > > >, std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> > const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n2: 1024 0x4EA87D2: boost::unit_test::fixed_mapping<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const>, std::less<boost::unit_test::basic_cstring<char const> > >::add_pair(boost::unit_test::basic_cstring<char const> const&, boost::unit_test::basic_cstring<char const> const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 1024 0x4E7082E: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 1024 0x4010138: call_init.part.0 (dl-init.c:78)
+     n1: 1024 0x4010221: _dl_init (dl-init.c:36)
+      n0: 1024 0x4001308: ??? (in /lib/x86_64-linux-gnu/ld-2.19.so)
+   n0: 0 in 5 places, all below massif's threshold (01.00%)
+ n1: 864 0x4EA89F6: std::_Rb_tree<boost::unit_test::basic_cstring<char const>, std::pair<boost::unit_test::basic_cstring<char const> const, boost::runtime::environment::rt_env_detail::variable_data>, std::_Select1st<std::pair<boost::unit_test::basic_cstring<char const> const, boost::runtime::environment::rt_env_detail::variable_data> >, std::less<boost::unit_test::basic_cstring<char const> >, std::allocator<std::pair<boost::unit_test::basic_cstring<char const> const, boost::runtime::environment::rt_env_detail::variable_data> > >::_M_insert_unique_(std::_Rb_tree_const_iterator<std::pair<boost::unit_test::basic_cstring<char const> const, boost::runtime::environment::rt_env_detail::variable_data> >, std::pair<boost::unit_test::basic_cstring<char const> const, boost::runtime::environment::rt_env_detail::variable_data> const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n1: 864 0x4EA8CA9: boost::runtime::environment::rt_env_detail::new_var_record(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n0: 864 in 6 places, all below massif's threshold (01.00%)
+ n1: 648 0x4EA62BB: boost::shared_ptr<boost::runtime::cla::dual_name_parameter_t<std::string> > boost::runtime::cla::dual_name_parameter<std::string>(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 648 in 3 places, all below massif's threshold (01.00%)
+ n1: 648 0x4EA602B: boost::shared_ptr<boost::runtime::cla::dual_name_parameter_t<boost::unit_test::output_format> > boost::runtime::cla::dual_name_parameter<boost::unit_test::output_format>(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 648 in 3 places, all below massif's threshold (01.00%)
+ n1: 640 0x4EA4FFC: boost::runtime::cla::parser::operator<<(boost::shared_ptr<boost::runtime::cla::parameter>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 640 in 9 places, all below massif's threshold (01.00%)
+ n1: 504 0x4E741AF: std::_Rb_tree<std::string, std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> >, std::_Select1st<std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> > >, std::less<std::string>, std::allocator<std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> > > >::_M_insert_unique_(std::_Rb_tree_const_iterator<std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> > >, std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> > const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 504 in 9 places, all below massif's threshold (01.00%)
+ n1: 480 0x4EA5D5F: boost::shared_ptr<boost::runtime::cla::named_parameter_t<bool> > boost::runtime::cla::named_parameter<bool>(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 480 in 3 places, all below massif's threshold (01.00%)
+ n1: 416 0x404EC8: boost::unit_test::make_test_case(boost::unit_test::callback0<boost::unit_test::ut_detail::unused> const&, boost::unit_test::basic_cstring<char const>) (in /home/zheondre/Desktop/p5/ps5a)
+  n0: 416 in 4 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=31
+#-----------
+time=2627702
+mem_heap_B=17942
+mem_heap_extra_B=5202
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=2647919
+mem_heap_B=26158
+mem_heap_extra_B=5226
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=2652850
+mem_heap_B=17942
+mem_heap_extra_B=5202
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=2673067
+mem_heap_B=26158
+mem_heap_extra_B=5226
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=2689397
+mem_heap_B=26182
+mem_heap_extra_B=5242
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=2695143
+mem_heap_B=18292
+mem_heap_extra_B=5252
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=2703253
+mem_heap_B=18661
+mem_heap_extra_B=5355
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=2706332
+mem_heap_B=18830
+mem_heap_extra_B=5402
+mem_stacks_B=0
+heap_tree=detailed
+n13: 18830 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 6701 0x518B3B7: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+  n1: 5222 0x518B544: std::string::_M_mutate(unsigned long, unsigned long, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n10: 5222 0x518BAEC: std::string::_M_replace_safe(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n0: 1011 in 17 places, all below massif's threshold (01.00%)
+    n2: 716 0x4EA8B7E: boost::runtime::environment::rt_env_detail::new_var_record(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 467 in 6 places, all below massif's threshold (01.00%)
+     n1: 249 0x4EA93D8: boost::runtime::environment::rt_env_detail::variable_data& boost::runtime::environment::rt_env_detail::init_new_var<bool, boost::nfp::named_parameter<char, boost::nfp::nfp_detail::no_params_type_t, char> >(boost::unit_test::basic_cstring<char const>, boost::nfp::named_parameter<char, boost::nfp::nfp_detail::no_params_type_t, char>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+      n1: 249 0x4E9791A: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+       n0: 249 in 5 places, all below massif's threshold (01.00%)
+    n2: 694 0x4E96C51: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n1: 415 0x4E96DAF: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+      n0: 415 in 6 places, all below massif's threshold (01.00%)
+     n1: 279 0x4E96D0F: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+      n0: 279 in 3 places, all below massif's threshold (01.00%)
+    n1: 536 0x4E967B8: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 536 in 6 places, all below massif's threshold (01.00%)
+    n1: 405 0x4EA4C9A: boost::runtime::cla::dual_name_policy::dual_name_policy() (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 405 in 6 places, all below massif's threshold (01.00%)
+    n1: 390 0x4EA4C78: boost::runtime::cla::dual_name_policy::dual_name_policy() (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 390 in 6 places, all below massif's threshold (01.00%)
+    n1: 390 0x4E967D0: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 390 in 6 places, all below massif's threshold (01.00%)
+    n2: 390 0x4E9693A: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n1: 364 0x4E96B1E: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+      n0: 364 in 5 places, all below massif's threshold (01.00%)
+     n0: 26 in 1 place, below massif's threshold (01.00%)
+    n2: 364 0x4E96952: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n1: 338 0x4E96B1E: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+      n0: 338 in 5 places, all below massif's threshold (01.00%)
+     n0: 26 in 1 place, below massif's threshold (01.00%)
+    n1: 326 0x4E97051: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 326 in 2 places, all below massif's threshold (01.00%)
+  n2: 1254 0x518CADF: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n1: 1039 0x518CEF6: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n0: 1039 in 29 places, all below massif's threshold (01.00%)
+   n0: 215 in 1 place, below massif's threshold (01.00%)
+  n0: 225 in 1 place, below massif's threshold (01.00%)
+ n0: 3609 in 72 places, all below massif's threshold (01.00%)
+ n1: 1440 0x4EA89F6: std::_Rb_tree<boost::unit_test::basic_cstring<char const>, std::pair<boost::unit_test::basic_cstring<char const> const, boost::runtime::environment::rt_env_detail::variable_data>, std::_Select1st<std::pair<boost::unit_test::basic_cstring<char const> const, boost::runtime::environment::rt_env_detail::variable_data> >, std::less<boost::unit_test::basic_cstring<char const> >, std::allocator<std::pair<boost::unit_test::basic_cstring<char const> const, boost::runtime::environment::rt_env_detail::variable_data> > >::_M_insert_unique_(std::_Rb_tree_const_iterator<std::pair<boost::unit_test::basic_cstring<char const> const, boost::runtime::environment::rt_env_detail::variable_data> >, std::pair<boost::unit_test::basic_cstring<char const> const, boost::runtime::environment::rt_env_detail::variable_data> const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n4: 1440 0x4EA8CA9: boost::runtime::environment::rt_env_detail::new_var_record(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 480 0x4EA93D8: boost::runtime::environment::rt_env_detail::variable_data& boost::runtime::environment::rt_env_detail::init_new_var<bool, boost::nfp::named_parameter<char, boost::nfp::nfp_detail::no_params_type_t, char> >(boost::unit_test::basic_cstring<char const>, boost::nfp::named_parameter<char, boost::nfp::nfp_detail::no_params_type_t, char>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 480 0x4E9791A: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 480 in 5 places, all below massif's threshold (01.00%)
+   n0: 384 in 4 places, all below massif's threshold (01.00%)
+   n1: 288 0x4EAAF49: boost::runtime::environment::rt_env_detail::variable_data& boost::runtime::environment::rt_env_detail::init_new_var<boost::unit_test::output_format, boost::nfp::named_parameter<char, boost::nfp::nfp_detail::no_params_type_t, char> >(boost::unit_test::basic_cstring<char const>, boost::nfp::named_parameter<char, boost::nfp::nfp_detail::no_params_type_t, char>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 288 0x4E99B62: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 288 in 3 places, all below massif's threshold (01.00%)
+   n1: 288 0x4EA95F1: boost::runtime::environment::rt_env_detail::variable_data& boost::runtime::environment::rt_env_detail::init_new_var<std::string, boost::nfp::named_parameter<char, boost::nfp::nfp_detail::no_params_type_t, char> >(boost::unit_test::basic_cstring<char const>, boost::nfp::named_parameter<char, boost::nfp::nfp_detail::no_params_type_t, char>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 288 0x4E97C74: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 288 in 3 places, all below massif's threshold (01.00%)
+ n1: 1296 0x4EA5ADB: boost::shared_ptr<boost::runtime::cla::dual_name_parameter_t<bool> > boost::runtime::cla::dual_name_parameter<bool>(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 1296 in 6 places, all below massif's threshold (01.00%)
+ n1: 1040 0x562742F: __new_exitfn (cxa_atexit.c:101)
+  n1: 1040 0x56274D7: __cxa_atexit (cxa_atexit.c:35)
+   n1: 1040 0x4E7019C: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 1040 0x4010138: call_init.part.0 (dl-init.c:78)
+     n1: 1040 0x4010221: _dl_init (dl-init.c:36)
+      n0: 1040 0x4001308: ??? (in /lib/x86_64-linux-gnu/ld-2.19.so)
+ n1: 1024 0x4EA85EE: std::vector<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> >, std::allocator<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> > > >::_M_insert_aux(__gnu_cxx::__normal_iterator<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> >*, std::vector<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> >, std::allocator<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> > > > >, std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> > const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n2: 1024 0x4EA87D2: boost::unit_test::fixed_mapping<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const>, std::less<boost::unit_test::basic_cstring<char const> > >::add_pair(boost::unit_test::basic_cstring<char const> const&, boost::unit_test::basic_cstring<char const> const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 1024 0x4E7082E: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 1024 0x4010138: call_init.part.0 (dl-init.c:78)
+     n1: 1024 0x4010221: _dl_init (dl-init.c:36)
+      n0: 1024 0x4001308: ??? (in /lib/x86_64-linux-gnu/ld-2.19.so)
+   n0: 0 in 5 places, all below massif's threshold (01.00%)
+ n1: 648 0x4EA62BB: boost::shared_ptr<boost::runtime::cla::dual_name_parameter_t<std::string> > boost::runtime::cla::dual_name_parameter<std::string>(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 648 in 3 places, all below massif's threshold (01.00%)
+ n1: 648 0x4EA602B: boost::shared_ptr<boost::runtime::cla::dual_name_parameter_t<boost::unit_test::output_format> > boost::runtime::cla::dual_name_parameter<boost::unit_test::output_format>(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 648 in 3 places, all below massif's threshold (01.00%)
+ n1: 640 0x4EA4FFC: boost::runtime::cla::parser::operator<<(boost::shared_ptr<boost::runtime::cla::parameter>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 640 in 9 places, all below massif's threshold (01.00%)
+ n1: 504 0x4E741AF: std::_Rb_tree<std::string, std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> >, std::_Select1st<std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> > >, std::less<std::string>, std::allocator<std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> > > >::_M_insert_unique_(std::_Rb_tree_const_iterator<std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> > >, std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> > const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 504 in 9 places, all below massif's threshold (01.00%)
+ n1: 480 0x4EA5D5F: boost::shared_ptr<boost::runtime::cla::named_parameter_t<bool> > boost::runtime::cla::named_parameter<bool>(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 480 in 3 places, all below massif's threshold (01.00%)
+ n1: 416 0x404EC8: boost::unit_test::make_test_case(boost::unit_test::callback0<boost::unit_test::ut_detail::unused> const&, boost::unit_test::basic_cstring<char const>) (in /home/zheondre/Desktop/p5/ps5a)
+  n0: 416 in 4 places, all below massif's threshold (01.00%)
+ n1: 384 0x4EA8B1F: boost::runtime::environment::rt_env_detail::new_var_record(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 384 in 7 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=39
+#-----------
+time=2727693
+mem_heap_B=27214
+mem_heap_extra_B=5458
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=2738166
+mem_heap_B=27342
+mem_heap_extra_B=5466
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=2745681
+mem_heap_B=28750
+mem_heap_extra_B=5474
+mem_stacks_B=0
+heap_tree=peak
+n15: 28750 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8192 0x4E71501: boost::execution_monitor::catch_signals(boost::unit_test::callback0<int> const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n2: 8192 0x4E71D81: boost::execution_monitor::execute(boost::unit_test::callback0<int> const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 8192 0x4E962F0: boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::unit_test::test_case const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 8192 0x4E7FF92: boost::unit_test::framework_impl::visit(boost::unit_test::test_case const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n1: 8192 0x4EAED21: boost::unit_test::traverse_test_tree(boost::unit_test::test_suite const&, boost::unit_test::test_tree_visitor&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+      n1: 8192 0x4E7B4B8: boost::unit_test::framework::run(unsigned long, bool) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+       n1: 8192 0x4E93ED2: boost::unit_test::unit_test_main(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+        n0: 8192 0x402C84: main (in /home/zheondre/Desktop/p5/ps5a)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n3: 6757 0x518B3B7: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+  n1: 5278 0x518B544: std::string::_M_mutate(unsigned long, unsigned long, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n9: 5278 0x518BAEC: std::string::_M_replace_safe(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n0: 1337 in 18 places, all below massif's threshold (01.00%)
+    n1: 772 0x4EA8B7E: boost::runtime::environment::rt_env_detail::new_var_record(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 772 in 7 places, all below massif's threshold (01.00%)
+    n2: 694 0x4E96C51: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n1: 415 0x4E96DAF: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+      n0: 415 in 6 places, all below massif's threshold (01.00%)
+     n0: 279 in 1 place, below massif's threshold (01.00%)
+    n1: 536 0x4E967B8: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 536 in 6 places, all below massif's threshold (01.00%)
+    n1: 405 0x4EA4C9A: boost::runtime::cla::dual_name_policy::dual_name_policy() (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 405 in 6 places, all below massif's threshold (01.00%)
+    n1: 390 0x4E967D0: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 390 in 6 places, all below massif's threshold (01.00%)
+    n1: 390 0x4EA4C78: boost::runtime::cla::dual_name_policy::dual_name_policy() (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 390 in 6 places, all below massif's threshold (01.00%)
+    n2: 390 0x4E9693A: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n1: 364 0x4E96B1E: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+      n0: 364 in 5 places, all below massif's threshold (01.00%)
+     n0: 26 in 1 place, below massif's threshold (01.00%)
+    n1: 364 0x4E96952: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 364 in 2 places, all below massif's threshold (01.00%)
+  n2: 1254 0x518CADF: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n1: 1039 0x518CEF6: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n0: 1039 in 29 places, all below massif's threshold (01.00%)
+   n0: 215 in 1 place, below massif's threshold (01.00%)
+  n0: 225 in 1 place, below massif's threshold (01.00%)
+ n0: 3649 in 73 places, all below massif's threshold (01.00%)
+ n1: 1536 0x4EA89F6: std::_Rb_tree<boost::unit_test::basic_cstring<char const>, std::pair<boost::unit_test::basic_cstring<char const> const, boost::runtime::environment::rt_env_detail::variable_data>, std::_Select1st<std::pair<boost::unit_test::basic_cstring<char const> const, boost::runtime::environment::rt_env_detail::variable_data> >, std::less<boost::unit_test::basic_cstring<char const> >, std::allocator<std::pair<boost::unit_test::basic_cstring<char const> const, boost::runtime::environment::rt_env_detail::variable_data> > >::_M_insert_unique_(std::_Rb_tree_const_iterator<std::pair<boost::unit_test::basic_cstring<char const> const, boost::runtime::environment::rt_env_detail::variable_data> >, std::pair<boost::unit_test::basic_cstring<char const> const, boost::runtime::environment::rt_env_detail::variable_data> const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n2: 1536 0x4EA8CA9: boost::runtime::environment::rt_env_detail::new_var_record(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n0: 960 in 6 places, all below massif's threshold (01.00%)
+   n1: 576 0x4EA93D8: boost::runtime::environment::rt_env_detail::variable_data& boost::runtime::environment::rt_env_detail::init_new_var<bool, boost::nfp::named_parameter<char, boost::nfp::nfp_detail::no_params_type_t, char> >(boost::unit_test::basic_cstring<char const>, boost::nfp::named_parameter<char, boost::nfp::nfp_detail::no_params_type_t, char>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 576 0x4E9791A: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 576 in 6 places, all below massif's threshold (01.00%)
+ n1: 1536 0x40690E: __gnu_cxx::new_allocator<double>::allocate(unsigned long, void const*) (in /home/zheondre/Desktop/p5/ps5a)
+  n1: 1536 0x406645: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (in /home/zheondre/Desktop/p5/ps5a)
+   n1: 1536 0x405C7A: std::vector<double, std::allocator<double> >::_M_insert_aux(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (in /home/zheondre/Desktop/p5/ps5a)
+    n1: 1536 0x4054B6: std::vector<double, std::allocator<double> >::push_back(double const&) (in /home/zheondre/Desktop/p5/ps5a)
+     n1: 1536 0x405017: RingBuffer::RingBuffer(int) (in /home/zheondre/Desktop/p5/ps5a)
+      n1: 1536 0x402CC5: RingBufferconsrtuct::test_method() (in /home/zheondre/Desktop/p5/ps5a)
+       n1: 1536 0x402C9A: RingBufferconsrtuct_invoker() (in /home/zheondre/Desktop/p5/ps5a)
+        n1: 1536 0x407436: boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker<boost::unit_test::ut_detail::unused>::invoke<void (*)()>(void (*&)()) (in /home/zheondre/Desktop/p5/ps5a)
+         n1: 1536 0x407154: boost::unit_test::ut_detail::callback0_impl_t<boost::unit_test::ut_detail::unused, void (*)()>::invoke() (in /home/zheondre/Desktop/p5/ps5a)
+          n1: 1536 0x4E961EF: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+           n1: 1536 0x4E71544: boost::execution_monitor::catch_signals(boost::unit_test::callback0<int> const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+            n1: 1536 0x4E71D81: boost::execution_monitor::execute(boost::unit_test::callback0<int> const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+             n1: 1536 0x4E962F0: boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::unit_test::test_case const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+              n1: 1536 0x4E7FF92: boost::unit_test::framework_impl::visit(boost::unit_test::test_case const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+               n1: 1536 0x4EAED21: boost::unit_test::traverse_test_tree(boost::unit_test::test_suite const&, boost::unit_test::test_tree_visitor&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+                n1: 1536 0x4E7B4B8: boost::unit_test::framework::run(unsigned long, bool) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+                 n1: 1536 0x4E93ED2: boost::unit_test::unit_test_main(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+                  n0: 1536 0x402C84: main (in /home/zheondre/Desktop/p5/ps5a)
+ n1: 1296 0x4EA5ADB: boost::shared_ptr<boost::runtime::cla::dual_name_parameter_t<bool> > boost::runtime::cla::dual_name_parameter<bool>(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 1296 in 6 places, all below massif's threshold (01.00%)
+ n1: 1040 0x562742F: __new_exitfn (cxa_atexit.c:101)
+  n1: 1040 0x56274D7: __cxa_atexit (cxa_atexit.c:35)
+   n1: 1040 0x4E7019C: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 1040 0x4010138: call_init.part.0 (dl-init.c:78)
+     n1: 1040 0x4010221: _dl_init (dl-init.c:36)
+      n0: 1040 0x4001308: ??? (in /lib/x86_64-linux-gnu/ld-2.19.so)
+ n1: 1024 0x4EA85EE: std::vector<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> >, std::allocator<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> > > >::_M_insert_aux(__gnu_cxx::__normal_iterator<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> >*, std::vector<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> >, std::allocator<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> > > > >, std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> > const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n2: 1024 0x4EA87D2: boost::unit_test::fixed_mapping<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const>, std::less<boost::unit_test::basic_cstring<char const> > >::add_pair(boost::unit_test::basic_cstring<char const> const&, boost::unit_test::basic_cstring<char const> const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 1024 0x4E7082E: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 1024 0x4010138: call_init.part.0 (dl-init.c:78)
+     n1: 1024 0x4010221: _dl_init (dl-init.c:36)
+      n0: 1024 0x4001308: ??? (in /lib/x86_64-linux-gnu/ld-2.19.so)
+   n0: 0 in 5 places, all below massif's threshold (01.00%)
+ n1: 648 0x4EA602B: boost::shared_ptr<boost::runtime::cla::dual_name_parameter_t<boost::unit_test::output_format> > boost::runtime::cla::dual_name_parameter<boost::unit_test::output_format>(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 648 in 3 places, all below massif's threshold (01.00%)
+ n1: 648 0x4EA62BB: boost::shared_ptr<boost::runtime::cla::dual_name_parameter_t<std::string> > boost::runtime::cla::dual_name_parameter<std::string>(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 648 in 3 places, all below massif's threshold (01.00%)
+ n1: 640 0x4EA4FFC: boost::runtime::cla::parser::operator<<(boost::shared_ptr<boost::runtime::cla::parameter>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 640 in 9 places, all below massif's threshold (01.00%)
+ n1: 504 0x4E741AF: std::_Rb_tree<std::string, std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> >, std::_Select1st<std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> > >, std::less<std::string>, std::allocator<std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> > > >::_M_insert_unique_(std::_Rb_tree_const_iterator<std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> > >, std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> > const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 504 in 9 places, all below massif's threshold (01.00%)
+ n1: 480 0x4EA5D5F: boost::shared_ptr<boost::runtime::cla::named_parameter_t<bool> > boost::runtime::cla::named_parameter<bool>(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 480 in 3 places, all below massif's threshold (01.00%)
+ n1: 416 0x404EC8: boost::unit_test::make_test_case(boost::unit_test::callback0<boost::unit_test::ut_detail::unused> const&, boost::unit_test::basic_cstring<char const>) (in /home/zheondre/Desktop/p5/ps5a)
+  n0: 416 in 4 places, all below massif's threshold (01.00%)
+ n1: 384 0x4EA8B1F: boost::runtime::environment::rt_env_detail::new_var_record(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 384 in 7 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=42
+#-----------
+time=2748514
+mem_heap_B=27214
+mem_heap_extra_B=5458
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=2759833
+mem_heap_B=27358
+mem_heap_extra_B=5466
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=2762256
+mem_heap_B=27420
+mem_heap_extra_B=5476
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=2823501
+mem_heap_B=27358
+mem_heap_extra_B=5466
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=2826426
+mem_heap_B=27214
+mem_heap_extra_B=5458
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=2852628
+mem_heap_B=27358
+mem_heap_extra_B=5466
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=2861420
+mem_heap_B=27294
+mem_heap_extra_B=5458
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=2884428
+mem_heap_B=27326
+mem_heap_extra_B=5490
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=2887260
+mem_heap_B=27350
+mem_heap_extra_B=5482
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=2892761
+mem_heap_B=27494
+mem_heap_extra_B=5490
+mem_stacks_B=0
+heap_tree=detailed
+n14: 27494 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8192 0x4E71501: boost::execution_monitor::catch_signals(boost::unit_test::callback0<int> const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n2: 8192 0x4E71D81: boost::execution_monitor::execute(boost::unit_test::callback0<int> const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 8192 0x4E962F0: boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::unit_test::test_case const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 8192 0x4E7FF92: boost::unit_test::framework_impl::visit(boost::unit_test::test_case const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n1: 8192 0x4EAED21: boost::unit_test::traverse_test_tree(boost::unit_test::test_suite const&, boost::unit_test::test_tree_visitor&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+      n1: 8192 0x4E7B4B8: boost::unit_test::framework::run(unsigned long, bool) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+       n1: 8192 0x4E93ED2: boost::unit_test::unit_test_main(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+        n0: 8192 0x402C84: main (in /home/zheondre/Desktop/p5/ps5a)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n3: 6757 0x518B3B7: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+  n1: 5278 0x518B544: std::string::_M_mutate(unsigned long, unsigned long, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n9: 5278 0x518BAEC: std::string::_M_replace_safe(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n0: 1337 in 18 places, all below massif's threshold (01.00%)
+    n1: 772 0x4EA8B7E: boost::runtime::environment::rt_env_detail::new_var_record(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 772 in 7 places, all below massif's threshold (01.00%)
+    n2: 694 0x4E96C51: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n1: 415 0x4E96DAF: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+      n0: 415 in 6 places, all below massif's threshold (01.00%)
+     n0: 279 in 1 place, below massif's threshold (01.00%)
+    n1: 536 0x4E967B8: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 536 in 6 places, all below massif's threshold (01.00%)
+    n1: 405 0x4EA4C9A: boost::runtime::cla::dual_name_policy::dual_name_policy() (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 405 in 6 places, all below massif's threshold (01.00%)
+    n1: 390 0x4E967D0: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 390 in 6 places, all below massif's threshold (01.00%)
+    n1: 390 0x4EA4C78: boost::runtime::cla::dual_name_policy::dual_name_policy() (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 390 in 6 places, all below massif's threshold (01.00%)
+    n2: 390 0x4E9693A: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n1: 364 0x4E96B1E: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+      n0: 364 in 5 places, all below massif's threshold (01.00%)
+     n0: 26 in 1 place, below massif's threshold (01.00%)
+    n2: 364 0x4E96952: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n1: 338 0x4E96B1E: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+      n0: 338 in 5 places, all below massif's threshold (01.00%)
+     n0: 26 in 1 place, below massif's threshold (01.00%)
+  n2: 1254 0x518CADF: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n1: 1039 0x518CEF6: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n0: 1039 in 30 places, all below massif's threshold (01.00%)
+   n0: 215 in 1 place, below massif's threshold (01.00%)
+  n0: 225 in 1 place, below massif's threshold (01.00%)
+ n0: 3929 in 75 places, all below massif's threshold (01.00%)
+ n1: 1536 0x4EA89F6: std::_Rb_tree<boost::unit_test::basic_cstring<char const>, std::pair<boost::unit_test::basic_cstring<char const> const, boost::runtime::environment::rt_env_detail::variable_data>, std::_Select1st<std::pair<boost::unit_test::basic_cstring<char const> const, boost::runtime::environment::rt_env_detail::variable_data> >, std::less<boost::unit_test::basic_cstring<char const> >, std::allocator<std::pair<boost::unit_test::basic_cstring<char const> const, boost::runtime::environment::rt_env_detail::variable_data> > >::_M_insert_unique_(std::_Rb_tree_const_iterator<std::pair<boost::unit_test::basic_cstring<char const> const, boost::runtime::environment::rt_env_detail::variable_data> >, std::pair<boost::unit_test::basic_cstring<char const> const, boost::runtime::environment::rt_env_detail::variable_data> const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n2: 1536 0x4EA8CA9: boost::runtime::environment::rt_env_detail::new_var_record(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n0: 960 in 6 places, all below massif's threshold (01.00%)
+   n1: 576 0x4EA93D8: boost::runtime::environment::rt_env_detail::variable_data& boost::runtime::environment::rt_env_detail::init_new_var<bool, boost::nfp::named_parameter<char, boost::nfp::nfp_detail::no_params_type_t, char> >(boost::unit_test::basic_cstring<char const>, boost::nfp::named_parameter<char, boost::nfp::nfp_detail::no_params_type_t, char>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 576 0x4E9791A: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 576 in 6 places, all below massif's threshold (01.00%)
+ n1: 1296 0x4EA5ADB: boost::shared_ptr<boost::runtime::cla::dual_name_parameter_t<bool> > boost::runtime::cla::dual_name_parameter<bool>(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 1296 in 6 places, all below massif's threshold (01.00%)
+ n1: 1040 0x562742F: __new_exitfn (cxa_atexit.c:101)
+  n1: 1040 0x56274D7: __cxa_atexit (cxa_atexit.c:35)
+   n1: 1040 0x4E7019C: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 1040 0x4010138: call_init.part.0 (dl-init.c:78)
+     n1: 1040 0x4010221: _dl_init (dl-init.c:36)
+      n0: 1040 0x4001308: ??? (in /lib/x86_64-linux-gnu/ld-2.19.so)
+ n1: 1024 0x4EA85EE: std::vector<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> >, std::allocator<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> > > >::_M_insert_aux(__gnu_cxx::__normal_iterator<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> >*, std::vector<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> >, std::allocator<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> > > > >, std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> > const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n2: 1024 0x4EA87D2: boost::unit_test::fixed_mapping<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const>, std::less<boost::unit_test::basic_cstring<char const> > >::add_pair(boost::unit_test::basic_cstring<char const> const&, boost::unit_test::basic_cstring<char const> const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 1024 0x4E7082E: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 1024 0x4010138: call_init.part.0 (dl-init.c:78)
+     n1: 1024 0x4010221: _dl_init (dl-init.c:36)
+      n0: 1024 0x4001308: ??? (in /lib/x86_64-linux-gnu/ld-2.19.so)
+   n0: 0 in 5 places, all below massif's threshold (01.00%)
+ n1: 648 0x4EA602B: boost::shared_ptr<boost::runtime::cla::dual_name_parameter_t<boost::unit_test::output_format> > boost::runtime::cla::dual_name_parameter<boost::unit_test::output_format>(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 648 in 3 places, all below massif's threshold (01.00%)
+ n1: 648 0x4EA62BB: boost::shared_ptr<boost::runtime::cla::dual_name_parameter_t<std::string> > boost::runtime::cla::dual_name_parameter<std::string>(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 648 in 3 places, all below massif's threshold (01.00%)
+ n1: 640 0x4EA4FFC: boost::runtime::cla::parser::operator<<(boost::shared_ptr<boost::runtime::cla::parameter>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 640 in 9 places, all below massif's threshold (01.00%)
+ n1: 504 0x4E741AF: std::_Rb_tree<std::string, std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> >, std::_Select1st<std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> > >, std::less<std::string>, std::allocator<std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> > > >::_M_insert_unique_(std::_Rb_tree_const_iterator<std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> > >, std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> > const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 504 in 9 places, all below massif's threshold (01.00%)
+ n1: 480 0x4EA5D5F: boost::shared_ptr<boost::runtime::cla::named_parameter_t<bool> > boost::runtime::cla::named_parameter<bool>(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 480 in 3 places, all below massif's threshold (01.00%)
+ n1: 416 0x404EC8: boost::unit_test::make_test_case(boost::unit_test::callback0<boost::unit_test::ut_detail::unused> const&, boost::unit_test::basic_cstring<char const>) (in /home/zheondre/Desktop/p5/ps5a)
+  n0: 416 in 4 places, all below massif's threshold (01.00%)
+ n1: 384 0x4EA8B1F: boost::runtime::environment::rt_env_detail::new_var_record(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 384 in 7 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=52
+#-----------
+time=2917214
+mem_heap_B=27494
+mem_heap_extra_B=5490
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=2926168
+mem_heap_B=27398
+mem_heap_extra_B=5474
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=2949176
+mem_heap_B=27430
+mem_heap_extra_B=5506
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=2952008
+mem_heap_B=27454
+mem_heap_extra_B=5498
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=2970592
+mem_heap_B=27598
+mem_heap_extra_B=5506
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=2979578
+mem_heap_B=27502
+mem_heap_extra_B=5490
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=3002586
+mem_heap_B=27534
+mem_heap_extra_B=5522
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=3023639
+mem_heap_B=27678
+mem_heap_extra_B=5530
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=3034089
+mem_heap_B=27510
+mem_heap_extra_B=5498
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=3037329
+mem_heap_B=27549
+mem_heap_extra_B=5499
+mem_stacks_B=0
+heap_tree=detailed
+n15: 27549 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8192 0x4E71501: boost::execution_monitor::catch_signals(boost::unit_test::callback0<int> const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n2: 8192 0x4E71D81: boost::execution_monitor::execute(boost::unit_test::callback0<int> const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 8192 0x4E962F0: boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::unit_test::test_case const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 8192 0x4E7FF92: boost::unit_test::framework_impl::visit(boost::unit_test::test_case const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n1: 8192 0x4EAED21: boost::unit_test::traverse_test_tree(boost::unit_test::test_suite const&, boost::unit_test::test_tree_visitor&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+      n1: 8192 0x4E7B4B8: boost::unit_test::framework::run(unsigned long, bool) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+       n1: 8192 0x4E93ED2: boost::unit_test::unit_test_main(bool (*)(), int, char**) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+        n0: 8192 0x402C84: main (in /home/zheondre/Desktop/p5/ps5a)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n3: 6804 0x518B3B7: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+  n1: 5325 0x518B544: std::string::_M_mutate(unsigned long, unsigned long, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n9: 5325 0x518BAEC: std::string::_M_replace_safe(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n0: 1337 in 18 places, all below massif's threshold (01.00%)
+    n2: 819 0x4EA8B7E: boost::runtime::environment::rt_env_detail::new_var_record(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 467 in 6 places, all below massif's threshold (01.00%)
+     n1: 352 0x4EA93D8: boost::runtime::environment::rt_env_detail::variable_data& boost::runtime::environment::rt_env_detail::init_new_var<bool, boost::nfp::named_parameter<char, boost::nfp::nfp_detail::no_params_type_t, char> >(boost::unit_test::basic_cstring<char const>, boost::nfp::named_parameter<char, boost::nfp::nfp_detail::no_params_type_t, char>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+      n1: 352 0x4E9791A: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+       n0: 352 in 7 places, all below massif's threshold (01.00%)
+    n2: 694 0x4E96C51: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n1: 415 0x4E96DAF: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+      n0: 415 in 6 places, all below massif's threshold (01.00%)
+     n0: 279 in 1 place, below massif's threshold (01.00%)
+    n1: 536 0x4E967B8: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 536 in 6 places, all below massif's threshold (01.00%)
+    n1: 405 0x4EA4C9A: boost::runtime::cla::dual_name_policy::dual_name_policy() (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 405 in 6 places, all below massif's threshold (01.00%)
+    n1: 390 0x4E967D0: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 390 in 6 places, all below massif's threshold (01.00%)
+    n1: 390 0x4EA4C78: boost::runtime::cla::dual_name_policy::dual_name_policy() (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 390 in 6 places, all below massif's threshold (01.00%)
+    n2: 390 0x4E9693A: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n1: 364 0x4E96B1E: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+      n0: 364 in 5 places, all below massif's threshold (01.00%)
+     n0: 26 in 1 place, below massif's threshold (01.00%)
+    n2: 364 0x4E96952: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n1: 338 0x4E96B1E: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+      n0: 338 in 5 places, all below massif's threshold (01.00%)
+     n0: 26 in 1 place, below massif's threshold (01.00%)
+  n2: 1254 0x518CADF: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n1: 1039 0x518CEF6: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n0: 1039 in 33 places, all below massif's threshold (01.00%)
+   n0: 215 in 1 place, below massif's threshold (01.00%)
+  n0: 225 in 1 place, below massif's threshold (01.00%)
+ n0: 3401 in 74 places, all below massif's threshold (01.00%)
+ n1: 1632 0x4EA89F6: std::_Rb_tree<boost::unit_test::basic_cstring<char const>, std::pair<boost::unit_test::basic_cstring<char const> const, boost::runtime::environment::rt_env_detail::variable_data>, std::_Select1st<std::pair<boost::unit_test::basic_cstring<char const> const, boost::runtime::environment::rt_env_detail::variable_data> >, std::less<boost::unit_test::basic_cstring<char const> >, std::allocator<std::pair<boost::unit_test::basic_cstring<char const> const, boost::runtime::environment::rt_env_detail::variable_data> > >::_M_insert_unique_(std::_Rb_tree_const_iterator<std::pair<boost::unit_test::basic_cstring<char const> const, boost::runtime::environment::rt_env_detail::variable_data> >, std::pair<boost::unit_test::basic_cstring<char const> const, boost::runtime::environment::rt_env_detail::variable_data> const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n2: 1632 0x4EA8CA9: boost::runtime::environment::rt_env_detail::new_var_record(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n0: 960 in 6 places, all below massif's threshold (01.00%)
+   n1: 672 0x4EA93D8: boost::runtime::environment::rt_env_detail::variable_data& boost::runtime::environment::rt_env_detail::init_new_var<bool, boost::nfp::named_parameter<char, boost::nfp::nfp_detail::no_params_type_t, char> >(boost::unit_test::basic_cstring<char const>, boost::nfp::named_parameter<char, boost::nfp::nfp_detail::no_params_type_t, char>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 672 0x4E9791A: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n0: 672 in 7 places, all below massif's threshold (01.00%)
+ n1: 1296 0x4EA5ADB: boost::shared_ptr<boost::runtime::cla::dual_name_parameter_t<bool> > boost::runtime::cla::dual_name_parameter<bool>(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 1296 in 6 places, all below massif's threshold (01.00%)
+ n1: 1040 0x562742F: __new_exitfn (cxa_atexit.c:101)
+  n1: 1040 0x56274D7: __cxa_atexit (cxa_atexit.c:35)
+   n1: 1040 0x4E7019C: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 1040 0x4010138: call_init.part.0 (dl-init.c:78)
+     n1: 1040 0x4010221: _dl_init (dl-init.c:36)
+      n0: 1040 0x4001308: ??? (in /lib/x86_64-linux-gnu/ld-2.19.so)
+ n1: 1024 0x4EA85EE: std::vector<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> >, std::allocator<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> > > >::_M_insert_aux(__gnu_cxx::__normal_iterator<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> >*, std::vector<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> >, std::allocator<std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> > > > >, std::pair<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const> > const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n2: 1024 0x4EA87D2: boost::unit_test::fixed_mapping<boost::unit_test::basic_cstring<char const>, boost::unit_test::basic_cstring<char const>, std::less<boost::unit_test::basic_cstring<char const> > >::add_pair(boost::unit_test::basic_cstring<char const> const&, boost::unit_test::basic_cstring<char const> const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 1024 0x4E7082E: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 1024 0x4010138: call_init.part.0 (dl-init.c:78)
+     n1: 1024 0x4010221: _dl_init (dl-init.c:36)
+      n0: 1024 0x4001308: ??? (in /lib/x86_64-linux-gnu/ld-2.19.so)
+   n0: 0 in 5 places, all below massif's threshold (01.00%)
+ n1: 648 0x4EA62BB: boost::shared_ptr<boost::runtime::cla::dual_name_parameter_t<std::string> > boost::runtime::cla::dual_name_parameter<std::string>(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 648 in 3 places, all below massif's threshold (01.00%)
+ n1: 648 0x4EA602B: boost::shared_ptr<boost::runtime::cla::dual_name_parameter_t<boost::unit_test::output_format> > boost::runtime::cla::dual_name_parameter<boost::unit_test::output_format>(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 648 in 3 places, all below massif's threshold (01.00%)
+ n1: 640 0x4EA4FFC: boost::runtime::cla::parser::operator<<(boost::shared_ptr<boost::runtime::cla::parameter>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 640 in 9 places, all below massif's threshold (01.00%)
+ n1: 504 0x4E741AF: std::_Rb_tree<std::string, std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> >, std::_Select1st<std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> > >, std::less<std::string>, std::allocator<std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> > > >::_M_insert_unique_(std::_Rb_tree_const_iterator<std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> > >, std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> > const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 504 in 9 places, all below massif's threshold (01.00%)
+ n1: 480 0x4EA5D5F: boost::shared_ptr<boost::runtime::cla::named_parameter_t<bool> > boost::runtime::cla::named_parameter<bool>(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 480 in 3 places, all below massif's threshold (01.00%)
+ n1: 416 0x4E8A294: std::_Rb_tree<unsigned long, std::pair<unsigned long const, boost::unit_test::test_results>, std::_Select1st<std::pair<unsigned long const, boost::unit_test::test_results> >, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, boost::unit_test::test_results> > >::_M_insert_unique_(std::_Rb_tree_const_iterator<std::pair<unsigned long const, boost::unit_test::test_results> >, std::pair<unsigned long const, boost::unit_test::test_results> const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n1: 416 0x4E8940B: boost::unit_test::results_collector_t::test_unit_start(boost::unit_test::test_unit const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n0: 416 in 2 places, all below massif's threshold (01.00%)
+ n1: 416 0x404EC8: boost::unit_test::make_test_case(boost::unit_test::callback0<boost::unit_test::ut_detail::unused> const&, boost::unit_test::basic_cstring<char const>) (in /home/zheondre/Desktop/p5/ps5a)
+  n0: 416 in 4 places, all below massif's threshold (01.00%)
+ n1: 408 0x4EA8B1F: boost::runtime::environment::rt_env_detail::new_var_record(boost::unit_test::basic_cstring<char const>) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n0: 408 in 7 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=62
+#-----------
+time=3039774
+mem_heap_B=26324
+mem_heap_extra_B=5068
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=3043305
+mem_heap_B=23937
+mem_heap_extra_B=4591
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=3045844
+mem_heap_B=23591
+mem_heap_extra_B=4497
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=3053371
+mem_heap_B=22627
+mem_heap_extra_B=4213
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=3055802
+mem_heap_B=20544
+mem_heap_extra_B=3584
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=3058299
+mem_heap_B=18540
+mem_heap_extra_B=2940
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=3060764
+mem_heap_B=16546
+mem_heap_extra_B=2294
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=3063224
+mem_heap_B=14470
+mem_heap_extra_B=1618
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=3065680
+mem_heap_B=12491
+mem_heap_extra_B=1005
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=3069306
+mem_heap_B=2216
+mem_heap_extra_B=544
+mem_stacks_B=0
+heap_tree=detailed
+n4: 2216 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1040 0x562742F: __new_exitfn (cxa_atexit.c:101)
+  n1: 1040 0x56274D7: __cxa_atexit (cxa_atexit.c:35)
+   n1: 1040 0x4E7019C: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+    n1: 1040 0x4010138: call_init.part.0 (dl-init.c:78)
+     n1: 1040 0x4010221: _dl_init (dl-init.c:36)
+      n0: 1040 0x4001308: ??? (in /lib/x86_64-linux-gnu/ld-2.19.so)
+ n9: 504 0x4E741AF: std::_Rb_tree<std::string, std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> >, std::_Select1st<std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> > >, std::less<std::string>, std::allocator<std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> > > >::_M_insert_unique_(std::_Rb_tree_const_iterator<std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> > >, std::pair<std::string const, boost::unit_test::callback1<boost::debug::dbg_startup_info const&, boost::unit_test::ut_detail::unused> > const&) (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+  n1: 56 0x4E6E41F: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 56 0x4010138: call_init.part.0 (dl-init.c:78)
+    n1: 56 0x4010221: _dl_init (dl-init.c:36)
+     n0: 56 0x4001308: ??? (in /lib/x86_64-linux-gnu/ld-2.19.so)
+  n1: 56 0x4E6E58B: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 56 0x4010138: call_init.part.0 (dl-init.c:78)
+    n1: 56 0x4010221: _dl_init (dl-init.c:36)
+     n0: 56 0x4001308: ??? (in /lib/x86_64-linux-gnu/ld-2.19.so)
+  n1: 56 0x4E6E2B3: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 56 0x4010138: call_init.part.0 (dl-init.c:78)
+    n1: 56 0x4010221: _dl_init (dl-init.c:36)
+     n0: 56 0x4001308: ??? (in /lib/x86_64-linux-gnu/ld-2.19.so)
+  n1: 56 0x4E6E641: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 56 0x4010138: call_init.part.0 (dl-init.c:78)
+    n1: 56 0x4010221: _dl_init (dl-init.c:36)
+     n0: 56 0x4001308: ??? (in /lib/x86_64-linux-gnu/ld-2.19.so)
+  n1: 56 0x4E6E369: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 56 0x4010138: call_init.part.0 (dl-init.c:78)
+    n1: 56 0x4010221: _dl_init (dl-init.c:36)
+     n0: 56 0x4001308: ??? (in /lib/x86_64-linux-gnu/ld-2.19.so)
+  n1: 56 0x4E6E4D5: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 56 0x4010138: call_init.part.0 (dl-init.c:78)
+    n1: 56 0x4010221: _dl_init (dl-init.c:36)
+     n0: 56 0x4001308: ??? (in /lib/x86_64-linux-gnu/ld-2.19.so)
+  n1: 56 0x4E6E1FD: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 56 0x4010138: call_init.part.0 (dl-init.c:78)
+    n1: 56 0x4010221: _dl_init (dl-init.c:36)
+     n0: 56 0x4001308: ??? (in /lib/x86_64-linux-gnu/ld-2.19.so)
+  n1: 56 0x4E6E140: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 56 0x4010138: call_init.part.0 (dl-init.c:78)
+    n1: 56 0x4010221: _dl_init (dl-init.c:36)
+     n0: 56 0x4001308: ??? (in /lib/x86_64-linux-gnu/ld-2.19.so)
+  n1: 56 0x4E6E092: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+   n1: 56 0x4010138: call_init.part.0 (dl-init.c:78)
+    n1: 56 0x4010221: _dl_init (dl-init.c:36)
+     n0: 56 0x4001308: ??? (in /lib/x86_64-linux-gnu/ld-2.19.so)
+ n0: 344 in 85 places, all below massif's threshold (01.00%)
+ n2: 328 0x518B3B7: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+  n2: 328 0x518CADF: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n11: 328 0x518CEF6: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n1: 35 0x4E6DD74: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n1: 35 0x4010138: call_init.part.0 (dl-init.c:78)
+      n1: 35 0x4010221: _dl_init (dl-init.c:36)
+       n0: 35 0x4001308: ??? (in /lib/x86_64-linux-gnu/ld-2.19.so)
+    n1: 35 0x4E6D7DF: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n1: 35 0x4010138: call_init.part.0 (dl-init.c:78)
+      n1: 35 0x4010221: _dl_init (dl-init.c:36)
+       n0: 35 0x4001308: ??? (in /lib/x86_64-linux-gnu/ld-2.19.so)
+    n1: 34 0x4E6D503: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n1: 34 0x4010138: call_init.part.0 (dl-init.c:78)
+      n1: 34 0x4010221: _dl_init (dl-init.c:36)
+       n0: 34 0x4001308: ??? (in /lib/x86_64-linux-gnu/ld-2.19.so)
+    n1: 34 0x4E6D66F: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n1: 34 0x4010138: call_init.part.0 (dl-init.c:78)
+      n1: 34 0x4010221: _dl_init (dl-init.c:36)
+       n0: 34 0x4001308: ??? (in /lib/x86_64-linux-gnu/ld-2.19.so)
+    n1: 34 0x4E6DC09: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n1: 34 0x4010138: call_init.part.0 (dl-init.c:78)
+      n1: 34 0x4010221: _dl_init (dl-init.c:36)
+       n0: 34 0x4001308: ??? (in /lib/x86_64-linux-gnu/ld-2.19.so)
+    n1: 34 0x4E6D347: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n1: 34 0x4010138: call_init.part.0 (dl-init.c:78)
+      n1: 34 0x4010221: _dl_init (dl-init.c:36)
+       n0: 34 0x4001308: ??? (in /lib/x86_64-linux-gnu/ld-2.19.so)
+    n1: 34 0x4E6DAA9: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n1: 34 0x4010138: call_init.part.0 (dl-init.c:78)
+      n1: 34 0x4010221: _dl_init (dl-init.c:36)
+       n0: 34 0x4001308: ??? (in /lib/x86_64-linux-gnu/ld-2.19.so)
+    n1: 32 0x4E6DED9: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n1: 32 0x4010138: call_init.part.0 (dl-init.c:78)
+      n1: 32 0x4010221: _dl_init (dl-init.c:36)
+       n0: 32 0x4001308: ??? (in /lib/x86_64-linux-gnu/ld-2.19.so)
+    n1: 28 0x4E6D397: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n1: 28 0x4010138: call_init.part.0 (dl-init.c:78)
+      n1: 28 0x4010221: _dl_init (dl-init.c:36)
+       n0: 28 0x4001308: ??? (in /lib/x86_64-linux-gnu/ld-2.19.so)
+    n1: 28 0x4E6D94C: ??? (in /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0)
+     n1: 28 0x4010138: call_init.part.0 (dl-init.c:78)
+      n1: 28 0x4010221: _dl_init (dl-init.c:36)
+       n0: 28 0x4001308: ??? (in /lib/x86_64-linux-gnu/ld-2.19.so)
+    n0: 0 in 23 places, all below massif's threshold (01.00%)
+   n0: 0 in 1 place, below massif's threshold (01.00%)
+  n0: 0 in 2 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=72
+#-----------
+time=3079854
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
