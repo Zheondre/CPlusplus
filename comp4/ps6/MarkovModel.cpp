@@ -24,7 +24,6 @@ std::string MarkovModel::gen(std::string kgram, int T) {
 }
 
 void MarkovModel::printmap(std::ostream &out){
-
   for(std::map< std::string, int >::iterator it = _kgrams.begin(); it != _kgrams.end(); it++)
     out << it->first << " "<< it->second << "\n" ;
 }
@@ -49,7 +48,7 @@ int MarkovModel::freq(std::string kgram, char c){
 
 char MarkovModel::randk(std::string kgram){
   int stsize = (unsigned)_s.size();
-  if(kgram.size() != (unsigned)_order)
+  if (kgram.size() != (unsigned)_order)
     throw
       std::runtime_error(" Kgram is not of length  k");
 
