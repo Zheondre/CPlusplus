@@ -117,50 +117,61 @@ void MarkovModel::sets() {
 
 MarkovModel::MarkovModel(std::string input, int k) { 
   int i, j, kk, pos, szofinpt; std::string x;
-
+  
   szofinpt = (unsigned)input.size();
-
   _alphabet = input;
+  
   _order = k;
-  kk = k;
-  pos = szofinpt - k;
+  if(k == 0){ 
   
-  for (i = 0; i < szofinpt-k; i++) {
-    findAmount(input.substr(i,k));
-    findAmount(input.substr(i,k+1));
+  
+  
+  
   }
-  
-  x = input.substr(pos,kk);
-  findAmount(x);
-  x.append(input.substr(0,1)); //K+1
-  findAmount(x);
-  pos = 0;
-  j = 1;
-  
-  for (i = input.size()-k; i< szofinpt; i++) {
-    kk--;
-    x = input.substr(i,kk);
-    x.append(input.substr(pos,j));
-    pos++; j++;
-    findAmount(x);
-    
-    x.append(input.substr(pos,1));
-    findAmount(x);//K+!	
-  }
-  std::string check; 
-  sets();
-  int sof_s = (unsigned)_s.size();
-  for(std::map< std::string,int>::iterator it = _kgrams.begin(); it != _kgrams.end(); ++it) {
-    if( (unsigned)it->first.size() == (unsigned)k ){ 
-      x = it->first;
-      for( i = 0; i < sof_s; i++) {
-	check = it->first + _s[i];
-	
-	if ( _kgrams.find(check) == _kgrams.end() ) {
-	  _kgrams[check] = 0;
-	}                                                                                     
-      }
-    }
+  else{
+
+	  _alphabet = input;
+	  _order = k;
+	  kk = k;
+	  pos = szofinpt - k;
+	  
+	  for (i = 0; i < szofinpt-k; i++) {
+		findAmount(input.substr(i,k));
+		findAmount(input.substr(i,k+1));
+	  }
+	  
+	  x = input.substr(pos,kk);
+	  findAmount(x);
+	  x.append(input.substr(0,1)); //K+1
+	  findAmount(x);
+	  pos = 0;
+	  j = 1;
+	  
+	  for (i = input.size()-k; i< szofinpt; i++) {
+		kk--;
+		x = input.substr(i,kk);
+		x.append(input.substr(pos,j));
+		pos++; j++;
+		findAmount(x);
+		
+		x.append(input.substr(pos,1));
+		findAmount(x);//K+!	
+	  }
+	  std::string check; 
+	  sets();
+	  int sof_s = (unsigned)_s.size();
+	  for(std::map< std::string,int>::iterator it = _kgrams.begin(); it != _kgrams.end(); ++it) {
+		if ((unsigned)it->first.size() == (unsigned)k){ 
+			x = it->first;
+			for( i = 0; i < sof_s; i++) {
+				check = it->first + _s[i];
+		
+				if ( _kgrams.find(check) == _kgrams.end() ) {
+					_kgrams[check] = 0;
+				}                                                                                     
+		  }
+		}
+	  }
   }
 }
 
