@@ -122,16 +122,12 @@ MarkovModel::MarkovModel(std::string input, int k) {
   _alphabet = input;
   
   _order = k;
-  if(k == 0){ 
-  
-  
-  
-  
+  if(k == 0){
+	  for( i = 0; i < szofinpt; i++)
+		findAmount(input.substr(i,k));
   }
   else{
-
-	  _alphabet = input;
-	  _order = k;
+	  
 	  kk = k;
 	  pos = szofinpt - k;
 	  
