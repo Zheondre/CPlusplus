@@ -1,6 +1,5 @@
 #ifndef _MarkovModel_
 #define _MarkovModel_
-
 //  Copyright 2015 Z'heondre Calcano
 /*
  * MarkovModel.hpp
@@ -17,25 +16,27 @@
 
 class MarkovModel {
   int _order;
-  map < string, int > _kgrams;  // must #include <map>
-  string _alphabet;
-  vector< string > _s;
+  std::map< std::string, int> _kgrams;
+  std::string _alphabet;
+  std::vector< std::string > _s;
   
  public:
-  MarkovModel(string text, int k);
+  MarkovModel(std::string text, int k);
   ~MarkovModel();
   int order();
-  int freq(string kgram);
-  int freq(string kgram, char c);
-  char randk(string kgram);
-  string gen(string kgram, int T);
-
+  int freq(std::string kgram);
+  int freq(std::string kgram, char c);
+  char randk(std::string kgram);
+  std::string gen(std::string kgram, int T);
+  void sets();
+  void findAmount(std::string x);
+  void printmap(std::ostream &out);
   friend std::ostream& operator<< (std::ostream &out, MarkovModel &mm){
 
-    out << MarkovModel._order << "\n" << MarkovModel._alphabet << "\n"; 
-
-    for(map< string,int>::iterator it = _kgrams.begin(); it != _kgrams.end(); ++it)
-      out << it->first << " "<< it->second << "\n" ;
+    out << mm._order << "\n" << mm._alphabet << "\n"; 
+    mm.printmap(out); 
+    return out;
+  }
 };
 
 #endif 
