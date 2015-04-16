@@ -22,7 +22,9 @@ class MarkovModel {
   
  public:
   MarkovModel(std::string text, int k);
-  ~MarkovModel();
+  ~MarkovModel(){
+    _kgrams.clear();
+  };
   int order();
   int freq(std::string kgram);
   int freq(std::string kgram, char c);
