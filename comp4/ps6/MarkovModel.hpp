@@ -19,12 +19,11 @@ class MarkovModel {
   std::map< std::string, int> _kgrams;
   std::string _alphabet;
   std::vector< std::string > _s;
-  
  public:
   MarkovModel(std::string text, int k);
-  ~MarkovModel(){
+  ~MarkovModel() {
     _kgrams.clear();
-  };
+  }
   int order();
   int freq(std::string kgram);
   int freq(std::string kgram, char c);
@@ -34,11 +33,9 @@ class MarkovModel {
   void findAmount(std::string x);
   void printmap(std::ostream &out);
   friend std::ostream& operator<< (std::ostream &out, MarkovModel &mm){
-
-    out << mm._order << "\n" << mm._alphabet << "\n"; 
-    mm.printmap(out); 
+    out << mm._order << "\n" << mm._alphabet << "\n";
+    mm.printmap(out);
     return out;
   }
 };
-
-#endif 
+#endif

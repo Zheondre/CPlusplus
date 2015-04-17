@@ -1,5 +1,5 @@
-//  Copyright 2015 Zheondre Calcano 
- 
+//  Copyright 2015 Zheondre Calcano
+#include <map>
 #include <exception>
 #include <stdexcept>
 #include <string>
@@ -7,13 +7,11 @@
 #include <vector>
 #include <algorithm>
 #include "MarkovModel.hpp"
-#include <map>
 
-int main( int argc, char *argv[]){ 
-
+int main(int argc, char *argv[]) {
 std::string a;
 std::cin >> a;
-MarkovModel temp( a, 2);
-temp.gen("ba", 10); 
+MarkovModel temp(a, 1);
+temp.gen("g", 10);
 std::cout << temp << std::endl;
 }
