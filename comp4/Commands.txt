@@ -1,0 +1,7 @@
+g++ (filename).o -o (file-name) -lsfml-graphics -lsfml-window -lsfml-system
+
+g++ -c (filename).cpp -Wall -Werror -ansi -pedantic -lboost_unit_test_framework -g
+
+cpplint.py --filter=-runtime/references,-build/header_guard --extensions=cpp,hpp
+
+tar czvf <archive-file-name>.tar.gz (name of dir)
