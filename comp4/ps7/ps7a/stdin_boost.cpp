@@ -12,7 +12,6 @@ using namespace boost;
 int main ()
 {
 
-
   string s, rs;
   regex e;
 
