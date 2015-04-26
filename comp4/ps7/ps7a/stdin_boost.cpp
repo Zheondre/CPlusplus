@@ -1,16 +1,21 @@
 // compile with 
 // g++ stdin_boost.cpp -lboost_regex
+
 // regex_match example
 #include <iostream>
 #include <string>
 #include <boost/regex.hpp>
+
 using namespace std;
 using namespace boost;
 
-int main () {
-	
+int main ()
+{
+
+
   string s, rs;
   regex e;
+
   // see http://www.boost.org/doc/libs/1_55_0/boost/regex/v4/error_type.hpp
   cout << "Here are some helpful error codes you may encounter\n";
   cout << "while constructing your regex\n";
@@ -63,8 +68,10 @@ int main () {
     }
 
     cout << endl << endl;
+
     cout << "Enter line > ";
   }
 
+  
   return 0;
 }
