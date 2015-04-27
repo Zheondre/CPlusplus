@@ -3,3 +3,5 @@ bob is taking a poop
 then bob tried turning up 
 bob is da man hoe
 bruuuuuhhhh.
+2014-01-26 14:02:39: (log.c.166) server started
+2014-01-26 14:05:24.465:INFO:oejs.AbstractConnector:Started  HYPERLINK "mailto:SelectChannelConnector@0.0.0.0:9080" SelectChannelConnector@0.0.0.0:9080
