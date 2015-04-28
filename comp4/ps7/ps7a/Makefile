@@ -1,13 +1,10 @@
-all: TextGenerator
+all: ps7a
 
-TextGenerator: TextGenerator.o MarkovModel.o
-	g++ TextGenerator.o MarkovModel.o -o TextGenerator -lboost_unit_test_framework -g
+main: main.o
+	g++ main.cpp -o ps7a -lboost_unit_test_framework -lboost_regex -g
 
-TextGenerator.o: TextGenerator.cpp MarkovModel.hpp
-	g++ -c TextGenerator.cpp -Wall -Werror -ansi -pedantic -lboost_unit_test_framework -g
-
-MarkovModel.o: MarkovModel.cpp MarkovModel.hpp
-	g++ -c MarkovModel.cpp -Wall -Werror -ansi -pedantic -lboost_unit_test_framework -g
+main.o: main.cpp
+	g++ -c main.cpp -Wall -Werror -ansi -pedantic -lboost_unit_test_framework -lboost_regex -g
 
 clean:
-	rm *.o TextGenerator *~
+	rm *.o ps7a *~

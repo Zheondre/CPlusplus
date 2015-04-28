@@ -4,9 +4,10 @@
  **********************************************************************/
 
 Name:
-
+Angel Calcano
 
 Hours to complete assignment (optional):
+20
 
 
 /**********************************************************************
@@ -15,34 +16,39 @@ Hours to complete assignment (optional):
  *  Indicate which parts you think are working, and describe
  *    how you know that they're working.
  **********************************************************************/
-
+I did not complete the whole assignment. 
 
 
 /**********************************************************************
  *  Copy here all regex's you created for parsing the file, 
  *  and explain individually what each ones does.
  **********************************************************************/
-
-
+(?:(?:([01]?\\d|2[0-3]):)?([0-5]?\\d):)?([0-5]?\\d)$";
+[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]).";
+"([01][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])(?:\\.([0-9]{1,4}))?";
+tried using these to get the date with and with out mm and they didn't work. 
 
 /**********************************************************************
  *  Describe your overall approach for solving the problem.
  *  100-200 words.
  **********************************************************************/
-
+I was going to try to look for each starting point based on log.c.(166) but what I used 
+wasnt working. since I spent alot of time trying to get it to work I ended up being three
+days late and decided to give up/ 
 
 
 /**********************************************************************
  *  List whatever help (if any) you received from lab TAs,
  *  classmates, or anyone else.
  **********************************************************************/
-
+Didnt get any help, I used some code from the discussion to see the difference between
+my regex to a working one. 
 
 
 /**********************************************************************
  *  Describe any serious problems you encountered.                    
  **********************************************************************/
-
+Getting regex to work.
 
 
 /**********************************************************************
