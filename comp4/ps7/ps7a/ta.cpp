@@ -1,18 +1,21 @@
 #include <iostream>
 #include <string>
 #include <boost/regex.hpp>
-
+#include <boost/date_time.hpp)
 using namespace std;
 using namespace boost;
 
 int main (){
-  //to get time with out mm
-  //month, day, year, hours, minutes, seconds
-  string m, d, y, h, m,s;
-  string t = ".*(\\d{2}):(\\d{2}):(\\d{2}).*";
+
+  //using namespace boost::gregorian;
+  //using namespace boost::posix_time;
+
+  string t = "(\\d{2}):(\\d{2}):(\\d{2})";
+  //(\d{2}):(\d{2}):(\d{2})
   string tmm= "(\\d{2}):(\\d{2}):(\\d{2}\\.\\d{3})";
+  //(\d{2}):(\d{2}):(\d{2})\.(\d{3})
   string gd = "(\\d{4})-(\\d{2})-(\\d{2})";
- //will grab the time, and give you all the peices to the time and mm secs.
+
   string f = ".*log.c.166.*"; // will only find line with this text in it use regmatch
   string fs = "2014-01-26 09:55:07: (log.c.166) server started";
   //use regmatch
@@ -25,16 +28,47 @@ int main (){
   while( true ) { 
     cin >> s; 
     regex e(s);
-    bool match = regex_match (fsa,sm,e);
-    //bool match = regex_search(fs,sm, e);
+    //bool match = regex_match (fs,sm,e);
+    bool match = regex_search(fsb,sm, e);
     cout<<( match? "Matched" : "Not matched") <<endl<< endl;
     if (sm.size() > 0) {
       cout << "the matches were: "<<endl;
       for (unsigned i=0; i<sm.size(); ++i) {
 	cout << "[" << sm[i] << "] " << endl;
-	temp =sm[0];
-	cout << sm[0];
+
       }
+      /*
+        boost::postix_time::time_duration ta(sm[1], sm[2], sm[3]);
+	boost::postix_time::time_duration tb(sn[1], sn[2], sn[3]); 
+	tb += milliseconds( (long)sn[4]);
+	tb = tb - ta ;
+	cout <<tb.total_miliseconds()<< endl;
+      */
     }
   } 
 }
+
+/* 
+
+time(){
+using namespace boost::gregorian;
+using namespace boost::posix_time;
+
+boost::postix_time::time_duration ta(sm[1],sm[2],sm[3]) 
+boost::postix_time::time_duration tb(sn[1], sn[2], sn[3]) 
+tb = milliseconds( (long)sn[4])
+
+ta = ta - tb ;
+
+ta.total_miliseconds();
+
+
+
+
+}
+
+
+
+
+
+*/
