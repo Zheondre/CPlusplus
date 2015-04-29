@@ -1,6 +1,6 @@
 all: ps7a
 
-main: main.o
+ps7a: main.o
 	g++ main.cpp -o ps7a -lboost_unit_test_framework -lboost_regex -g
 
 main.o: main.cpp

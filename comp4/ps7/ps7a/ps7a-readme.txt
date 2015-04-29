@@ -16,7 +16,8 @@ Hours to complete assignment (optional):
  *  Indicate which parts you think are working, and describe
  *    how you know that they're working.
  **********************************************************************/
-I did not complete the whole assignment. 
+I did not complete the whole assignment. I went back to do more work on it 
+since I had seen I read the directions wrong it almost works. 
 
 
 /**********************************************************************
@@ -27,6 +28,17 @@ I did not complete the whole assignment.
 [0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]).";
 "([01][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])(?:\\.([0-9]{1,4}))?";
 tried using these to get the date with and with out mm and they didn't work. 
+
+
+
+after  I went back to do more work I used the following 
+ rs = ".*log.c.166.*";
+  rsa = ".*oejs.AbstractConnector:Started SelectChannelConnector.*";
+  string t = "(\\d{2}):(\\d{2}):(\\d{2})";
+  //(\d{2}):(\d{2}):(\d{2})
+  string tmm= "(\\d{2}):(\\d{2}):(\\d{2})\\.(\\d{3})";
+  //(\d{2}):(\d{2}):(\d{2})\.(\d{3})
+  string gd = "(\\d{4})-(\\d{2})-(\\d{2})";
 
 /**********************************************************************
  *  Describe your overall approach for solving the problem.
