@@ -14,13 +14,7 @@ using namespace std; //NOLINT
 using namespace boost; //NOLINT
 
 void efname( string &name ) { name += ".rpt";}
-void wtof( string name, string info){
-  std::fstream outfile;
-  outfile.open(name.c_str(), std::fstream::app);
-  cout << info;
-  outfile << info;
-  outfile.close();
-}
+
 void parse(string fn ){ 
   int linenum, completeboot; 
   vector< int > holdval;
@@ -30,7 +24,8 @@ void parse(string fn ){
   string ufn, filename, lif, rs, rsa, temp,boottime;
   ufn = fn;
   efname(fn);
- 
+  std::fstream outfile;
+  outfile.open(fn.c_str());
   rs = ".*log.c.166.*";
   rsa = ".*oejs.AbstractConnector:Started SelectChannelConnector.*";
   string t = "(\\d{2}):(\\d{2}):(\\d{2})";
@@ -40,7 +35,7 @@ void parse(string fn ){
   string gd = "(\\d{4})-(\\d{2})-(\\d{2})";
   
   boottime= "Boot Time: ";
-  wtof(fn,"Device Boot Repot \n " + ufn + "\n"); 
+  outfile << "Device Boot Repot \n" + ufn + "\n\n";
   std::ifstream infile(ufn.c_str());
   smatch sm, sn, so,sp;
   regex e = regex(rs);
@@ -50,33 +45,32 @@ void parse(string fn ){
   regex getdate(gd);
   regex getdatea(gd);
   std::ostringstream ss;
-  
-  linenum = completeboot = 0; 
-  
+  linenum = completeboot = 0;
   while(getline(infile, lif)){
     linenum++;
     if(regex_match(lif,e)){
       if( completeboot == 1){ //badboot
-	wtof(fn, "**** Incomplete boot ****\n");
-	  completeboot = 0;
-      } else{ // startboot
-	wtof(fn, "=== Device boot ===\n");
-	regex_search(lif, sm, etime);
-	regex_search(lif, so, getdate);
-	holdval[0] = boost::lexical_cast<int>(sm[1]);
-	holdval[1] = boost::lexical_cast<int>(sm[2]);
-	holdval[2] = boost::lexical_cast<int>(sm[3]);	
-	ss << linenum ;
-	temp = ss.str();
-	temp += "(" + ufn + "):";
-	temp += so[0] + " " + sm[0] + " Boot Start \n";
-	wtof(fn,temp);
-	completeboot = 1;
-	temp.clear();
-      }
+	outfile << "**** Incomplete boot ****\n\n";
+	completeboot = 0;  
+      } 
+      //startboot
+      outfile << "=== Device boot ===\n";
+      regex_search(lif, sm, etime);
+      regex_search(lif, so, getdate);
+      holdval[0] = boost::lexical_cast<int>(sm[1]);
+      holdval[1] = boost::lexical_cast<int>(sm[2]);
+      holdval[2] = boost::lexical_cast<int>(sm[3]);
+      ss.str("");
+      ss << linenum ;
+      temp = ss.str();
+      temp += "(" + ufn + "):";
+      temp += so[0] + " " + sm[0] + " Boot Start \n";
+      outfile << temp;
+      completeboot = 1;
+      temp.clear();
     }
     if(regex_match(lif,ea)){ //good boot
-
+      ss.str("");
       ss << linenum;
       temp = ss.str(); // linenum
       temp += "(" + ufn + "):";
@@ -91,14 +85,16 @@ void parse(string fn ){
       //tb += boost::posix_time::millisec(boost::lexical_cast<int>(sn[4]));
       tb = tb - ta;
       temp += sp[0] + " " + sn[0] + " " + "Boot Completed \n";
-      wtof(fn,temp);
+      outfile << temp;
+      ss.str("");
       ss << tb.total_milliseconds();
-      wtof(fn, boottime + ss.str()+"\n");
+      outfile <<"\t"+ boottime + ss.str() + " ms\n\n";
       completeboot = 0;
       temp.clear();
 	}
     // cout<< "No match on current line."<<endl;
-  }  
+  }
+  outfile.close();
 }
 int main(int argc, char *argv[]) {
   string filename;
