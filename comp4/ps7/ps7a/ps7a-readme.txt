@@ -19,6 +19,16 @@ Hours to complete assignment (optional):
 I did not complete the whole assignment. I went back to do more work on it 
 since I had seen I read the directions wrong it almost works. 
 
+Eventually I completed the assignment. I had a lot of wierd errors. 
+
+Such as I couldnt create files that didnt exist: aparatleay you have to use
+outfile.open("file.txt",fstream::out) in order for it to work. I was only using 
+outfile.open("file.txt").
+
+the fail boot kept trying to calculate an successful boot from another successful boot: figured out why I had an if then else based on if a another start up boost was found before a completed boot. 
+
+Another problem I ran in to was that for each line number it kept concatinating in a string in printing out. I fixed this by clearing out the ostringstream variable since I was using it to conver an int in to a string. 
+
 
 /**********************************************************************
  *  Copy here all regex's you created for parsing the file, 
@@ -60,6 +70,10 @@ my regex to a working one.
 /**********************************************************************
  *  Describe any serious problems you encountered.                    
  **********************************************************************/
+Understanding the directions, main reason why I passed the assignment in so 
+late was because it took me a while to understand what was being asked to do 
+and what the requirments were. 
+
 Getting regex to work.
 
 

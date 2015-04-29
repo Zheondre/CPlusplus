@@ -1,5 +1,5 @@
 Device Boot Repot 
- device5_intouch.log
+device5_intouch.log
 
 === Device boot ===
 31063(device5_intouch.log):2014-01-26 09:55:07 Boot Start 
@@ -110,4 +110,5 @@ Device Boot Repot
 41694(device5_intouch.log):2014-02-03 14:02:34 Boot Start 
 41802(device5_intouch.log):2014-02-03 14:05:18.597 Boot Completed 
 	Boot Time: 164000 ms
+
 
