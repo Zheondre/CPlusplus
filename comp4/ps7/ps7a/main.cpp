@@ -1,84 +1,108 @@
+//  Copyright 2015 Zheondre Calcano
+#include <exception>
+#include <stdexcept>
 #include <fstream>
 #include <iostream>
 #include <string>
+#include <vector>
 #include <boost/regex.hpp>
+// g++ main.cpp -lboost_regex
 
-using namespace std;
-using namespace boost;
+using namespace std; //NOLINT
+using namespace boost; //NOLINT
 
-string tme(string& linefromfile){
-  //get time and date from current file
-  
-  string tandmm = "([01][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])(?:\\.([0-9]{1,4}))?";
-  string t = "^(?:(?:([01]?\\d|2[0-3]):)?([0-5]?\\d):)?([0-5]?\\d)$";
-  
-  //std::regex e ("(sub)(.*)"); example
-  
-  regex e(Da);
-  smatch sm;    // same as std::match_results<string::const_iterator> sm;
-  regex_match (linefromfile,sm,e);
-  string temp = sm[0] ;
-  cout << temp << endl;
+void efname( string &name ) { name += ".out";}
+void wtof( string name, string info){ 
+  std::ofstream outfile;
+  outfile.open(name, std::ios_base::app);
+  outfile << info;
 }
-
-void parse(string &fn, vector< string > &names ){ 
-  int linenum; 
-  regex e;
-  string filename, lif, rs, temp;
-  string t = ("([0-9]+)-([0-9]+)-([0- 9]+)""([0-9]+):([0-9]+):([0-9]+)"".*AbstractConnector:Started SelectChannelConnector.*")
-  // works "([0-9]+)-([0-9]+)-([0-9]+).*"
-  
-  //rs = "( )";
-  //temp = "(bob)(.*)"; <- works
-  std::ifstream infile(fn.c_str());
-  e = regex("(\\W|^)(log)(\\W|$)");
+void parse(string fn ){ 
+  int linenum, completeboot, he, hf, hg;; 
+  int vector<int> holdval;
+  holdval.push_back(0);
+  holdval.push_back(0);
+  holdval.push_back(0);  
+  string ufn, filename, lif, rs, rsa, temp;
+  ufn = fn;
+  efname(fn);
  
-  linenum = 0; 
+  rs = ".*log.c.166.*"
+  rsa = ".*oejs.AbstractConnector:Started SelectChannelConnector.*";
+  string t = "(\\d{2}):(\\d{2}):(\\d{2})";
+  //(\d{2}):(\d{2}):(\d{2})
+  string tmm= "(\\d{2}):(\\d{2}):(\\d{2})\\.(\\d{3})";
+  //(\d{2}):(\d{2}):(\d{2})\.(\d{3})
+  string gd = "(\\d{4})-(\\d{2})-(\\d{2})";
+  
+  boottime= "Boot Time: ";
+  wtof(fn,"Device Boot Repot \n " + uf + "\n"); 
+  std::ifstream infile(fn.c_str());
+  smatch sm, sn, so,sp;
+  regex e = regex(rs);
+  regex ea = regex(rsa); 
+  regex etime(t);
+  regex f(tmm);
+  regex getdate(gd);
+  regex getdatea(gd);
+  
+  linenum = completeboot = 0; 
 
-  while(getline(infile, lif)){
-   
+ while(getline(infile, lif)){
+	linenum++;
     if(regex_match(lif,e)){
-      cout << linenum << " "<< lif << endl;//works
-      tme(lif);  
-    }    
-    linenum++;
+		if( completeboot == 1){ //badboot
+			wtof(fn, "**** Incomplete boot ****\n")
+			completeboot = 0;
+		} else{ // startboot
+			wtof(fn, "=== Device boot ===\n");
+			regex_search(lif, sm, etime);
+			regex_search(lif, so, getdate);
+			holdval[0] = boost::lexical_cast<int>(sm[1]);
+			holdval[1] = boost::lexical_cast<int>(sm[2]);
+			holdval[2] = boost::lexical_cast<int>(sm[3]);	
+			temp = std::to_string(linenum); // linenum
+			temp += "(" + ufn + "):";
+			temp += so[0] + " " + sm[0] + " Boot Start \n";
+			wtof(fn,temp);
+			completeboot = 1;
+			temp = "";
+		}
+    }
+	if(regex_match(lif,e)){ //good boot
+		temp = std::to_string(linenum); // linenum
+		temp += "(" + ufn + "):";
+		regex_search(lif, sn, f);
+		regex_search(lif, sp, getdatea);
+		//I should put a case to check to see if the vector values are 
+		//equvalent to 0 but I ran out of time.
+		boost::posix_time::time_duration ta(holdval[0],holdval[1],holdval[2])
+		boost::posix_time::time_duration tb(boost::lexical_cast<int>(sn[1]),
+											boost::lexical_cast<int>(sn[2]),
+											boost::lexical_cast<int>(sn[3]));
+		tb += boost::posix_time::millisec(boost::lexical_cast<int>(sn[4]));
+		tb = tb - ta;
+											
+		temp += sp[0] + " " + sn[0] + " " + "Boot Completed";
+		wtof(fn,temp);
+		tb.total_milliseconds()
+		wtof(fn, boottime + std::to_string(tb.total_milliseconds()));
+		completeboot = 0;
+		temp = ""
+	}
     cout<< "No match on current line."<<endl;
-  } 
+  }  
 }
-
-//int totaltime(){ 
-//}
 
 int main (int argc, char *argv[]) {
   string filename;
-  vector< strings > names
-names.push_back("Logging");
-names.push_back("DatabaseInitialize");
-names.push_back("MessagingService");
-names.push_back("HealthMonitorService");
-names.push_back("Persistence");
-names.push_back("ConfigurationService");
-names.push_back("LandingPadService");
-names.push_back("PortConfigurationService");
-names.push_back("CacheService");
-names.push_back("ThemingService");
-names.push_back("StagingService");
-names.push_back("DeviceIOService");
-names.push_back("BellService");
-names.push_back("GateService");
-names.push_back("ReaderDataService");
-names.push_back("BiometricService");
-names.push_back("OfflineSmartviewService");
-names.push_back("AVFeedbackService");
-names.push_back("DatabaseThreads");
-names.push_back("SoftLoadService");
-names.push_back("WATCHDOG");
-names.push_back("ProtocolService");
-names.push_back("DiagnosticsService");
-
-  filename = argv[1];  
-  parse(filename, names);
+  
+  filename = argv[1];
+  
+  if( filename.size() < 1 )
+	  throw 
+		std::runtime_error("Null string for file name");
+  
+  parse(filename);
   return 0;
-  //ofstream resultsfile;
-  //myfile.open(filename) creatingfile for log but needs some work
 }

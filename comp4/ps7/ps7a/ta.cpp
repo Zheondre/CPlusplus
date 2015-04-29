@@ -61,12 +61,31 @@ tb = milliseconds( (long)sn[4])
 ta = ta - tb ;
 
 ta.total_miliseconds();
-
-
-
-
 }
-
+vector< strings > names
+names.push_back("Logging");
+names.push_back("DatabaseInitialize");
+names.push_back("MessagingService");
+names.push_back("HealthMonitorService");
+names.push_back("Persistence");
+names.push_back("ConfigurationService");
+names.push_back("LandingPadService");
+names.push_back("PortConfigurationService");
+names.push_back("CacheService");
+names.push_back("ThemingService");
+names.push_back("StagingService");
+names.push_back("DeviceIOService");
+names.push_back("BellService");
+names.push_back("GateService");
+names.push_back("ReaderDataService");
+names.push_back("BiometricService");
+names.push_back("OfflineSmartviewService");
+names.push_back("AVFeedbackService");
+names.push_back("DatabaseThreads");
+names.push_back("SoftLoadService");
+names.push_back("WATCHDOG");
+names.push_back("ProtocolService");
+names.push_back("DiagnosticsService");
 
 
 
