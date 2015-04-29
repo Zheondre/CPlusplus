@@ -13,7 +13,7 @@
 using namespace std; //NOLINT
 using namespace boost; //NOLINT
 
-void efname( string &name ) { name += ".out";}
+void efname( string &name ) { name += ".rpt";}
 void wtof( string name, string info){
   std::fstream outfile;
   outfile.open(name.c_str(), std::fstream::app);
