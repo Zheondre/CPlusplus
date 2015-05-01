@@ -18,7 +18,7 @@ void getl(string filename) {
   services s;
   smatch sm;
   fn = filename;
-  std::ifstream infile(fn.c_str()); // read test file contents 
+  std::ifstream infile(fn.c_str()); // read test file contentsgit  
   //regex e(s.getSta() + s.getsr(0) + ".*");
   regex e(s.getGS() + s.getsr(0) + ".*");
   while (getline(infile, lif)) {

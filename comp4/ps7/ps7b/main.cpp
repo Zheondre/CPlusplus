@@ -15,7 +15,7 @@ using namespace boost; //NOLINT
 
 void efname(string &name) { name += ".rpt";}
 void parse(string fn) {
-  int linenum, completeboot, startS;
+  int linenum, completeboot, startS, i;
   vector< int > holdval;
   services s;
   holdval.push_back(0);
@@ -50,7 +50,7 @@ void parse(string fn) {
       if (completeboot == 1) {
         outfile << "**** Incomplete boot ****\n\n";
         completeboot = 0;
-	for (i = 0 ; i < sname.size(); i++) { 
+	for (i = 0 ; i < s.sz(); i++) { 
 	  outfile << "Servces \n\t" +s.getsr(i)+"\n";
 	  outfile << "\t\t Start: Not started("+ ufn +")\n";
 	  outfile << "\t\t Completed: Not Completed(" + ufn + ")\n";
@@ -76,28 +76,11 @@ void parse(string fn) {
       temp.clear();
     }
     if(startS == 1) {
+      cout << lif << endl;
       s.ServiceStart(lif, linenum);
       s.ServiceSuccess(lif, linenum);
-      startS = 0;
     }
     if (regex_match(lif, ea)) {
-      for (i = 0; i < s.getsz() ; i++ ) {
-	if( s.getCompleteLN(i) != "-1" ) {
-	  outfile << "Services\n"
-	  outfile << "\t" + s.sr(i) + "\n\t\tStart: " + s.getStartLN(i) + "(" + ufn + ")\n";
-	  outfile << "\t\tCompleted: " + s.getCompleteLN(i) + "(" + ufn + ")\n";
-	  outfile << "\t\tElapsed Time: " + s.getElapsedT(i);
-	}
-	else{ 
-	  outfile << "\t" + s.sr(i) + "\n\t\tStart: " + s.getStartLN(i) + "(" + ufn + ")\n";
-	  outfile << "\t\tCompleted: Not completed(" + ufn +")\n\t\tElapsed Time:\n"  ;
-	}
-      } 
-      //print line saying which services didnt start up
-     
-      // check complete T
-      //after set all values tp -1
-
       ss.str("");
       ss << linenum;
       temp = ss.str();
@@ -116,7 +99,30 @@ void parse(string fn) {
       ss << tb.total_milliseconds();
       outfile <<"\t"+ boottime + ss.str() + " ms\n\n";
       completeboot = 0;
+      startS = 0;
       temp.clear();
+
+      outfile << "Services\n";
+      for (i = 0; i < s.sz() ; i++ ) {
+	if( s.getCompleteLN(i) != "-1" ) {
+	  outfile << "\t" + s.getsr(i) + "\n\t\tStart: " + s.getStartLN(i) + "(" + ufn + ")\n";
+	  outfile << "\t\tCompleted: " + s.getCompleteLN(i) + "(" + ufn + ")\n";
+	  outfile << "\t\tElapsed Time: " + s.getElapsedT(i) + "\n";
+	}
+	else{//error being printed after first start...
+	  outfile << "\t" + s.getsr(i) + "\n\t\tStart: " + s.getStartLN(i) + "(" + ufn + ")\n";
+	  outfile << "\t\tCompleted: Not completed(" + ufn +")\n\t\tElapsed Time:\n";
+	}
+      } 
+      outfile << "\t" + s.getfSM();  
+      for (i = 0; i < s.sz() ; i++ ) {
+	//print line saying which services didnt start up
+	if (s.getCompleteLN(i) == "-1")
+	  outfile << s.getsr(i) + " ";
+      }
+      outfile << "\n";
+      //after set all values tp -1
+      s.setNegvalues();
     }
   }
   outfile.close();
