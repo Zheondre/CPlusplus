@@ -14,29 +14,20 @@ using namespace boost;
 
 void getl(string filename) {
   //int i;
-  string lif,fn;
+  string lif, fn;
   services s;
+  smatch sm;
   fn = filename;
-  //outfile.open(fn.c_str(), fstream::out); open and create file it it isnt there
   std::ifstream infile(fn.c_str()); // read test file contents 
-  regex e(s.getSta() + s.getsr(0) + ".*");
-  
+  //regex e(s.getSta() + s.getsr(0) + ".*");
+  regex e(s.getGS() + s.getsr(0) + ".*");
   while (getline(infile, lif)) {
-    
-    if (regex_match (lif,e)) //starting service found
+    if (regex_match (lif,e)){ //starting service found
       cout << lif << endl;
-    // if a successfull boot is found, but the service didnt finish report error
-    /*if(bad boot){ 
-      for (i = 0 ; i < s.sz(); i++) { 
-	outfile << "Servces \n\t" + s.getsr(i) + "\n";
-	outfile << "\t\t Start: Not started("+ fn +")\n";
-	outfile << "\t\t Completed: Not Completed(" + fn + ")\n";
-	outfile << "\t\t Elaplsed Time:\n"; 
-      }
-      //allfailed services 
-      outfile << s.AFail();
+      if(regex_search(lif, sm, s.getRS()))
+	cout << sm[1] <<endl;   
     }
-*/
+    // if a successfull boot is found, but the service didnt finish report error
   }
 }
 int main(int argc, char *argv[]) {

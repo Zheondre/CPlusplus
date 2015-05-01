@@ -8,14 +8,16 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "Services.hpp"
 
 using namespace std; //NOLINT
 using namespace boost; //NOLINT
 
 void efname(string &name) { name += ".rpt";}
 void parse(string fn) {
-  int linenum, completeboot;
+  int linenum, completeboot, startS;
   vector< int > holdval;
+  services s;
   holdval.push_back(0);
   holdval.push_back(0);
   holdval.push_back(0);
@@ -28,9 +30,7 @@ void parse(string fn) {
   rs = ".*log.c.166.*";
   rsa = ".*oejs.AbstractConnector:Started SelectChannelConnector.*";
   string t = "(\\d{2}):(\\d{2}):(\\d{2})";
-  //  (\d{2}):(\d{2}):(\d{2})
   string tmm = "(\\d{2}):(\\d{2}):(\\d{2})\\.(\\d{3})";
-  //  (\d{2}):(\d{2}):(\d{2})\.(\d{3})
   string gd = "(\\d{4})-(\\d{2})-(\\d{2})";
   boottime = "Boot Time: ";
   outfile << "Device Boot Repot \n" + ufn + "\n\n";
@@ -43,11 +43,7 @@ void parse(string fn) {
   regex getdate(gd);
   regex getdatea(gd);
   std::ostringstream ss;
-  linenum = completeboot = 0;
-  string allfs = "\t*** Services not successfully started: ";  
-  for ( i = 0 ; i < sname.size(); i++ ) 
-    allfs += sname[i]+", "; 
-
+  linenum = completeboot = startS = 0;
   while (getline(infile, lif)) {
     linenum++;
     if (regex_match(lif, e)) {
@@ -55,13 +51,13 @@ void parse(string fn) {
         outfile << "**** Incomplete boot ****\n\n";
         completeboot = 0;
 	for (i = 0 ; i < sname.size(); i++) { 
-	  outfile << "Servces \n\t" +sname[i]+"\n";
-	  outfile << "\t\t Start: Not started("+ fn +")\n";
-	  outfile << "\t\t Completed: Not Completed(" + fn + ")\n";
+	  outfile << "Servces \n\t" +s.getsr(i)+"\n";
+	  outfile << "\t\t Start: Not started("+ ufn +")\n";
+	  outfile << "\t\t Completed: Not Completed(" + ufn + ")\n";
 	  outfile << "\t\t Elaplsed Time:\n"; 
 	}
 	//all failed services 
-	outfile << allfs + "\n";	
+	outfile << s.AFail();
       }
       outfile << "=== Device boot ===\n";
       regex_search(lif, sm, etime);
@@ -76,9 +72,32 @@ void parse(string fn) {
       temp += so[0] + " " + sm[0] + " Boot Start \n";
       outfile << temp;
       completeboot = 1;
+      startS = 1;
       temp.clear();
     }
+    if(startS == 1) {
+      s.ServiceStart(lif, linenum);
+      s.ServiceSuccess(lif, linenum);
+      startS = 0;
+    }
     if (regex_match(lif, ea)) {
+      for (i = 0; i < s.getsz() ; i++ ) {
+	if( s.getCompleteLN(i) != "-1" ) {
+	  outfile << "Services\n"
+	  outfile << "\t" + s.sr(i) + "\n\t\tStart: " + s.getStartLN(i) + "(" + ufn + ")\n";
+	  outfile << "\t\tCompleted: " + s.getCompleteLN(i) + "(" + ufn + ")\n";
+	  outfile << "\t\tElapsed Time: " + s.getElapsedT(i);
+	}
+	else{ 
+	  outfile << "\t" + s.sr(i) + "\n\t\tStart: " + s.getStartLN(i) + "(" + ufn + ")\n";
+	  outfile << "\t\tCompleted: Not completed(" + ufn +")\n\t\tElapsed Time:\n"  ;
+	}
+      } 
+      //print line saying which services didnt start up
+     
+      // check complete T
+      //after set all values tp -1
+
       ss.str("");
       ss << linenum;
       temp = ss.str();

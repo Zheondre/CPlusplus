@@ -16,9 +16,11 @@ using namespace std;
 using namespace boost;
 class services{
   //vector< bool > CpServ;
-  vector< string > sname;
-  string startservice, GoodStart, allfs, rs;
+  vector< string > sname, StartLN, CompleteLN, ElapsedT;
+  string startservice, GoodStart, allfs;
+  regex rs;
   int sofV;
+
 public:
   services(){
     sname.push_back("Logging");
@@ -37,6 +39,7 @@ public:
     sname.push_back("GateService");
     sname.push_back("ReaderDataService");
     sname.push_back("BiometricService");
+    sname.push_back("StateManager");
     sname.push_back("OfflineSmartviewService");
     sname.push_back("AVFeedbackService");
     sname.push_back("DatabaseThreads");
@@ -46,29 +49,33 @@ public:
     sname.push_back("DiagnosticsService");
     startservice = ".*Starting Service.  ";
     GoodStart = "Service started successfully.  ";
-    
     sofV = sname.size();
     //throw an error if vector is empty
-    for( int i = 0; i < sofV; i++)
+    allfs = "\t*** Services not successfully started: ";
+    for( int i = 0; i < sofV; i++){
+      StartLN.push_back("-1");
+      CompleteLN.push_back("-1");
+      ElapsedT("-1");
       allfs += sname[i]+", ";
+    }
     allfs += "\n";
-    rs = "([0-9]{3})";
-  //might have to hadd .* at the beginnning..
+    //rs ="\\(([0-9]{1,})\\)";
+    rs = "\\(([^()]*)\\)";
   }
-
+  void ServiceSuccess(string, int);
+  void ServiceStart(string, int);
+  string getCompleteLN(int);
+  string getStartLN(int); 
+  string getElapsedT(int);
   string getsr(int);
   string AFail();
   string getSta();
   string getGS();
-  string getRS();
+  regex getRS();
   int sz();
 };
-string services::getRS() { 
-  return rs;
-}
-string services::AFail() {
-  return allfs;
-}
+regex services::getRS() { return rs; }
+string services::AFail() { return allfs; }
 string services::getsr(int x) {
   if(x < 0)
     throw std::invalid_argument( "Value is less than 0");
@@ -76,13 +83,38 @@ string services::getsr(int x) {
     throw std::invalid_argument( "Value is greater than vector size");
   return sname[x];
 }
-string services::getSta() {
-  return startservice;
+string services::getSta() { return startservice; }
+string services::getGS() { return GoodStart; }
+string services::getCompleteLN(int x){ return CompleteLN[x]; }
+string services::getStartLN(int x) { return StartLN[x]; }
+string services::getElapsedT(int x) { return ElapsedT[x]; }
+int services::sz() { return sofV; }
+void services::ServiceStart(strin line, int linenum) { 
+ int i;  std::ostringstream so;
+ for (i = 0; i < s.sofV; i++) {
+   regex e(s.getSta() + s.getsr(i) + ".*");
+   if (regex_match (line,e)) {  //Success service found
+     cout << lif << endl;
+     so.str("");
+     so << linenum;
+     StartLN[i] = so.str();
+   }
+ }
+ //starting service found
 }
-string services::getGS() {
-  return GoodStart;
-}
-int services::sz() {
-  return sofV;
+void services::ServiceSuccess(string line, int linenum) {
+  int i; smatch sm; std::ostringstream so;
+  for(i = 0; i < s.sofV; i++) {
+    regex e(s.getGS() + s.getsr(i) + ".*");
+    if (regex_match (line,e)){  //Success service found
+      cout << lif << endl;
+      if(regex_search(lif, sm, dig)){
+	so.str("");
+	so << linenum;
+	ElapsedT[i] << boost::lexical_cast<string>(sm[1]);
+	CompleteLN[i] = so.str();
+      }
+    }
+  }
 }
 #endif
