@@ -76,13 +76,15 @@ void parse(string fn) {
       temp.clear();
     }
     if (startS == 1) {
-      cout << lif << endl;
+      //cout << lif << endl;
       s.ServiceStart(lif, linenum);
       s.ServiceSuccess(lif, linenum);
-      s.SoftloadS(lif, linenum, ufn);
-      s.findOV(lif);
-      s.findNV(lif);  
     }
+    s.SoftloadS(lif, linenum, ufn);
+    s.findOV(lif);
+    s.findNV(lif);  
+    s.SoftloadEnd(lif, linenum, ufn);
+
     if (regex_match(lif, ea)) {
       ss.str("");
       ss << linenum;

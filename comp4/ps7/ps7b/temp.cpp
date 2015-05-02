@@ -9,6 +9,7 @@
 #include <string>
 #include <vector>
 #include "Services.hpp"
+
 using namespace std;
 using namespace boost;
 
@@ -20,15 +21,19 @@ void getl(string filename) {
   fn = filename;
   std::ifstream infile(fn.c_str()); // read test file contentsgit  
   //regex e(s.getSta() + s.getsr(0) + ".*");
-  regex e(s.getGS() + s.getsr(0) + ".*");
+  regex e(".*SOFTLOADSERVICE;Install started.*");
+  regex rge("(\\s*\\w{3}\\s*[0-9]{2})");// works 
+  regex rgd("([0-9]{2}):([0-9]{2}):([0-9]{2})");// works
   while (getline(infile, lif)) {
-    if (regex_match (lif,e)){ //starting service found
+    if (regex_match (lif,e)){
       cout << lif << endl;
-      if(regex_search(lif, sm, s.getRS()))
-	cout << sm[1] <<endl;   
+      if(regex_search(lif, sm, rge))
+	cout << sm[0] <<endl;
+      if(regex_search(lif, sm, rgd))
+	cout << sm[0] << endl;
     }
-    // if a successfull boot is found, but the service didnt finish report error
   }
+  infile.close();
 }
 int main(int argc, char *argv[]) {
   string filename;

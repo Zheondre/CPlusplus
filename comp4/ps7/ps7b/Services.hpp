@@ -55,8 +55,8 @@ public:
     //throw an error if vector is empty
     fSM = "\t*** Services not successfully started: ";
     allfs = "\t*** Services not successfully started: ";
-    startSoftload = ".*SOFTLOADSERVICE;Install started";
-    EndSoftload =".*ExitValue from install command : 0";
+    startSoftload = ".*SOFTLOADSERVICE;Install started.*";
+    EndSoftload =".*ExitValue from install command : 0.*";
     for (int i; i < 3; i++) { 
       start.push_back(0);
       end.push_back(0);
@@ -177,15 +177,15 @@ void services::ServiceSuccess(string line, int linenum) {
 }
 void services::findOV(string line) {
   smatch sm; std::ostringstream so; string ltp;
-  regex e(".*intouch-application-base-");
-  if (regex_match(line, e)) {
-    cout << line << endl;
+  regex e(".*intouch-application-base-.*");
+  if (regex_match(line, e)) {//works
+    //cout << line << endl;
     regex rge(".*: removing");
     if (regex_match(line, rge)) {
       regex dig("(?=-[0-9])(.*?)(?=\\.armv)");
       if(regex_search(line, sm, dig)){
 	ltp = boost::lexical_cast<string>(sm[0]);
-	ltp.erase(0,1);
+	cout << ltp.erase(0,1) << " helllooo" << endl;
 	l2 = "Original version ==> " + ltp + "\n";
       }
     }
@@ -193,15 +193,15 @@ void services::findOV(string line) {
 }
 void services::findNV(string line) {
   smatch sm; std::ostringstream so; string ltp;
-  regex e(".*intouch-application-base-");
-  if (regex_match(line, e)) {
-    cout << line << endl;
+  regex e(".*intouch-application-base-.*");
+  if (regex_match(line, e)) {// works
+    //cout << line << endl;
     regex rge(".*: Processing");
     if (regex_match(line, rge)) {
       regex dig("(?=-[0-9])(.*?)(?=\\.armv)");
       if(regex_search(line, sm, dig)){
 	ltp = boost::lexical_cast<string>(sm[0]);
-	ltp.erase(0, 1);
+	cout << ltp.erase(0, 1) << endl;
 	l3 = "New version ==> "+ltp +"\n";
       }
     }
@@ -210,12 +210,14 @@ void services::findNV(string line) {
 
 void services::SoftloadS(string line, int ln, string fn) {
   // if valid line drab date
+  //cout << line << endl;
   smatch sm; std::ostringstream so; string ltp;
   regex e(startSoftload);
-  if (regex_match(line, e)) {
-    cout << line << endl;
+  if (regex_match(line, e)) {//this regex works
+    cout << line << endl; 
     regex rge("(\\s*\\w{3}\\s*[0-9]{2})([0-9]{2}):([0-9]{2}):([0-9]{2})");
-    if (regex_search(line, sm, rge)){
+    if (regex_search(line, sm, rge)) { //dw
+      cout << line << endl;
       so.str("");
       so << ln;
       ltp = so.str() + "(" + fn + ") : "
@@ -232,10 +234,11 @@ void services::SoftloadEnd(string line, int ln, string fn) {
   // if valid line drab date
   smatch sm; std::ostringstream so; string ltp;
   regex e(EndSoftload);
-  if (regex_match(line, e)) {
+  if (regex_match(line, e)) {//this regex works
     cout << line << endl;
     regex rge("(\\s*\\w{3}\\s*[0-9]{2})([0-9]{2}):([0-9]{2}):([0-9]{2})");
     if (regex_search(line, sm, rge)) {
+      cout << line << endl;
       so.str("");
       so << ln;
       ltp = so.str() + "(" + fn + ") : " 
@@ -245,6 +248,7 @@ void services::SoftloadEnd(string line, int ln, string fn) {
       end[1] = boost::lexical_cast<int>(sm[2]);
       end[2] = boost::lexical_cast<int>(sm[3]);
       l5 = ltp;
+      cout << l5 << endl;
       GetEtime();
     }
   }
