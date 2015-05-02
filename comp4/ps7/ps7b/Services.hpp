@@ -153,7 +153,6 @@ void services::ServiceStart(string line, int linenum) {
  for (i = 0; i < sofV; i++) {
    regex e(getSta() + getsr(i) + ".*");
    if (regex_match(line,e)) {  //Start service found
-     cout << line << endl;
      so.str("");
      so << linenum;
      StartLN[i] = so.str();
@@ -166,7 +165,6 @@ void services::ServiceSuccess(string line, int linenum) {
   for(i = 0; i < sofV; i++) {
     regex e(getGS() + getsr(i) + ".*");
     if (regex_match(line,e)){  //Success service found
-      cout << line << endl;
       regex dig(rs); 
       if(regex_search(line, sm, dig)){
 	so.str("");
@@ -215,6 +213,7 @@ void services::SoftloadS(string line, int ln, string fn) {
   smatch sm; std::ostringstream so; string ltp;
   regex e(startSoftload);
   if (regex_match(line, e)) {
+    cout << line << endl;
     regex rge("(\\s*\\w{3}\\s*[0-9]{2})([0-9]{2}):([0-9]{2}):([0-9]{2})");
     if (regex_search(line, sm, rge)){
       so.str("");
@@ -234,6 +233,7 @@ void services::SoftloadEnd(string line, int ln, string fn) {
   smatch sm; std::ostringstream so; string ltp;
   regex e(EndSoftload);
   if (regex_match(line, e)) {
+    cout << line << endl;
     regex rge("(\\s*\\w{3}\\s*[0-9]{2})([0-9]{2}):([0-9]{2}):([0-9]{2})");
     if (regex_search(line, sm, rge)) {
       so.str("");
