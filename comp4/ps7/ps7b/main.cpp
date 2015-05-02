@@ -75,10 +75,13 @@ void parse(string fn) {
       startS = 1;
       temp.clear();
     }
-    if(startS == 1) {
+    if (startS == 1) {
       cout << lif << endl;
       s.ServiceStart(lif, linenum);
       s.ServiceSuccess(lif, linenum);
+      s.SoftloadS(lif, linenum, ufn);
+      s.findOV(lif);
+      s.findNV(lif);  
     }
     if (regex_match(lif, ea)) {
       ss.str("");
@@ -101,7 +104,6 @@ void parse(string fn) {
       completeboot = 0;
       startS = 0;
       temp.clear();
-
       outfile << "Services\n";
       for (i = 0; i < s.sz() ; i++ ) {
 	if( s.getCompleteLN(i) != "-1" ) {
@@ -123,6 +125,12 @@ void parse(string fn) {
       outfile << "\n";
       //after set all values tp -1
       s.setNegvalues();
+      outfile << "=== Softload ===\n";
+      outfile << s.getL1();
+      outfile << s.getL2();
+      outfile << s.getL3();
+      outfile << s.getL4();
+      outfile << s.getL5();
     }
   }
   outfile.close();

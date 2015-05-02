@@ -1,6 +1,6 @@
 //  Copyright 2015 Zheondre Calcano
-#ifndef _Kronos_
-#define _kronos_
+#ifndef _Services_
+#define _Services_
 
 #include <boost/regex.hpp>
 #include <boost/date_time.hpp>
@@ -16,8 +16,10 @@ using namespace std;
 using namespace boost;
 class services{
   //vector< bool > CpServ;
+  vector< int > start, end;
   vector< string > sname, StartLN, CompleteLN, ElapsedT;
-  string startservice, GoodStart, allfs, fSM;
+  string startservice, GoodStart, allfs, fSM, startSoftload, EndSoftload;
+  string l1, l2, l3, l4, l5;
   regex rs;
   int sofV;
 
@@ -53,6 +55,12 @@ public:
     //throw an error if vector is empty
     fSM = "\t*** Services not successfully started: ";
     allfs = "\t*** Services not successfully started: ";
+    startSoftload = ".*SOFTLOADSERVICE;Install started";
+    EndSoftload =".*ExitValue from install command : 0";
+    for (int i; i < 3; i++) { 
+      start.push_back(0);
+      end.push_back(0);
+    }
     for( int i = 0; i < sofV; i++){
       StartLN.push_back("-1");
       CompleteLN.push_back("-1");
@@ -66,17 +74,57 @@ public:
   void setNegvalues();
   void ServiceSuccess(string, int);
   void ServiceStart(string, int);
+  void findOV(string);
+  void findNV(string);
+  void SoftloadS(string, int, string);
+  void SoftloadEnd(string, int, string);
   string getfSM();
   string getCompleteLN(int);
-  string getStartLN(int); 
+  string getStartLN(int);
   string getElapsedT(int);
   string getsr(int);
   string AFail();
   string getSta();
   string getGS();
+  void GetEtime();
+  string getL1();
+  string getL2();
+  string getL3();
+  string getL4();
+  string getL5();
   regex getRS();
   int sz();
 };
+string services::getL1(){
+  string t;
+  t = l1;
+  l1 = "";
+  return t;
+}
+string services::getL2(){
+  string t;
+  t = l2;
+  l2 = "";
+  return t;
+}
+string services::getL3(){
+  string t;
+  t = l3;
+  l3 = "";
+  return t;
+}
+string services::getL4(){
+  string t;
+  t = l4;
+  l4 = "";
+  return t;
+}
+string services::getL5(){
+  string t;
+  t = l5;
+  l5 = "";
+  return t;
+}
 regex services::getRS() { return rs; }
 string services::AFail() { return allfs; }
 string services::getsr(int x) {
@@ -128,5 +176,88 @@ void services::ServiceSuccess(string line, int linenum) {
       }
     }
   }
+}
+void services::findOV(string line) {
+  smatch sm; std::ostringstream so; string ltp;
+  regex e(".*intouch-application-base-");
+  if (regex_match(line, e)) {
+    cout << line << endl;
+    regex rge(".*: removing");
+    if (regex_match(line, rge)) {
+      regex dig("(?=-[0-9])(.*?)(?=\\.armv)");
+      if(regex_search(line, sm, dig)){
+	ltp = boost::lexical_cast<string>(sm[0]);
+	ltp.erase(0,1);
+	l2 = "Original version ==> " + ltp + "\n";
+      }
+    }
+  }
+}
+void services::findNV(string line) {
+  smatch sm; std::ostringstream so; string ltp;
+  regex e(".*intouch-application-base-");
+  if (regex_match(line, e)) {
+    cout << line << endl;
+    regex rge(".*: Processing");
+    if (regex_match(line, rge)) {
+      regex dig("(?=-[0-9])(.*?)(?=\\.armv)");
+      if(regex_search(line, sm, dig)){
+	ltp = boost::lexical_cast<string>(sm[0]);
+	ltp.erase(0, 1);
+	l3 = "New version ==> "+ltp +"\n";
+      }
+    }
+  }
+}
+
+void services::SoftloadS(string line, int ln, string fn) {
+  // if valid line drab date
+  smatch sm; std::ostringstream so; string ltp;
+  regex e(startSoftload);
+  if (regex_match(line, e)) {
+    regex rge("(\\s*\\w{3}\\s*[0-9]{2})([0-9]{2}):([0-9]{2}):([0-9]{2})");
+    if (regex_search(line, sm, rge)){
+      so.str("");
+      so << ln;
+      ltp = so.str() + "(" + fn + ") : "
+	+ boost::lexical_cast<string>(sm[0]);
+      ltp += "Softload Start\n";
+      start[0] = boost::lexical_cast<int>(sm[1]); 
+      start[1] = boost::lexical_cast<int>(sm[2]);
+      start[2] = boost::lexical_cast<int>(sm[3]);
+      l1 = ltp;
+    }
+  }
+}
+void services::SoftloadEnd(string line, int ln, string fn) {
+  // if valid line drab date
+  smatch sm; std::ostringstream so; string ltp;
+  regex e(EndSoftload);
+  if (regex_match(line, e)) {
+    regex rge("(\\s*\\w{3}\\s*[0-9]{2})([0-9]{2}):([0-9]{2}):([0-9]{2})");
+    if (regex_search(line, sm, rge)) {
+      so.str("");
+      so << ln;
+      ltp = so.str() + "(" + fn + ") : " 
+	+ boost::lexical_cast<string>(sm[0]);     
+      ltp += "Softload Start\n";
+      end[0] = boost::lexical_cast<int>(sm[1]); 
+      end[1] = boost::lexical_cast<int>(sm[2]);
+      end[2] = boost::lexical_cast<int>(sm[3]);
+      l5 = ltp;
+      GetEtime();
+    }
+  }
+}
+void services::GetEtime() {
+  string temp;
+  std::ostringstream so;
+  boost::posix_time::time_duration st( start[0], start[1], start[2]);
+  boost::posix_time::time_duration et( end[0], end[1], end[2]);
+  et = et - st;
+  so.str("");
+  so << et.total_seconds();
+  temp = "Elapsed Time (sec) ==> " + so.str() + "\n";
+  l4 = temp;
 }
 #endif
