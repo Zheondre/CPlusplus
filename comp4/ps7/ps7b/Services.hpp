@@ -65,8 +65,8 @@ class services{
       CompleteLN.push_back("-1");
       ElapsedT.push_back("-1");
       if (i == sofV - 1) {
-	allfs += sname[i] + " ";
-      } else { 
+        allfs += sname[i] + " ";
+      } else {
         allfs += sname[i]+", ";
       }
     }

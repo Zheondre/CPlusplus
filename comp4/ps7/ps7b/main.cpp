@@ -59,11 +59,11 @@ void parse(string fn) {
       }
       if (SoftLoadfound == 1) {
         outfile << s.getL1();
-	outfile << s.getL2();
-	outfile << s.getL3();
-	outfile << s.getL4();
-	outfile << s.getL5();
-	s.makeLsNull();
+        outfile << s.getL2();
+        outfile << s.getL3();
+        outfile << s.getL4();
+        outfile << s.getL5();
+        s.makeLsNull();
       }
       outfile << "=== Device boot ===\n";
       regex_search(lif, sm, etime);
@@ -122,25 +122,31 @@ void parse(string fn) {
             + s.getStartLN(i) + "(" + ufn + ")\n";
           outfile << "\t\tCompleted: " + s.getCompleteLN(i) + "(" + ufn + ")\n";
           outfile << "\t\tElapsed Time: " + s.getElapsedT(i) + "\n";
-        } else {
-          outfile << "\t" + s.getsr(i) + "\n\t\tStart: "
-	    + s.getStartLN(i) + "(" + ufn + ")\n";
-          outfile << "\t\tCompleted: Not completed("
-          + ufn +")\n\t\tElapsed Time:\n";
+         } else {
+          if (s.getStartLN(i) == "-1") {
+             outfile << "\t" + s.getsr(i) + "\n\t\tStart: "
+               + "Not started(" + ufn + ")\n";
+             outfile << "\t\tCompleted: Not completed("
+               + ufn +")\n\t\tElapsed Time:\n";
+          } else {
+             outfile << "\t" + s.getsr(i) + "\n\t\tStart: "
+               + s.getStartLN(i) +"(" + ufn + ")\n";
+             outfile << "\t\tCompleted: Not completed("
+               + ufn +")\n\t\tElapsed Time:\n";
+         }
         }
       }
       outfile << s.getfSM();
       ngvalf = 0;
       for (i = 0; i < s.sz(); i++) {
         if (s.getCompleteLN(i) == "-1") {
-	  if (ngvalf== 0) {
-	    outfile << s.getsr(i);
-	    ngvalf++;
-	    continue;
-	  }
-	  if (ngvalf == 1) {
+          if (ngvalf== 0) {
+            outfile << s.getsr(i);
+            ngvalf++;
+            continue;
+          }
+          if (ngvalf == 1) {
             outfile <<", "+ s.getsr(i);
-	    ngvalf = 0;
           }
         }
       }

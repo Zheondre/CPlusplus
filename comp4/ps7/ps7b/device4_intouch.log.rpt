@@ -410,11 +410,12 @@ Services
 		Completed: 31946(device4_intouch.log)
 		Elapsed Time: 232 ms
 	*** Services not successfully started: ProtocolService
-21:41:46 Softload Start
+=== Softload ===
+32717(device4_intouch.log) : Dec  4 21:41:46 Softload Start
 	Original version ==> 1.1.1-91
 	New version ==> 1.0.7-52923.1
 	Elapsed time (sec) ==> 41
-21:42:27 Softload Completed
+32737(device4_intouch.log) : Dec  4 21:42:27 Softload Completed
 === Device boot ===
 32789(device4_intouch.log): 2013-12-04 21:50:27 Boot Start 
 33032(device4_intouch.log): 2013-12-04 21:52:57 Boot Completed
@@ -517,7 +518,7 @@ Services
 		Start: 33018(device4_intouch.log)
 		Completed: 33020(device4_intouch.log)
 		Elapsed Time: 197 ms
-	*** Services not successfully started: Persistence, StagingServiceStateManager, OfflineSmartviewService
+	*** Services not successfully started: Persistence, StagingService, StateManager, OfflineSmartviewService
 === Device boot ===
 33145(device4_intouch.log): 2013-12-04 21:58:45 Boot Start 
 33390(device4_intouch.log): 2013-12-04 22:01:14 Boot Completed
@@ -620,7 +621,7 @@ Services
 		Start: 33376(device4_intouch.log)
 		Completed: 33378(device4_intouch.log)
 		Elapsed Time: 157 ms
-	*** Services not successfully started: Persistence, StagingServiceStateManager, OfflineSmartviewService
+	*** Services not successfully started: Persistence, StagingService, StateManager, OfflineSmartviewService
 === Device boot ===
 33677(device4_intouch.log): 2013-12-04 22:21:03 Boot Start 
 33920(device4_intouch.log): 2013-12-04 22:23:31 Boot Completed
@@ -723,7 +724,7 @@ Services
 		Start: 33907(device4_intouch.log)
 		Completed: 33908(device4_intouch.log)
 		Elapsed Time: 120 ms
-	*** Services not successfully started: Persistence, StagingServiceStateManager, OfflineSmartviewService
+	*** Services not successfully started: Persistence, StagingService, StateManager, OfflineSmartviewService
 === Device boot ===
 45295(device4_intouch.log): 2013-12-05 13:34:25 Boot Start 
 45538(device4_intouch.log): 2013-12-05 13:36:55 Boot Completed
@@ -826,7 +827,7 @@ Services
 		Start: 45525(device4_intouch.log)
 		Completed: 45526(device4_intouch.log)
 		Elapsed Time: 143 ms
-	*** Services not successfully started: Persistence, StagingServiceStateManager, OfflineSmartviewService
+	*** Services not successfully started: Persistence, StagingService, StateManager, OfflineSmartviewService
 === Device boot ===
 45615(device4_intouch.log): 2013-12-05 14:12:25 Boot Start 
 45858(device4_intouch.log): 2013-12-05 14:14:53 Boot Completed
@@ -929,7 +930,7 @@ Services
 		Start: 45845(device4_intouch.log)
 		Completed: 45847(device4_intouch.log)
 		Elapsed Time: 206 ms
-	*** Services not successfully started: Persistence, StagingServiceStateManager, OfflineSmartviewService
+	*** Services not successfully started: Persistence, StagingService, StateManager, OfflineSmartviewService
 === Device boot ===
 46117(device4_intouch.log): 2013-12-05 15:39:02 Boot Start 
 46353(device4_intouch.log): 2013-12-05 15:41:29 Boot Completed
@@ -1032,7 +1033,7 @@ Services
 		Start: 46340(device4_intouch.log)
 		Completed: 46341(device4_intouch.log)
 		Elapsed Time: 124 ms
-	*** Services not successfully started: Persistence, StagingServiceStateManager, OfflineSmartviewService
+	*** Services not successfully started: Persistence, StagingService, StateManager, OfflineSmartviewService
 === Device boot ===
 46357(device4_intouch.log): 2013-12-05 20:20:24 Boot Start 
 46600(device4_intouch.log): 2013-12-05 20:22:54 Boot Completed
@@ -1135,7 +1136,7 @@ Services
 		Start: 46587(device4_intouch.log)
 		Completed: 46588(device4_intouch.log)
 		Elapsed Time: 111 ms
-	*** Services not successfully started: Persistence, StagingServiceStateManager, OfflineSmartviewService
+	*** Services not successfully started: Persistence, StagingService, StateManager, OfflineSmartviewService
 === Device boot ===
 46792(device4_intouch.log): 2013-12-10 13:20:43 Boot Start 
 47035(device4_intouch.log): 2013-12-10 13:23:12 Boot Completed
@@ -1238,7 +1239,7 @@ Services
 		Start: 47020(device4_intouch.log)
 		Completed: 47023(device4_intouch.log)
 		Elapsed Time: 127 ms
-	*** Services not successfully started: Persistence, StagingServiceStateManager, OfflineSmartviewService
+	*** Services not successfully started: Persistence, StagingService, StateManager, OfflineSmartviewService
 === Device boot ===
 47700(device4_intouch.log): 2013-12-10 19:40:58 Boot Start 
 47991(device4_intouch.log): 2013-12-10 19:43:55 Boot Completed
@@ -1341,7 +1342,7 @@ Services
 		Start: 47976(device4_intouch.log)
 		Completed: 47979(device4_intouch.log)
 		Elapsed Time: 114 ms
-	*** Services not successfully started: Persistence, StagingServiceStateManager, OfflineSmartviewService
+	*** Services not successfully started: Persistence, StagingService, StateManager, OfflineSmartviewService
 === Device boot ===
 48100(device4_intouch.log): 2013-12-11 14:09:11 Boot Start 
 48341(device4_intouch.log): 2013-12-11 14:11:41 Boot Completed
@@ -1409,7 +1410,7 @@ Services
 		Completed: 48319(device4_intouch.log)
 		Elapsed Time: 165 ms
 	BiometricService
-		Start: -1(device4_intouch.log)
+		Start: Not started(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	StateManager
@@ -1444,7 +1445,7 @@ Services
 		Start: 48327(device4_intouch.log)
 		Completed: 48329(device4_intouch.log)
 		Elapsed Time: 347 ms
-	*** Services not successfully started: Persistence, StagingServiceBiometricService, StateManagerOfflineSmartviewService
+	*** Services not successfully started: Persistence, StagingService, BiometricService, StateManager, OfflineSmartviewService
 === Device boot ===
 48345(device4_intouch.log): 2013-12-11 14:17:49 Boot Start 
 48636(device4_intouch.log): 2013-12-11 14:20:46 Boot Completed
@@ -1547,4 +1548,4 @@ Services
 		Start: 48623(device4_intouch.log)
 		Completed: 48624(device4_intouch.log)
 		Elapsed Time: 129 ms
-	*** Services not successfully started: Persistence, StagingServiceStateManager, OfflineSmartviewService
+	*** Services not successfully started: Persistence, StagingService, StateManager, OfflineSmartviewService

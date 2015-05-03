@@ -65,7 +65,7 @@ Services
 		Completed: 31149(device3_intouch.log)
 		Elapsed Time: 2 ms
 	BiometricService
-		Start: -1(device3_intouch.log)
+		Start: Not started(device3_intouch.log)
 		Completed: Not completed(device3_intouch.log)
 		Elapsed Time:
 	StateManager

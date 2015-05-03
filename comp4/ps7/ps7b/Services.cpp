@@ -115,7 +115,7 @@ bool services::SoftloadS(string line, int ln, string fn) {
   smatch sm; std::ostringstream so; string ltp;
   regex e(startSoftload);
   if (regex_match(line, e)) {
-    regex rge("(\\s*\\w{3}\\s*[0-9]{2})");
+    regex rge("(\\s*\\w{3}\\s*[0-9]{1,2})");
     regex rgd("([0-9]{2}):([0-9]{2}):([0-9]{2})");
     if (regex_search(line, sm, rge)) {
       so.str("");
@@ -140,7 +140,8 @@ int services::SoftloadEnd(string line, int ln, string fn) {
   smatch sm; std::ostringstream so; string ltp;
   regex e(EndSoftload);
   if (regex_match(line, e)) {
-    regex rge("(\\s*\\w{3}\\s*[0-9]{2})");
+    regex rge("(\\s*\\w{3}\\s*[0-9]{1,2})");
+    //regex rdf("
     regex rgd("([0-9]{2}):([0-9]{2}):([0-9]{2})");
     if (regex_search(line, sm, rge)) {
       so.str("");
