@@ -15,7 +15,7 @@ using namespace boost; //NOLINT
 
 void efname(string &name) { name += ".rpt";}
 void parse(string fn) {
-  int linenum, completeboot, startS, i;
+  int linenum, completeboot, startS, i, SoftLoadfound;
   vector< int > holdval;
   services s;
   holdval.push_back(0);
@@ -43,15 +43,16 @@ void parse(string fn) {
   regex getdate(gd);
   regex getdatea(gd);
   std::ostringstream ss;
-  linenum = completeboot = startS = 0;
+  linenum = completeboot = startS = SoftLoadfound = 0;
   while (getline(infile, lif)) {
     linenum++;
     if (regex_match(lif, e)) {
       if (completeboot == 1) {
         outfile << "**** Incomplete boot ****\n\n";
         completeboot = 0;
+	outfile << "Services \n"; 
 	for (i = 0 ; i < s.sz(); i++) { 
-	  outfile << "Servces \n\t" +s.getsr(i)+"\n";
+	  outfile << "\t" + s.getsr(i) + "\n";
 	  outfile << "\t\t Start: Not started("+ ufn +")\n";
 	  outfile << "\t\t Completed: Not Completed(" + ufn + ")\n";
 	  outfile << "\t\t Elaplsed Time:\n"; 
@@ -76,15 +77,17 @@ void parse(string fn) {
       temp.clear();
     }
     if (startS == 1) {
-      //cout << lif << endl;
       s.ServiceStart(lif, linenum);
       s.ServiceSuccess(lif, linenum);
     }
-    s.SoftloadS(lif, linenum, ufn);
-    s.findOV(lif);
-    s.findNV(lif);  
-    s.SoftloadEnd(lif, linenum, ufn);
-
+    if (s.SoftloadS(lif, linenum, ufn)){
+      SoftLoadfound = 1;
+    }
+    if (SoftLoadfound == 1) {
+      s.findOV(lif);
+      s.findNV(lif);  
+      SoftLoadfound = s.SoftloadEnd(lif, linenum, ufn);
+    }
     if (regex_match(lif, ea)) {
       ss.str("");
       ss << linenum;
@@ -102,7 +105,7 @@ void parse(string fn) {
       outfile << temp;
       ss.str("");
       ss << tb.total_milliseconds();
-      outfile <<"\t"+ boottime + ss.str() + " ms\n\n";
+      outfile <<"\t"+ boottime + ss.str() + "ms\n\n";
       completeboot = 0;
       startS = 0;
       temp.clear();
@@ -118,21 +121,23 @@ void parse(string fn) {
 	  outfile << "\t\tCompleted: Not completed(" + ufn +")\n\t\tElapsed Time:\n";
 	}
       } 
-      outfile << "\t" + s.getfSM();  
+      outfile << s.getfSM();  
       for (i = 0; i < s.sz() ; i++ ) {
 	//print line saying which services didnt start up
 	if (s.getCompleteLN(i) == "-1")
 	  outfile << s.getsr(i) + " ";
       }
       outfile << "\n";
-      //after set all values tp -1
       s.setNegvalues();
-      outfile << "=== Softload ===\n";
+      if (SoftLoadfound == 1) {
       outfile << s.getL1();
       outfile << s.getL2();
       outfile << s.getL3();
       outfile << s.getL4();
       outfile << s.getL5();
+      s.makeLsNull();
+      
+      }
     }
   }
   outfile.close();
