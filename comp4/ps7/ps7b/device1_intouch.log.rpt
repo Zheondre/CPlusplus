@@ -93,7 +93,7 @@ Services
 		Completed: 435750(device1_intouch.log)
 		Elapsed Time: 526 ms
 	ProtocolService
-		Start: Not started(device1_intouch.log)
+		Start: 435744(device1_intouch.log)
 		Completed: Not completed(device1_intouch.log)
 		Elapsed Time:
 	DiagnosticsService
@@ -174,7 +174,7 @@ Services
 		Completed: 436755(device1_intouch.log)
 		Elapsed Time: 3 ms
 	BiometricService
-		Start: Not started(device1_intouch.log)
+		Start: -1(device1_intouch.log)
 		Completed: Not completed(device1_intouch.log)
 		Elapsed Time:
 	StateManager
@@ -202,7 +202,7 @@ Services
 		Completed: 436850(device1_intouch.log)
 		Elapsed Time: 304 ms
 	ProtocolService
-		Start: Not started(device1_intouch.log)
+		Start: 436848(device1_intouch.log)
 		Completed: Not completed(device1_intouch.log)
 		Elapsed Time:
 	DiagnosticsService
@@ -311,7 +311,7 @@ Services
 		Completed: 440784(device1_intouch.log)
 		Elapsed Time: 608 ms
 	ProtocolService
-		Start: Not started(device1_intouch.log)
+		Start: 440779(device1_intouch.log)
 		Completed: Not completed(device1_intouch.log)
 		Elapsed Time:
 	DiagnosticsService
@@ -414,7 +414,7 @@ Services
 		Completed: 441206(device1_intouch.log)
 		Elapsed Time: 390 ms
 	ProtocolService
-		Start: Not started(device1_intouch.log)
+		Start: 441204(device1_intouch.log)
 		Completed: Not completed(device1_intouch.log)
 		Elapsed Time:
 	DiagnosticsService
@@ -517,7 +517,7 @@ Services
 		Completed: 442423(device1_intouch.log)
 		Elapsed Time: 378 ms
 	ProtocolService
-		Start: Not started(device1_intouch.log)
+		Start: 442421(device1_intouch.log)
 		Completed: Not completed(device1_intouch.log)
 		Elapsed Time:
 	DiagnosticsService
@@ -620,7 +620,7 @@ Services
 		Completed: 443401(device1_intouch.log)
 		Elapsed Time: 493 ms
 	ProtocolService
-		Start: Not started(device1_intouch.log)
+		Start: 443398(device1_intouch.log)
 		Completed: Not completed(device1_intouch.log)
 		Elapsed Time:
 	DiagnosticsService

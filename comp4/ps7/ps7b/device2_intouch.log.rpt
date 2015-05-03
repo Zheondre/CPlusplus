@@ -99,7 +99,7 @@ Services
 		Completed: 499021(device2_intouch.log)
 		Elapsed Time: 216 ms
 	ProtocolService
-		Start: Not started(device2_intouch.log)
+		Start: 499017(device2_intouch.log)
 		Completed: Not completed(device2_intouch.log)
 		Elapsed Time:
 	DiagnosticsService

@@ -196,7 +196,7 @@ Services
 		Completed: 846(device4_intouch.log)
 		Elapsed Time: 419 ms
 	ProtocolService
-		Start: Not started(device4_intouch.log)
+		Start: 840(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	DiagnosticsService
@@ -299,7 +299,7 @@ Services
 		Completed: 1558(device4_intouch.log)
 		Elapsed Time: 237 ms
 	ProtocolService
-		Start: Not started(device4_intouch.log)
+		Start: 1553(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	DiagnosticsService
@@ -402,7 +402,7 @@ Services
 		Completed: 31947(device4_intouch.log)
 		Elapsed Time: 489 ms
 	ProtocolService
-		Start: Not started(device4_intouch.log)
+		Start: 31941(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	DiagnosticsService
@@ -438,7 +438,7 @@ Services
 		Completed: 32847(device4_intouch.log)
 		Elapsed Time: 150 ms
 	Persistence
-		Start: Not started(device4_intouch.log)
+		Start: 32865(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	ConfigurationService
@@ -462,7 +462,7 @@ Services
 		Completed: 32881(device4_intouch.log)
 		Elapsed Time: 1 ms
 	StagingService
-		Start: Not started(device4_intouch.log)
+		Start: 32890(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	DeviceIOService
@@ -486,11 +486,11 @@ Services
 		Completed: 32964(device4_intouch.log)
 		Elapsed Time: 221 ms
 	StateManager
-		Start: Not started(device4_intouch.log)
+		Start: 32965(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	OfflineSmartviewService
-		Start: Not started(device4_intouch.log)
+		Start: 32989(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	AVFeedbackService
@@ -517,7 +517,7 @@ Services
 		Start: 33018(device4_intouch.log)
 		Completed: 33020(device4_intouch.log)
 		Elapsed Time: 197 ms
-	*** Services not successfully started: Persistence, StagingService, StateManager, OfflineSmartviewService, 
+	*** Services not successfully started: Persistence, StagingServiceStateManager, OfflineSmartviewService
 === Device boot ===
 33145(device4_intouch.log): 2013-12-04 21:58:45 Boot Start 
 33390(device4_intouch.log): 2013-12-04 22:01:14 Boot Completed
@@ -541,7 +541,7 @@ Services
 		Completed: 33205(device4_intouch.log)
 		Elapsed Time: 163 ms
 	Persistence
-		Start: Not started(device4_intouch.log)
+		Start: 33221(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	ConfigurationService
@@ -565,7 +565,7 @@ Services
 		Completed: 33235(device4_intouch.log)
 		Elapsed Time: 1 ms
 	StagingService
-		Start: Not started(device4_intouch.log)
+		Start: 33246(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	DeviceIOService
@@ -589,11 +589,11 @@ Services
 		Completed: 33320(device4_intouch.log)
 		Elapsed Time: 226 ms
 	StateManager
-		Start: Not started(device4_intouch.log)
+		Start: 33321(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	OfflineSmartviewService
-		Start: Not started(device4_intouch.log)
+		Start: 33345(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	AVFeedbackService
@@ -620,7 +620,7 @@ Services
 		Start: 33376(device4_intouch.log)
 		Completed: 33378(device4_intouch.log)
 		Elapsed Time: 157 ms
-	*** Services not successfully started: Persistence, StagingService, StateManager, OfflineSmartviewService, 
+	*** Services not successfully started: Persistence, StagingServiceStateManager, OfflineSmartviewService
 === Device boot ===
 33677(device4_intouch.log): 2013-12-04 22:21:03 Boot Start 
 33920(device4_intouch.log): 2013-12-04 22:23:31 Boot Completed
@@ -644,7 +644,7 @@ Services
 		Completed: 33735(device4_intouch.log)
 		Elapsed Time: 147 ms
 	Persistence
-		Start: Not started(device4_intouch.log)
+		Start: 33751(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	ConfigurationService
@@ -668,7 +668,7 @@ Services
 		Completed: 33765(device4_intouch.log)
 		Elapsed Time: 0 ms
 	StagingService
-		Start: Not started(device4_intouch.log)
+		Start: 33776(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	DeviceIOService
@@ -692,11 +692,11 @@ Services
 		Completed: 33850(device4_intouch.log)
 		Elapsed Time: 233 ms
 	StateManager
-		Start: Not started(device4_intouch.log)
+		Start: 33851(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	OfflineSmartviewService
-		Start: Not started(device4_intouch.log)
+		Start: 33875(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	AVFeedbackService
@@ -723,7 +723,7 @@ Services
 		Start: 33907(device4_intouch.log)
 		Completed: 33908(device4_intouch.log)
 		Elapsed Time: 120 ms
-	*** Services not successfully started: Persistence, StagingService, StateManager, OfflineSmartviewService, 
+	*** Services not successfully started: Persistence, StagingServiceStateManager, OfflineSmartviewService
 === Device boot ===
 45295(device4_intouch.log): 2013-12-05 13:34:25 Boot Start 
 45538(device4_intouch.log): 2013-12-05 13:36:55 Boot Completed
@@ -747,7 +747,7 @@ Services
 		Completed: 45353(device4_intouch.log)
 		Elapsed Time: 166 ms
 	Persistence
-		Start: Not started(device4_intouch.log)
+		Start: 45369(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	ConfigurationService
@@ -771,7 +771,7 @@ Services
 		Completed: 45383(device4_intouch.log)
 		Elapsed Time: 0 ms
 	StagingService
-		Start: Not started(device4_intouch.log)
+		Start: 45394(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	DeviceIOService
@@ -795,11 +795,11 @@ Services
 		Completed: 45468(device4_intouch.log)
 		Elapsed Time: 269 ms
 	StateManager
-		Start: Not started(device4_intouch.log)
+		Start: 45469(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	OfflineSmartviewService
-		Start: Not started(device4_intouch.log)
+		Start: 45493(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	AVFeedbackService
@@ -826,7 +826,7 @@ Services
 		Start: 45525(device4_intouch.log)
 		Completed: 45526(device4_intouch.log)
 		Elapsed Time: 143 ms
-	*** Services not successfully started: Persistence, StagingService, StateManager, OfflineSmartviewService, 
+	*** Services not successfully started: Persistence, StagingServiceStateManager, OfflineSmartviewService
 === Device boot ===
 45615(device4_intouch.log): 2013-12-05 14:12:25 Boot Start 
 45858(device4_intouch.log): 2013-12-05 14:14:53 Boot Completed
@@ -850,7 +850,7 @@ Services
 		Completed: 45673(device4_intouch.log)
 		Elapsed Time: 160 ms
 	Persistence
-		Start: Not started(device4_intouch.log)
+		Start: 45689(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	ConfigurationService
@@ -874,7 +874,7 @@ Services
 		Completed: 45703(device4_intouch.log)
 		Elapsed Time: 0 ms
 	StagingService
-		Start: Not started(device4_intouch.log)
+		Start: 45714(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	DeviceIOService
@@ -898,11 +898,11 @@ Services
 		Completed: 45788(device4_intouch.log)
 		Elapsed Time: 238 ms
 	StateManager
-		Start: Not started(device4_intouch.log)
+		Start: 45789(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	OfflineSmartviewService
-		Start: Not started(device4_intouch.log)
+		Start: 45813(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	AVFeedbackService
@@ -929,7 +929,7 @@ Services
 		Start: 45845(device4_intouch.log)
 		Completed: 45847(device4_intouch.log)
 		Elapsed Time: 206 ms
-	*** Services not successfully started: Persistence, StagingService, StateManager, OfflineSmartviewService, 
+	*** Services not successfully started: Persistence, StagingServiceStateManager, OfflineSmartviewService
 === Device boot ===
 46117(device4_intouch.log): 2013-12-05 15:39:02 Boot Start 
 46353(device4_intouch.log): 2013-12-05 15:41:29 Boot Completed
@@ -953,7 +953,7 @@ Services
 		Completed: 46168(device4_intouch.log)
 		Elapsed Time: 156 ms
 	Persistence
-		Start: Not started(device4_intouch.log)
+		Start: 46184(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	ConfigurationService
@@ -977,7 +977,7 @@ Services
 		Completed: 46198(device4_intouch.log)
 		Elapsed Time: 0 ms
 	StagingService
-		Start: Not started(device4_intouch.log)
+		Start: 46209(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	DeviceIOService
@@ -1001,11 +1001,11 @@ Services
 		Completed: 46283(device4_intouch.log)
 		Elapsed Time: 231 ms
 	StateManager
-		Start: Not started(device4_intouch.log)
+		Start: 46284(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	OfflineSmartviewService
-		Start: Not started(device4_intouch.log)
+		Start: 46308(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	AVFeedbackService
@@ -1032,7 +1032,7 @@ Services
 		Start: 46340(device4_intouch.log)
 		Completed: 46341(device4_intouch.log)
 		Elapsed Time: 124 ms
-	*** Services not successfully started: Persistence, StagingService, StateManager, OfflineSmartviewService, 
+	*** Services not successfully started: Persistence, StagingServiceStateManager, OfflineSmartviewService
 === Device boot ===
 46357(device4_intouch.log): 2013-12-05 20:20:24 Boot Start 
 46600(device4_intouch.log): 2013-12-05 20:22:54 Boot Completed
@@ -1056,7 +1056,7 @@ Services
 		Completed: 46415(device4_intouch.log)
 		Elapsed Time: 152 ms
 	Persistence
-		Start: Not started(device4_intouch.log)
+		Start: 46431(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	ConfigurationService
@@ -1080,7 +1080,7 @@ Services
 		Completed: 46445(device4_intouch.log)
 		Elapsed Time: 0 ms
 	StagingService
-		Start: Not started(device4_intouch.log)
+		Start: 46456(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	DeviceIOService
@@ -1104,11 +1104,11 @@ Services
 		Completed: 46530(device4_intouch.log)
 		Elapsed Time: 248 ms
 	StateManager
-		Start: Not started(device4_intouch.log)
+		Start: 46531(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	OfflineSmartviewService
-		Start: Not started(device4_intouch.log)
+		Start: 46555(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	AVFeedbackService
@@ -1135,7 +1135,7 @@ Services
 		Start: 46587(device4_intouch.log)
 		Completed: 46588(device4_intouch.log)
 		Elapsed Time: 111 ms
-	*** Services not successfully started: Persistence, StagingService, StateManager, OfflineSmartviewService, 
+	*** Services not successfully started: Persistence, StagingServiceStateManager, OfflineSmartviewService
 === Device boot ===
 46792(device4_intouch.log): 2013-12-10 13:20:43 Boot Start 
 47035(device4_intouch.log): 2013-12-10 13:23:12 Boot Completed
@@ -1159,7 +1159,7 @@ Services
 		Completed: 46850(device4_intouch.log)
 		Elapsed Time: 157 ms
 	Persistence
-		Start: Not started(device4_intouch.log)
+		Start: 46866(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	ConfigurationService
@@ -1183,7 +1183,7 @@ Services
 		Completed: 46880(device4_intouch.log)
 		Elapsed Time: 0 ms
 	StagingService
-		Start: Not started(device4_intouch.log)
+		Start: 46891(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	DeviceIOService
@@ -1207,11 +1207,11 @@ Services
 		Completed: 46965(device4_intouch.log)
 		Elapsed Time: 231 ms
 	StateManager
-		Start: Not started(device4_intouch.log)
+		Start: 46966(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	OfflineSmartviewService
-		Start: Not started(device4_intouch.log)
+		Start: 46990(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	AVFeedbackService
@@ -1238,7 +1238,7 @@ Services
 		Start: 47020(device4_intouch.log)
 		Completed: 47023(device4_intouch.log)
 		Elapsed Time: 127 ms
-	*** Services not successfully started: Persistence, StagingService, StateManager, OfflineSmartviewService, 
+	*** Services not successfully started: Persistence, StagingServiceStateManager, OfflineSmartviewService
 === Device boot ===
 47700(device4_intouch.log): 2013-12-10 19:40:58 Boot Start 
 47991(device4_intouch.log): 2013-12-10 19:43:55 Boot Completed
@@ -1262,7 +1262,7 @@ Services
 		Completed: 47806(device4_intouch.log)
 		Elapsed Time: 166 ms
 	Persistence
-		Start: Not started(device4_intouch.log)
+		Start: 47836(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	ConfigurationService
@@ -1286,7 +1286,7 @@ Services
 		Completed: 47833(device4_intouch.log)
 		Elapsed Time: 0 ms
 	StagingService
-		Start: Not started(device4_intouch.log)
+		Start: 47849(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	DeviceIOService
@@ -1310,11 +1310,11 @@ Services
 		Completed: 47923(device4_intouch.log)
 		Elapsed Time: 183 ms
 	StateManager
-		Start: Not started(device4_intouch.log)
+		Start: 47924(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	OfflineSmartviewService
-		Start: Not started(device4_intouch.log)
+		Start: 47948(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	AVFeedbackService
@@ -1341,7 +1341,7 @@ Services
 		Start: 47976(device4_intouch.log)
 		Completed: 47979(device4_intouch.log)
 		Elapsed Time: 114 ms
-	*** Services not successfully started: Persistence, StagingService, StateManager, OfflineSmartviewService, 
+	*** Services not successfully started: Persistence, StagingServiceStateManager, OfflineSmartviewService
 === Device boot ===
 48100(device4_intouch.log): 2013-12-11 14:09:11 Boot Start 
 48341(device4_intouch.log): 2013-12-11 14:11:41 Boot Completed
@@ -1365,7 +1365,7 @@ Services
 		Completed: 48159(device4_intouch.log)
 		Elapsed Time: 157 ms
 	Persistence
-		Start: Not started(device4_intouch.log)
+		Start: 48177(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	ConfigurationService
@@ -1389,7 +1389,7 @@ Services
 		Completed: 48191(device4_intouch.log)
 		Elapsed Time: 0 ms
 	StagingService
-		Start: Not started(device4_intouch.log)
+		Start: 48198(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	DeviceIOService
@@ -1409,15 +1409,15 @@ Services
 		Completed: 48319(device4_intouch.log)
 		Elapsed Time: 165 ms
 	BiometricService
-		Start: Not started(device4_intouch.log)
+		Start: -1(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	StateManager
-		Start: Not started(device4_intouch.log)
+		Start: 48266(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	OfflineSmartviewService
-		Start: Not started(device4_intouch.log)
+		Start: 48290(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	AVFeedbackService
@@ -1444,7 +1444,7 @@ Services
 		Start: 48327(device4_intouch.log)
 		Completed: 48329(device4_intouch.log)
 		Elapsed Time: 347 ms
-	*** Services not successfully started: Persistence, StagingService, BiometricService, StateManager, OfflineSmartviewService, 
+	*** Services not successfully started: Persistence, StagingServiceBiometricService, StateManagerOfflineSmartviewService
 === Device boot ===
 48345(device4_intouch.log): 2013-12-11 14:17:49 Boot Start 
 48636(device4_intouch.log): 2013-12-11 14:20:46 Boot Completed
@@ -1468,7 +1468,7 @@ Services
 		Completed: 48451(device4_intouch.log)
 		Elapsed Time: 169 ms
 	Persistence
-		Start: Not started(device4_intouch.log)
+		Start: 48475(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	ConfigurationService
@@ -1492,7 +1492,7 @@ Services
 		Completed: 48563(device4_intouch.log)
 		Elapsed Time: 0 ms
 	StagingService
-		Start: Not started(device4_intouch.log)
+		Start: 48488(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	DeviceIOService
@@ -1516,11 +1516,11 @@ Services
 		Completed: 48568(device4_intouch.log)
 		Elapsed Time: 181 ms
 	StateManager
-		Start: Not started(device4_intouch.log)
+		Start: 48569(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	OfflineSmartviewService
-		Start: Not started(device4_intouch.log)
+		Start: 48593(device4_intouch.log)
 		Completed: Not completed(device4_intouch.log)
 		Elapsed Time:
 	AVFeedbackService
@@ -1547,4 +1547,4 @@ Services
 		Start: 48623(device4_intouch.log)
 		Completed: 48624(device4_intouch.log)
 		Elapsed Time: 129 ms
-	*** Services not successfully started: Persistence, StagingService, StateManager, OfflineSmartviewService, 
+	*** Services not successfully started: Persistence, StagingServiceStateManager, OfflineSmartviewService

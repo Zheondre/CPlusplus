@@ -15,7 +15,7 @@ using namespace boost; //NOLINT
 
 void efname(string &name) { name += ".rpt";}
 void parse(string fn) {
-  int linenum, completeboot, startS, i, SoftLoadfound;
+  int linenum, completeboot, startS, i, SoftLoadfound, ngvalf;
   vector< int > holdval;
   services s;
   holdval.push_back(0);
@@ -52,18 +52,18 @@ void parse(string fn) {
         for (i = 0; i < s.sz(); i++) {
           outfile << "\t" + s.getsr(i) + "\n";
           outfile << "\t\tStart: Not started("+ ufn +")\n";
-          outfile << "\t\tCompleted: Not Completed(" + ufn + ")\n";
+          outfile << "\t\tCompleted: Not completed(" + ufn + ")\n";
           outfile << "\t\tElapsed Time:\n";
         }
         outfile << s.AFail();
       }
       if (SoftLoadfound == 1) {
-      outfile << s.getL1();
-      outfile << s.getL2();
-      outfile << s.getL3();
-      outfile << s.getL4();
-      outfile << s.getL5();
-      s.makeLsNull();
+        outfile << s.getL1();
+	outfile << s.getL2();
+	outfile << s.getL3();
+	outfile << s.getL4();
+	outfile << s.getL5();
+	s.makeLsNull();
       }
       outfile << "=== Device boot ===\n";
       regex_search(lif, sm, etime);
@@ -119,23 +119,28 @@ void parse(string fn) {
       for (i = 0; i < s.sz(); i++) {
         if (s.getCompleteLN(i) != "-1") {
           outfile << "\t" + s.getsr(i) + "\n\t\tStart: "
-          + s.getStartLN(i) + "(" + ufn + ")\n";
+            + s.getStartLN(i) + "(" + ufn + ")\n";
           outfile << "\t\tCompleted: " + s.getCompleteLN(i) + "(" + ufn + ")\n";
           outfile << "\t\tElapsed Time: " + s.getElapsedT(i) + "\n";
         } else {
           outfile << "\t" + s.getsr(i) + "\n\t\tStart: "
-          + "Not started(" + ufn + ")\n";
+	    + s.getStartLN(i) + "(" + ufn + ")\n";
           outfile << "\t\tCompleted: Not completed("
           + ufn +")\n\t\tElapsed Time:\n";
         }
       }
       outfile << s.getfSM();
+      ngvalf = 0;
       for (i = 0; i < s.sz(); i++) {
         if (s.getCompleteLN(i) == "-1") {
-          if (i == s.sz() - 2) {
-            outfile << s.getsr(i);
-          } else {
-            outfile << s.getsr(i) + ", ";
+	  if (ngvalf== 0) {
+	    outfile << s.getsr(i);
+	    ngvalf++;
+	    continue;
+	  }
+	  if (ngvalf == 1) {
+            outfile <<", "+ s.getsr(i);
+	    ngvalf = 0;
           }
         }
       }

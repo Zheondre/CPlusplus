@@ -64,7 +64,11 @@ class services{
       StartLN.push_back("-1");
       CompleteLN.push_back("-1");
       ElapsedT.push_back("-1");
-      allfs += sname[i]+", ";
+      if (i == sofV - 1) {
+	allfs += sname[i] + " ";
+      } else { 
+        allfs += sname[i]+", ";
+      }
     }
     allfs += "\n";
     // rs ="\\(([0-9]{1,})\\)";
