@@ -12,8 +12,8 @@
 #include <string>
 #include <vector>
 
-using namespace std;
-using namespace boost;
+using namespace std; //NOLINT
+using namespace boost; //NOLINT
 
 class services{
   vector< int > start, end;
@@ -22,8 +22,9 @@ class services{
   string l1, l2, l3, l4, l5;
   regex rs;
   int sofV;
-  public:
-  services(){
+
+ public:
+  services() {
     sname.push_back("Logging");
     sname.push_back("DatabaseInitialize");
     sname.push_back("MessagingService");
@@ -51,23 +52,22 @@ class services{
     startservice = ".*Starting Service.  ";
     GoodStart = "Service started successfully.  ";
     sofV = sname.size();
-    //throw an error if vector is empty
     fSM = "\t*** Services not successfully started: ";
     allfs = "\t*** Services not successfully started: ";
     startSoftload = ".*SOFTLOADSERVICE;Install started.*";
     EndSoftload =".*ExitValue from install command : 0.*";
-    for (int i; i < 3; i++) { 
+    for (int i; i < 3; i++) {
       start.push_back(0);
       end.push_back(0);
     }
-    for( int i = 0; i < sofV; i++){
+    for (int i = 0; i < sofV; i++) {
       StartLN.push_back("-1");
       CompleteLN.push_back("-1");
       ElapsedT.push_back("-1");
       allfs += sname[i]+", ";
     }
     allfs += "\n";
-    //rs ="\\(([0-9]{1,})\\)";
+    // rs ="\\(([0-9]{1,})\\)";
     rs = "\\(([^()]*)\\)";
   }
   void makeLsNull();
@@ -79,10 +79,10 @@ class services{
   bool SoftloadS(string, int, string);
   int SoftloadEnd(string, int, string);
   string getfSM();
-  string getCompleteLN(int);
-  string getStartLN(int);
-  string getElapsedT(int);
-  string getsr(int);
+  string getCompleteLN(int x);
+  string getStartLN(int x);
+  string getElapsedT(int x);
+  string getsr(int x);
   string AFail();
   string getSta();
   string getGS();

@@ -50,15 +50,22 @@ void parse(string fn) {
       if (completeboot == 1) {
         outfile << "**** Incomplete boot ****\n\n";
         completeboot = 0;
-	outfile << "Services \n"; 
-	for (i = 0 ; i < s.sz(); i++) { 
-	  outfile << "\t" + s.getsr(i) + "\n";
-	  outfile << "\t\t Start: Not started("+ ufn +")\n";
-	  outfile << "\t\t Completed: Not Completed(" + ufn + ")\n";
-	  outfile << "\t\t Elaplsed Time:\n"; 
-	}
-	//all failed services 
-	outfile << s.AFail();
+        outfile << "Services \n";
+        for (i = 0; i < s.sz(); i++) {
+          outfile << "\t" + s.getsr(i) + "\n";
+          outfile << "\t\t Start: Not started("+ ufn +")\n";
+          outfile << "\t\t Completed: Not Completed(" + ufn + ")\n";
+          outfile << "\t\t Elaplsed Time:\n";
+        }
+        outfile << s.AFail();
+      }
+      if (SoftLoadfound == 1) {
+      outfile << s.getL1();
+      outfile << s.getL2();
+      outfile << s.getL3();
+      outfile << s.getL4();
+      outfile << s.getL5();
+      s.makeLsNull();
       }
       outfile << "=== Device boot ===\n";
       regex_search(lif, sm, etime);
@@ -80,12 +87,12 @@ void parse(string fn) {
       s.ServiceStart(lif, linenum);
       s.ServiceSuccess(lif, linenum);
     }
-    if (s.SoftloadS(lif, linenum, ufn)){
+    if (s.SoftloadS(lif, linenum, ufn)) {
       SoftLoadfound = 1;
     }
     if (SoftLoadfound == 1) {
       s.findOV(lif);
-      s.findNV(lif);  
+      s.findNV(lif);
       SoftLoadfound = s.SoftloadEnd(lif, linenum, ufn);
     }
     if (regex_match(lif, ea)) {
@@ -99,7 +106,7 @@ void parse(string fn) {
       boost::posix_time::time_duration tb(boost::lexical_cast<int>(sn[1]),
                                           boost::lexical_cast<int>(sn[2]),
                                           boost::lexical_cast<int>(sn[3]));
-      //  tb += boost::posix_time::millisec(boost::lexical_cast<int>(sn[4]));
+      // tb += boost::posix_time::millisec(boost::lexical_cast<int>(sn[4]));
       tb = tb - ta;
       temp += sp[0] + " " + sn[0] + " " + "Boot Completed \n";
       outfile << temp;
@@ -110,34 +117,27 @@ void parse(string fn) {
       startS = 0;
       temp.clear();
       outfile << "Services\n";
-      for (i = 0; i < s.sz() ; i++ ) {
-	if( s.getCompleteLN(i) != "-1" ) {
-	  outfile << "\t" + s.getsr(i) + "\n\t\tStart: " + s.getStartLN(i) + "(" + ufn + ")\n";
-	  outfile << "\t\tCompleted: " + s.getCompleteLN(i) + "(" + ufn + ")\n";
-	  outfile << "\t\tElapsed Time: " + s.getElapsedT(i) + "\n";
-	}
-	else{//error being printed after first start...
-	  outfile << "\t" + s.getsr(i) + "\n\t\tStart: " + s.getStartLN(i) + "(" + ufn + ")\n";
-	  outfile << "\t\tCompleted: Not completed(" + ufn +")\n\t\tElapsed Time:\n";
-	}
-      } 
-      outfile << s.getfSM();  
-      for (i = 0; i < s.sz() ; i++ ) {
-	//print line saying which services didnt start up
-	if (s.getCompleteLN(i) == "-1")
-	  outfile << s.getsr(i) + " ";
+      for (i = 0; i < s.sz(); i++) {
+        if (s.getCompleteLN(i) != "-1") {
+          outfile << "\t" + s.getsr(i) + "\n\t\tStart: "
+          + s.getStartLN(i) + "(" + ufn + ")\n";
+          outfile << "\t\tCompleted: " + s.getCompleteLN(i) + "(" + ufn + ")\n";
+          outfile << "\t\tElapsed Time: " + s.getElapsedT(i) + "\n";
+        } else {
+          outfile << "\t" + s.getsr(i) + "\n\t\tStart: "
+          + s.getStartLN(i) + "(" + ufn + ")\n";
+          outfile << "\t\tCompleted: Not completed("
+          + ufn +")\n\t\tElapsed Time:\n";
+        }
+      }
+      outfile << s.getfSM();
+      for (i = 0; i < s.sz() ; i++) {
+        if (s.getCompleteLN(i) == "-1") {
+          outfile << s.getsr(i) + ", ";
+        }
       }
       outfile << "\n";
       s.setNegvalues();
-      if (SoftLoadfound == 1) {
-      outfile << s.getL1();
-      outfile << s.getL2();
-      outfile << s.getL3();
-      outfile << s.getL4();
-      outfile << s.getL5();
-      s.makeLsNull();
-      
-      }
     }
   }
   outfile.close();
