@@ -1,9 +1,6 @@
-Device Boot Repot 
-device6_intouch.log
-
 === Device boot ===
-2(device6_intouch.log):2014-04-03 20:27:48 Boot Start 
-161(device6_intouch.log):2014-04-03 20:31:01.087 Boot Completed 
+2(device6_intouch.log): 2014-04-03 20:27:48 Boot Start 
+161(device6_intouch.log): 2014-04-03 20:31:01 Boot Completed
 	Boot Time: 193000ms
 
 Services
@@ -105,8 +102,8 @@ Services
 		Elapsed Time: 206 ms
 	*** Services not successfully started: 
 === Device boot ===
-82079(device6_intouch.log):2014-04-09 14:51:15 Boot Start 
-82303(device6_intouch.log):2014-04-09 14:54:39.150 Boot Completed 
+82079(device6_intouch.log): 2014-04-09 14:51:15 Boot Start 
+82303(device6_intouch.log): 2014-04-09 14:54:39 Boot Completed
 	Boot Time: 204000ms
 
 Services
@@ -199,17 +196,17 @@ Services
 		Completed: 82278(device6_intouch.log)
 		Elapsed Time: 284 ms
 	ProtocolService
-		Start: 82272(device6_intouch.log)
+		Start: Not started(device6_intouch.log)
 		Completed: Not completed(device6_intouch.log)
 		Elapsed Time:
 	DiagnosticsService
 		Start: 82276(device6_intouch.log)
 		Completed: 82277(device6_intouch.log)
 		Elapsed Time: 254 ms
-	*** Services not successfully started: ProtocolService, 
+	*** Services not successfully started: ProtocolService
 === Device boot ===
-85398(device6_intouch.log):2014-04-10 18:13:13 Boot Start 
-85564(device6_intouch.log):2014-04-10 18:16:37.082 Boot Completed 
+85398(device6_intouch.log): 2014-04-10 18:13:13 Boot Start 
+85564(device6_intouch.log): 2014-04-10 18:16:37 Boot Completed
 	Boot Time: 204000ms
 
 Services
@@ -302,17 +299,17 @@ Services
 		Completed: 85555(device6_intouch.log)
 		Elapsed Time: 421 ms
 	ProtocolService
-		Start: 85549(device6_intouch.log)
+		Start: Not started(device6_intouch.log)
 		Completed: Not completed(device6_intouch.log)
 		Elapsed Time:
 	DiagnosticsService
 		Start: 85553(device6_intouch.log)
 		Completed: 85554(device6_intouch.log)
 		Elapsed Time: 255 ms
-	*** Services not successfully started: ProtocolService, 
+	*** Services not successfully started: ProtocolService
 === Device boot ===
-85957(device6_intouch.log):2014-04-10 19:11:05 Boot Start 
-86123(device6_intouch.log):2014-04-10 19:14:24.863 Boot Completed 
+85957(device6_intouch.log): 2014-04-10 19:11:05 Boot Start 
+86123(device6_intouch.log): 2014-04-10 19:14:24 Boot Completed
 	Boot Time: 199000ms
 
 Services
@@ -405,17 +402,17 @@ Services
 		Completed: 86113(device6_intouch.log)
 		Elapsed Time: 82 ms
 	ProtocolService
-		Start: 86108(device6_intouch.log)
+		Start: Not started(device6_intouch.log)
 		Completed: Not completed(device6_intouch.log)
 		Elapsed Time:
 	DiagnosticsService
 		Start: 86112(device6_intouch.log)
 		Completed: 86114(device6_intouch.log)
 		Elapsed Time: 202 ms
-	*** Services not successfully started: ProtocolService, 
+	*** Services not successfully started: ProtocolService
 === Device boot ===
-86127(device6_intouch.log):2014-04-10 19:18:36 Boot Start 
-86293(device6_intouch.log):2014-04-10 19:21:56.771 Boot Completed 
+86127(device6_intouch.log): 2014-04-10 19:18:36 Boot Start 
+86293(device6_intouch.log): 2014-04-10 19:21:56 Boot Completed
 	Boot Time: 200000ms
 
 Services
@@ -508,23 +505,23 @@ Services
 		Completed: 86284(device6_intouch.log)
 		Elapsed Time: 178 ms
 	ProtocolService
-		Start: 86278(device6_intouch.log)
+		Start: Not started(device6_intouch.log)
 		Completed: Not completed(device6_intouch.log)
 		Elapsed Time:
 	DiagnosticsService
 		Start: 86282(device6_intouch.log)
 		Completed: 86283(device6_intouch.log)
 		Elapsed Time: 114 ms
-	*** Services not successfully started: ProtocolService, 
+	*** Services not successfully started: ProtocolService
 === Softload ===
 86299(device6_intouch.log) : Apr 10 19:26:39 Softload Start
 	Original version ==> 2.1.0-defects.142
 	New version ==> 2.0.0-36
-	Elapsed Time (sec) ==> 160
+	Elapsed time (sec) ==> 160
 86344(device6_intouch.log) : Apr 10 19:29:19 Softload Completed
 === Device boot ===
-86568(device6_intouch.log):2014-04-10 19:32:16 Boot Start 
-86732(device6_intouch.log):2014-04-10 19:35:36.317 Boot Completed 
+86568(device6_intouch.log): 2014-04-10 19:32:16 Boot Start 
+86732(device6_intouch.log): 2014-04-10 19:35:36 Boot Completed
 	Boot Time: 200000ms
 
 Services
@@ -617,17 +614,17 @@ Services
 		Completed: 86722(device6_intouch.log)
 		Elapsed Time: 97 ms
 	ProtocolService
-		Start: 86717(device6_intouch.log)
+		Start: Not started(device6_intouch.log)
 		Completed: Not completed(device6_intouch.log)
 		Elapsed Time:
 	DiagnosticsService
 		Start: 86719(device6_intouch.log)
 		Completed: 86723(device6_intouch.log)
 		Elapsed Time: 104 ms
-	*** Services not successfully started: ProtocolService, 
+	*** Services not successfully started: ProtocolService
 === Device boot ===
-86750(device6_intouch.log):2014-04-10 20:06:27 Boot Start 
-86821(device6_intouch.log):2014-04-10 20:09:07.793 Boot Completed 
+86750(device6_intouch.log): 2014-04-10 20:06:27 Boot Start 
+86821(device6_intouch.log): 2014-04-10 20:09:07 Boot Completed
 	Boot Time: 160000ms
 
 Services
@@ -720,17 +717,17 @@ Services
 		Completed: 86815(device6_intouch.log)
 		Elapsed Time: 415 ms
 	ProtocolService
-		Start: 86809(device6_intouch.log)
+		Start: Not started(device6_intouch.log)
 		Completed: Not completed(device6_intouch.log)
 		Elapsed Time:
 	DiagnosticsService
 		Start: 86808(device6_intouch.log)
 		Completed: 86814(device6_intouch.log)
 		Elapsed Time: 250 ms
-	*** Services not successfully started: ProtocolService, 
+	*** Services not successfully started: ProtocolService
 === Device boot ===
-86939(device6_intouch.log):2014-04-11 00:15:56 Boot Start 
-87111(device6_intouch.log):2014-04-11 00:18:49.131 Boot Completed 
+86939(device6_intouch.log): 2014-04-11 00:15:56 Boot Start 
+87111(device6_intouch.log): 2014-04-11 00:18:49 Boot Completed
 	Boot Time: 173000ms
 
 Services
@@ -823,17 +820,17 @@ Services
 		Completed: 87084(device6_intouch.log)
 		Elapsed Time: 229 ms
 	ProtocolService
-		Start: 87079(device6_intouch.log)
+		Start: Not started(device6_intouch.log)
 		Completed: Not completed(device6_intouch.log)
 		Elapsed Time:
 	DiagnosticsService
 		Start: 87082(device6_intouch.log)
 		Completed: 87085(device6_intouch.log)
 		Elapsed Time: 240 ms
-	*** Services not successfully started: ProtocolService, 
+	*** Services not successfully started: ProtocolService
 === Device boot ===
-87116(device6_intouch.log):2014-04-11 13:28:25 Boot Start 
-87286(device6_intouch.log):2014-04-11 13:31:12.767 Boot Completed 
+87116(device6_intouch.log): 2014-04-11 13:28:25 Boot Start 
+87286(device6_intouch.log): 2014-04-11 13:31:12 Boot Completed
 	Boot Time: 167000ms
 
 Services
@@ -926,17 +923,17 @@ Services
 		Completed: 87261(device6_intouch.log)
 		Elapsed Time: 376 ms
 	ProtocolService
-		Start: 87255(device6_intouch.log)
+		Start: Not started(device6_intouch.log)
 		Completed: Not completed(device6_intouch.log)
 		Elapsed Time:
 	DiagnosticsService
 		Start: 87259(device6_intouch.log)
 		Completed: 87260(device6_intouch.log)
 		Elapsed Time: 158 ms
-	*** Services not successfully started: ProtocolService, 
+	*** Services not successfully started: ProtocolService
 === Device boot ===
-87836(device6_intouch.log):2014-04-11 13:58:02 Boot Start 
-88009(device6_intouch.log):2014-04-11 14:00:49.095 Boot Completed 
+87836(device6_intouch.log): 2014-04-11 13:58:02 Boot Start 
+88009(device6_intouch.log): 2014-04-11 14:00:49 Boot Completed
 	Boot Time: 167000ms
 
 Services
@@ -1029,17 +1026,17 @@ Services
 		Completed: 87984(device6_intouch.log)
 		Elapsed Time: 321 ms
 	ProtocolService
-		Start: 87978(device6_intouch.log)
+		Start: Not started(device6_intouch.log)
 		Completed: Not completed(device6_intouch.log)
 		Elapsed Time:
 	DiagnosticsService
 		Start: 87982(device6_intouch.log)
 		Completed: 87983(device6_intouch.log)
 		Elapsed Time: 229 ms
-	*** Services not successfully started: ProtocolService, 
+	*** Services not successfully started: ProtocolService
 === Device boot ===
-88983(device6_intouch.log):2014-04-11 14:23:42 Boot Start 
-89155(device6_intouch.log):2014-04-11 14:26:31.377 Boot Completed 
+88983(device6_intouch.log): 2014-04-11 14:23:42 Boot Start 
+89155(device6_intouch.log): 2014-04-11 14:26:31 Boot Completed
 	Boot Time: 169000ms
 
 Services
@@ -1132,221 +1129,221 @@ Services
 		Completed: 89129(device6_intouch.log)
 		Elapsed Time: 258 ms
 	ProtocolService
-		Start: 89123(device6_intouch.log)
+		Start: Not started(device6_intouch.log)
 		Completed: Not completed(device6_intouch.log)
 		Elapsed Time:
 	DiagnosticsService
 		Start: 89127(device6_intouch.log)
 		Completed: 89128(device6_intouch.log)
 		Elapsed Time: 169 ms
-	*** Services not successfully started: ProtocolService, 
+	*** Services not successfully started: ProtocolService
 === Device boot ===
-90112(device6_intouch.log):2014-04-14 12:13:59 Boot Start 
+90112(device6_intouch.log): 2014-04-14 12:13:59 Boot Start 
 **** Incomplete boot ****
 
 Services 
 	Logging
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	DatabaseInitialize
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	MessagingService
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	HealthMonitorService
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	Persistence
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	ConfigurationService
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	LandingPadService
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	PortConfigurationService
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	CacheService
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	ThemingService
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	StagingService
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	DeviceIOService
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	BellService
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	GateService
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	ReaderDataService
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	BiometricService
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	StateManager
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	OfflineSmartviewService
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	AVFeedbackService
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	DatabaseThreads
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	SoftLoadService
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	WATCHDOG
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	ProtocolService
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	DiagnosticsService
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	*** Services not successfully started: Logging, DatabaseInitialize, MessagingService, HealthMonitorService, Persistence, ConfigurationService, LandingPadService, PortConfigurationService, CacheService, ThemingService, StagingService, DeviceIOService, BellService, GateService, ReaderDataService, BiometricService, StateManager, OfflineSmartviewService, AVFeedbackService, DatabaseThreads, SoftLoadService, WATCHDOG, ProtocolService, DiagnosticsService, 
 === Device boot ===
-90135(device6_intouch.log):2014-04-14 12:16:13 Boot Start 
+90135(device6_intouch.log): 2014-04-14 12:16:13 Boot Start 
 **** Incomplete boot ****
 
 Services 
 	Logging
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	DatabaseInitialize
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	MessagingService
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	HealthMonitorService
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	Persistence
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	ConfigurationService
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	LandingPadService
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	PortConfigurationService
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	CacheService
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	ThemingService
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	StagingService
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	DeviceIOService
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	BellService
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	GateService
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	ReaderDataService
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	BiometricService
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	StateManager
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	OfflineSmartviewService
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	AVFeedbackService
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	DatabaseThreads
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	SoftLoadService
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	WATCHDOG
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	ProtocolService
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	DiagnosticsService
-		 Start: Not started(device6_intouch.log)
-		 Completed: Not Completed(device6_intouch.log)
-		 Elaplsed Time:
+		Start: Not started(device6_intouch.log)
+		Completed: Not Completed(device6_intouch.log)
+		Elapsed Time:
 	*** Services not successfully started: Logging, DatabaseInitialize, MessagingService, HealthMonitorService, Persistence, ConfigurationService, LandingPadService, PortConfigurationService, CacheService, ThemingService, StagingService, DeviceIOService, BellService, GateService, ReaderDataService, BiometricService, StateManager, OfflineSmartviewService, AVFeedbackService, DatabaseThreads, SoftLoadService, WATCHDOG, ProtocolService, DiagnosticsService, 
 === Device boot ===
-90176(device6_intouch.log):2014-04-14 12:18:44 Boot Start 
-90307(device6_intouch.log):2014-04-14 12:21:25.493 Boot Completed 
+90176(device6_intouch.log): 2014-04-14 12:18:44 Boot Start 
+90307(device6_intouch.log): 2014-04-14 12:21:25 Boot Completed
 	Boot Time: 161000ms
 
 Services
@@ -1439,11 +1436,11 @@ Services
 		Completed: 90298(device6_intouch.log)
 		Elapsed Time: 557 ms
 	ProtocolService
-		Start: 90294(device6_intouch.log)
+		Start: Not started(device6_intouch.log)
 		Completed: Not completed(device6_intouch.log)
 		Elapsed Time:
 	DiagnosticsService
 		Start: 90293(device6_intouch.log)
 		Completed: 90297(device6_intouch.log)
 		Elapsed Time: 192 ms
-	*** Services not successfully started: ProtocolService, 
+	*** Services not successfully started: ProtocolService

@@ -1,9 +1,6 @@
-Device Boot Repot 
-device1_intouch.log
-
 === Device boot ===
-435369(device1_intouch.log):2014-03-25 19:11:59 Boot Start 
-435759(device1_intouch.log):2014-03-25 19:15:02.369 Boot Completed 
+435369(device1_intouch.log): 2014-03-25 19:11:59 Boot Start 
+435759(device1_intouch.log): 2014-03-25 19:15:02 Boot Completed
 	Boot Time: 183000ms
 
 Services
@@ -96,23 +93,23 @@ Services
 		Completed: 435750(device1_intouch.log)
 		Elapsed Time: 526 ms
 	ProtocolService
-		Start: 435744(device1_intouch.log)
+		Start: Not started(device1_intouch.log)
 		Completed: Not completed(device1_intouch.log)
 		Elapsed Time:
 	DiagnosticsService
 		Start: 435748(device1_intouch.log)
 		Completed: 435749(device1_intouch.log)
 		Elapsed Time: 218 ms
-	*** Services not successfully started: ProtocolService, 
+	*** Services not successfully started: ProtocolService
 === Softload ===
 436276(device1_intouch.log) : Mar 25 19:17:55 Softload Start
 	Original version ==> 2.0.0-uix.64
 	New version ==> 2.0.2-146
-	Elapsed Time (sec) ==> 622
+	Elapsed time (sec) ==> 622
 436427(device1_intouch.log) : Mar 25 19:28:17 Softload Completed
 === Device boot ===
-436500(device1_intouch.log):2014-03-25 19:29:59 Boot Start 
-436859(device1_intouch.log):2014-03-25 19:32:44.036 Boot Completed 
+436500(device1_intouch.log): 2014-03-25 19:29:59 Boot Start 
+436859(device1_intouch.log): 2014-03-25 19:32:44 Boot Completed
 	Boot Time: 165000ms
 
 Services
@@ -177,7 +174,7 @@ Services
 		Completed: 436755(device1_intouch.log)
 		Elapsed Time: 3 ms
 	BiometricService
-		Start: -1(device1_intouch.log)
+		Start: Not started(device1_intouch.log)
 		Completed: Not completed(device1_intouch.log)
 		Elapsed Time:
 	StateManager
@@ -205,23 +202,23 @@ Services
 		Completed: 436850(device1_intouch.log)
 		Elapsed Time: 304 ms
 	ProtocolService
-		Start: 436848(device1_intouch.log)
+		Start: Not started(device1_intouch.log)
 		Completed: Not completed(device1_intouch.log)
 		Elapsed Time:
 	DiagnosticsService
 		Start: 436845(device1_intouch.log)
 		Completed: 436849(device1_intouch.log)
 		Elapsed Time: 130 ms
-	*** Services not successfully started: BiometricService, ProtocolService, 
+	*** Services not successfully started: BiometricService, ProtocolService
 === Softload ===
 440360(device1_intouch.log) : Mar 25 21:45:44 Softload Start
 	Original version ==> 2.0.2-146
 	New version ==> 2.1.0-udm.12
-	Elapsed Time (sec) ==> 596
+	Elapsed time (sec) ==> 596
 440518(device1_intouch.log) : Mar 25 21:55:40 Softload Completed
 === Device boot ===
-440719(device1_intouch.log):2014-03-25 22:01:46 Boot Start 
-440791(device1_intouch.log):2014-03-25 22:04:27.514 Boot Completed 
+440719(device1_intouch.log): 2014-03-25 22:01:46 Boot Start 
+440791(device1_intouch.log): 2014-03-25 22:04:27 Boot Completed
 	Boot Time: 161000ms
 
 Services
@@ -314,17 +311,17 @@ Services
 		Completed: 440784(device1_intouch.log)
 		Elapsed Time: 608 ms
 	ProtocolService
-		Start: 440779(device1_intouch.log)
+		Start: Not started(device1_intouch.log)
 		Completed: Not completed(device1_intouch.log)
 		Elapsed Time:
 	DiagnosticsService
 		Start: 440782(device1_intouch.log)
 		Completed: 440783(device1_intouch.log)
 		Elapsed Time: 405 ms
-	*** Services not successfully started: ProtocolService, 
+	*** Services not successfully started: ProtocolService
 === Device boot ===
-440866(device1_intouch.log):2014-03-26 12:47:42 Boot Start 
-441216(device1_intouch.log):2014-03-26 12:50:29.824 Boot Completed 
+440866(device1_intouch.log): 2014-03-26 12:47:42 Boot Start 
+441216(device1_intouch.log): 2014-03-26 12:50:29 Boot Completed
 	Boot Time: 167000ms
 
 Services
@@ -417,17 +414,17 @@ Services
 		Completed: 441206(device1_intouch.log)
 		Elapsed Time: 390 ms
 	ProtocolService
-		Start: 441204(device1_intouch.log)
+		Start: Not started(device1_intouch.log)
 		Completed: Not completed(device1_intouch.log)
 		Elapsed Time:
 	DiagnosticsService
 		Start: 441202(device1_intouch.log)
 		Completed: 441205(device1_intouch.log)
 		Elapsed Time: 260 ms
-	*** Services not successfully started: ProtocolService, 
+	*** Services not successfully started: ProtocolService
 === Device boot ===
-442094(device1_intouch.log):2014-03-26 20:41:34 Boot Start 
-442432(device1_intouch.log):2014-03-26 20:44:13.235 Boot Completed 
+442094(device1_intouch.log): 2014-03-26 20:41:34 Boot Start 
+442432(device1_intouch.log): 2014-03-26 20:44:13 Boot Completed
 	Boot Time: 159000ms
 
 Services
@@ -520,17 +517,17 @@ Services
 		Completed: 442423(device1_intouch.log)
 		Elapsed Time: 378 ms
 	ProtocolService
-		Start: 442421(device1_intouch.log)
+		Start: Not started(device1_intouch.log)
 		Completed: Not completed(device1_intouch.log)
 		Elapsed Time:
 	DiagnosticsService
 		Start: 442417(device1_intouch.log)
 		Completed: 442422(device1_intouch.log)
 		Elapsed Time: 182 ms
-	*** Services not successfully started: ProtocolService, 
+	*** Services not successfully started: ProtocolService
 === Device boot ===
-443073(device1_intouch.log):2014-03-27 14:09:01 Boot Start 
-443411(device1_intouch.log):2014-03-27 14:11:42.500 Boot Completed 
+443073(device1_intouch.log): 2014-03-27 14:09:01 Boot Start 
+443411(device1_intouch.log): 2014-03-27 14:11:42 Boot Completed
 	Boot Time: 161000ms
 
 Services
@@ -623,11 +620,11 @@ Services
 		Completed: 443401(device1_intouch.log)
 		Elapsed Time: 493 ms
 	ProtocolService
-		Start: 443398(device1_intouch.log)
+		Start: Not started(device1_intouch.log)
 		Completed: Not completed(device1_intouch.log)
 		Elapsed Time:
 	DiagnosticsService
 		Start: 443397(device1_intouch.log)
 		Completed: 443402(device1_intouch.log)
 		Elapsed Time: 563 ms
-	*** Services not successfully started: ProtocolService, 
+	*** Services not successfully started: ProtocolService

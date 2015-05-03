@@ -167,7 +167,7 @@ void services::GetEtime() {
   et = et - st;
   so.str("");
   so << et.total_seconds();
-  temp = "\tElapsed Time (sec) ==> " + so.str() + "\n";
+  temp = "\tElapsed time (sec) ==> " + so.str() + "\n";
   l4 = temp;
 }
 

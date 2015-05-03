@@ -25,7 +25,6 @@ void parse(string fn) {
   ufn = fn;
   efname(fn);
   std::fstream outfile;
-  cout << fn << endl;
   outfile.open(fn.c_str(), fstream::out);
   rs = ".*log.c.166.*";
   rsa = ".*oejs.AbstractConnector:Started SelectChannelConnector.*";
@@ -33,7 +32,6 @@ void parse(string fn) {
   string tmm = "(\\d{2}):(\\d{2}):(\\d{2})\\.(\\d{3})";
   string gd = "(\\d{4})-(\\d{2})-(\\d{2})";
   boottime = "Boot Time: ";
-  outfile << "Device Boot Repot \n" + ufn + "\n\n";
   std::ifstream infile(ufn.c_str());
   smatch sm, sn, so, sp;
   regex e = regex(rs);
@@ -53,9 +51,9 @@ void parse(string fn) {
         outfile << "Services \n";
         for (i = 0; i < s.sz(); i++) {
           outfile << "\t" + s.getsr(i) + "\n";
-          outfile << "\t\t Start: Not started("+ ufn +")\n";
-          outfile << "\t\t Completed: Not Completed(" + ufn + ")\n";
-          outfile << "\t\t Elaplsed Time:\n";
+          outfile << "\t\tStart: Not started("+ ufn +")\n";
+          outfile << "\t\tCompleted: Not Completed(" + ufn + ")\n";
+          outfile << "\t\tElapsed Time:\n";
         }
         outfile << s.AFail();
       }
@@ -76,7 +74,7 @@ void parse(string fn) {
       ss.str("");
       ss << linenum;
       temp = ss.str();
-      temp += "(" + ufn + "):";
+      temp += "(" + ufn + "): ";
       temp += so[0] + " " + sm[0] + " Boot Start \n";
       outfile << temp;
       completeboot = 1;
@@ -99,7 +97,7 @@ void parse(string fn) {
       ss.str("");
       ss << linenum;
       temp = ss.str();
-      temp += "(" + ufn + "):";
+      temp += "(" + ufn + "): ";
       regex_search(lif, sn, f);
       regex_search(lif, sp, getdatea);
       boost::posix_time::time_duration ta(holdval[0], holdval[1], holdval[2]);
@@ -108,7 +106,8 @@ void parse(string fn) {
                                           boost::lexical_cast<int>(sn[3]));
       // tb += boost::posix_time::millisec(boost::lexical_cast<int>(sn[4]));
       tb = tb - ta;
-      temp += sp[0] + " " + sn[0] + " " + "Boot Completed \n";
+      temp += sp[0] + " " + sn[1] +":" + sn[2] + ":" + sn[3]
+      + " " + "Boot Completed\n";
       outfile << temp;
       ss.str("");
       ss << tb.total_milliseconds();
@@ -125,15 +124,19 @@ void parse(string fn) {
           outfile << "\t\tElapsed Time: " + s.getElapsedT(i) + "\n";
         } else {
           outfile << "\t" + s.getsr(i) + "\n\t\tStart: "
-          + s.getStartLN(i) + "(" + ufn + ")\n";
+          + "Not started(" + ufn + ")\n";
           outfile << "\t\tCompleted: Not completed("
           + ufn +")\n\t\tElapsed Time:\n";
         }
       }
       outfile << s.getfSM();
-      for (i = 0; i < s.sz() ; i++) {
+      for (i = 0; i < s.sz(); i++) {
         if (s.getCompleteLN(i) == "-1") {
-          outfile << s.getsr(i) + ", ";
+          if (i == s.sz() - 2) {
+            outfile << s.getsr(i);
+          } else {
+            outfile << s.getsr(i) + ", ";
+          }
         }
       }
       outfile << "\n";
