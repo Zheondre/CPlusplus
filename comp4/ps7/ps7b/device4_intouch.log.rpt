@@ -100,7 +100,6 @@ Services
 		Start: 99(device4_intouch.log)
 		Completed: 100(device4_intouch.log)
 		Elapsed Time: 135 ms
-	*** Services not successfully started: 
 === Device boot ===
 747(device4_intouch.log): 2013-10-03 12:23:21 Boot Start 
 855(device4_intouch.log): 2013-10-03 12:26:15 Boot Completed

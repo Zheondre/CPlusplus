@@ -82,6 +82,8 @@ class services{
   void findNV(string);
   bool SoftloadS(string, int, string);
   int SoftloadEnd(string, int, string);
+  string Sformat(string);
+  string LFS();
   string getfSM();
   string getCompleteLN(int x);
   string getStartLN(int x);

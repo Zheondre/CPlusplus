@@ -141,7 +141,6 @@ int services::SoftloadEnd(string line, int ln, string fn) {
   regex e(EndSoftload);
   if (regex_match(line, e)) {
     regex rge("(\\s*\\w{3}\\s*[0-9]{1,2})");
-    //regex rdf("
     regex rgd("([0-9]{2}):([0-9]{2}):([0-9]{2})");
     if (regex_search(line, sm, rge)) {
       so.str("");
@@ -171,4 +170,47 @@ void services::GetEtime() {
   temp = "\tElapsed time (sec) ==> " + so.str() + "\n";
   l4 = temp;
 }
-
+string services::Sformat(string ufn) {
+  string temp = "";
+    for (int i = 0; i < sofV; i++) {
+      if (getCompleteLN(i) != "-1") {
+        temp +=  "\t" + getsr(i) + "\n\t\tStart: "
+        + getStartLN(i) + "(" + ufn + ")\n";
+        temp += "\t\tCompleted: " + getCompleteLN(i) + "(" + ufn + ")\n";
+        temp += "\t\tElapsed Time: " + getElapsedT(i) + "\n";
+      } else {
+        if (getStartLN(i) == "-1") {
+          temp += "\t" + getsr(i) + "\n\t\tStart: "
+          + "Not started(" + ufn + ")\n";
+          temp += "\t\tCompleted: Not completed("
+          + ufn +")\n\t\tElapsed Time:\n";
+        } else {
+          temp += "\t" + getsr(i) + "\n\t\tStart: "
+          + getStartLN(i) +"(" + ufn + ")\n";
+          temp += "\t\tCompleted: Not completed("
+          + ufn +")\n\t\tElapsed Time:\n";
+        }
+      }
+    }
+    return temp;
+}
+string services::LFS() {
+  string temp, t2;
+  temp = t2 = "";
+  int ngvalf = 0;
+  for (int i = 0; i < sofV; i++) {
+    if (getCompleteLN(i) == "-1") {
+      if (ngvalf== 0) {
+        t2 += fSM;
+        temp += getsr(i);
+        ngvalf++;
+        continue;
+      }
+      if (ngvalf == 1) {
+        temp +=", "+ getsr(i);
+      }
+    }
+  }
+  t2 += temp;
+  return t2;
+}

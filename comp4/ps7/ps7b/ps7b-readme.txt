@@ -35,7 +35,7 @@ I completed the whole assignment, I know it is working because I compared it to 
 
 (?=-[0-9])(.*?)(?=\\.armv) This will grab the text between base-(  ).arm . 
 .*: Processing.* Finds the string for the softload process.
-(\\s*\\w{3}\\s*[0-9]{2}) Finds a three letter month, with the number day.
+(\\s*\\w{3}\\s*[0-9]{1,2}) Finds a three letter month, with the number day with either one or two digits.
 ([0-9]{2}):([0-9]{2}):([0-9]{2}) Gets time.
 .*(nameofservice).* Finds the start up services
 .*Starting Service. (name of service).* Finds march for service.

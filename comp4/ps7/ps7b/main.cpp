@@ -15,13 +15,14 @@ using namespace boost; //NOLINT
 
 void efname(string &name) { name += ".rpt";}
 void parse(string fn) {
-  int linenum, completeboot, startS, i, SoftLoadfound, ngvalf;
+  int linenum, completeboot, startS, i, SoftLoadfound, ngvalf, serf;
   vector< int > holdval;
   services s;
   holdval.push_back(0);
   holdval.push_back(0);
   holdval.push_back(0);
-  string ufn, filename, lif, rs, rsa, temp, boottime;
+  string ufn, filename, lif, rs, rsa, temp, boottime, isnll;
+  isnll = "";
   ufn = fn;
   efname(fn);
   std::fstream outfile;
@@ -49,13 +50,9 @@ void parse(string fn) {
         outfile << "**** Incomplete boot ****\n\n";
         completeboot = 0;
         outfile << "Services \n";
-        for (i = 0; i < s.sz(); i++) {
-          outfile << "\t" + s.getsr(i) + "\n";
-          outfile << "\t\tStart: Not started("+ ufn +")\n";
-          outfile << "\t\tCompleted: Not completed(" + ufn + ")\n";
-          outfile << "\t\tElapsed Time:\n";
-        }
-        outfile << s.AFail();
+        outfile << s.Sformat(ufn);
+        outfile << s.LFS();
+        outfile << "\n";
       }
       if (SoftLoadfound == 1) {
         outfile << s.getL1();
@@ -116,41 +113,12 @@ void parse(string fn) {
       startS = 0;
       temp.clear();
       outfile << "Services\n";
-      for (i = 0; i < s.sz(); i++) {
-        if (s.getCompleteLN(i) != "-1") {
-          outfile << "\t" + s.getsr(i) + "\n\t\tStart: "
-            + s.getStartLN(i) + "(" + ufn + ")\n";
-          outfile << "\t\tCompleted: " + s.getCompleteLN(i) + "(" + ufn + ")\n";
-          outfile << "\t\tElapsed Time: " + s.getElapsedT(i) + "\n";
-         } else {
-          if (s.getStartLN(i) == "-1") {
-             outfile << "\t" + s.getsr(i) + "\n\t\tStart: "
-               + "Not started(" + ufn + ")\n";
-             outfile << "\t\tCompleted: Not completed("
-               + ufn +")\n\t\tElapsed Time:\n";
-          } else {
-             outfile << "\t" + s.getsr(i) + "\n\t\tStart: "
-               + s.getStartLN(i) +"(" + ufn + ")\n";
-             outfile << "\t\tCompleted: Not completed("
-               + ufn +")\n\t\tElapsed Time:\n";
-         }
-        }
+      outfile << s.Sformat(ufn);
+      isnll = s.LFS();
+      outfile << isnll;
+      if (isnll != "") {
+        outfile << "\n";
       }
-      outfile << s.getfSM();
-      ngvalf = 0;
-      for (i = 0; i < s.sz(); i++) {
-        if (s.getCompleteLN(i) == "-1") {
-          if (ngvalf== 0) {
-            outfile << s.getsr(i);
-            ngvalf++;
-            continue;
-          }
-          if (ngvalf == 1) {
-            outfile <<", "+ s.getsr(i);
-          }
-        }
-      }
-      outfile << "\n";
       s.setNegvalues();
     }
   }

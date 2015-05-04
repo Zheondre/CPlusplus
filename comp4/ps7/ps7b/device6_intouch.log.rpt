@@ -100,7 +100,6 @@ Services
 		Start: 145(device6_intouch.log)
 		Completed: 149(device6_intouch.log)
 		Elapsed Time: 206 ms
-	*** Services not successfully started: 
 === Device boot ===
 82079(device6_intouch.log): 2014-04-09 14:51:15 Boot Start 
 82303(device6_intouch.log): 2014-04-09 14:54:39 Boot Completed
@@ -1238,18 +1237,18 @@ Services
 		Start: Not started(device6_intouch.log)
 		Completed: Not completed(device6_intouch.log)
 		Elapsed Time:
-	*** Services not successfully started: Logging, DatabaseInitialize, MessagingService, HealthMonitorService, Persistence, ConfigurationService, LandingPadService, PortConfigurationService, CacheService, ThemingService, StagingService, DeviceIOService, BellService, GateService, ReaderDataService, BiometricService, StateManager, OfflineSmartviewService, AVFeedbackService, DatabaseThreads, SoftLoadService, WATCHDOG, ProtocolService, DiagnosticsService 
+	*** Services not successfully started: Logging, DatabaseInitialize, MessagingService, HealthMonitorService, Persistence, ConfigurationService, LandingPadService, PortConfigurationService, CacheService, ThemingService, StagingService, DeviceIOService, BellService, GateService, ReaderDataService, BiometricService, StateManager, OfflineSmartviewService, AVFeedbackService, DatabaseThreads, SoftLoadService, WATCHDOG, ProtocolService, DiagnosticsService
 === Device boot ===
 90135(device6_intouch.log): 2014-04-14 12:16:13 Boot Start 
 **** Incomplete boot ****
 
 Services 
 	Logging
-		Start: Not started(device6_intouch.log)
-		Completed: Not completed(device6_intouch.log)
-		Elapsed Time:
+		Start: 90155(device6_intouch.log)
+		Completed: 90156(device6_intouch.log)
+		Elapsed Time: 319 ms
 	DatabaseInitialize
-		Start: Not started(device6_intouch.log)
+		Start: 90157(device6_intouch.log)
 		Completed: Not completed(device6_intouch.log)
 		Elapsed Time:
 	MessagingService
@@ -1340,7 +1339,7 @@ Services
 		Start: Not started(device6_intouch.log)
 		Completed: Not completed(device6_intouch.log)
 		Elapsed Time:
-	*** Services not successfully started: Logging, DatabaseInitialize, MessagingService, HealthMonitorService, Persistence, ConfigurationService, LandingPadService, PortConfigurationService, CacheService, ThemingService, StagingService, DeviceIOService, BellService, GateService, ReaderDataService, BiometricService, StateManager, OfflineSmartviewService, AVFeedbackService, DatabaseThreads, SoftLoadService, WATCHDOG, ProtocolService, DiagnosticsService 
+	*** Services not successfully started: DatabaseInitialize, MessagingService, HealthMonitorService, Persistence, ConfigurationService, LandingPadService, PortConfigurationService, CacheService, ThemingService, StagingService, DeviceIOService, BellService, GateService, ReaderDataService, BiometricService, StateManager, OfflineSmartviewService, AVFeedbackService, DatabaseThreads, SoftLoadService, WATCHDOG, ProtocolService, DiagnosticsService
 === Device boot ===
 90176(device6_intouch.log): 2014-04-14 12:18:44 Boot Start 
 90307(device6_intouch.log): 2014-04-14 12:21:25 Boot Completed
