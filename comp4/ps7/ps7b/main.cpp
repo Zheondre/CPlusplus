@@ -8,32 +8,31 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "Services.hpp"
 
 using namespace std; //NOLINT
 using namespace boost; //NOLINT
 
 void efname(string &name) { name += ".rpt";}
 void parse(string fn) {
-  int linenum, completeboot;
+  int linenum, completeboot, startS, i, SoftLoadfound, ngvalf, serf;
   vector< int > holdval;
+  services s;
   holdval.push_back(0);
   holdval.push_back(0);
   holdval.push_back(0);
-  string ufn, filename, lif, rs, rsa, temp, boottime;
+  string ufn, filename, lif, rs, rsa, temp, boottime, isnll;
+  isnll = "";
   ufn = fn;
   efname(fn);
   std::fstream outfile;
-  cout << fn << endl;
   outfile.open(fn.c_str(), fstream::out);
   rs = ".*log.c.166.*";
   rsa = ".*oejs.AbstractConnector:Started SelectChannelConnector.*";
   string t = "(\\d{2}):(\\d{2}):(\\d{2})";
-  //  (\d{2}):(\d{2}):(\d{2})
   string tmm = "(\\d{2}):(\\d{2}):(\\d{2})\\.(\\d{3})";
-  //  (\d{2}):(\d{2}):(\d{2})\.(\d{3})
   string gd = "(\\d{4})-(\\d{2})-(\\d{2})";
   boottime = "Boot Time: ";
-  outfile << "Device Boot Repot \n" + ufn + "\n\n";
   std::ifstream infile(ufn.c_str());
   smatch sm, sn, so, sp;
   regex e = regex(rs);
@@ -43,25 +42,25 @@ void parse(string fn) {
   regex getdate(gd);
   regex getdatea(gd);
   std::ostringstream ss;
-  linenum = completeboot = 0;
-  string allfs = "\t*** Services not successfully started: ";  
-  for ( i = 0 ; i < sname.size(); i++ ) 
-    allfs += sname[i]+", "; 
-
+  linenum = completeboot = startS = SoftLoadfound = 0;
   while (getline(infile, lif)) {
     linenum++;
     if (regex_match(lif, e)) {
       if (completeboot == 1) {
         outfile << "**** Incomplete boot ****\n\n";
         completeboot = 0;
-	for (i = 0 ; i < sname.size(); i++) { 
-	  outfile << "Servces \n\t" +sname[i]+"\n";
-	  outfile << "\t\t Start: Not started("+ fn +")\n";
-	  outfile << "\t\t Completed: Not Completed(" + fn + ")\n";
-	  outfile << "\t\t Elaplsed Time:\n"; 
-	}
-	//all failed services 
-	outfile << allfs + "\n";	
+        outfile << "Services \n";
+        outfile << s.Sformat(ufn);
+        outfile << s.LFS();
+        outfile << "\n";
+      }
+      if (SoftLoadfound == 1) {
+        outfile << s.getL1();
+        outfile << s.getL2();
+        outfile << s.getL3();
+        outfile << s.getL4();
+        outfile << s.getL5();
+        s.makeLsNull();
       }
       outfile << "=== Device boot ===\n";
       regex_search(lif, sm, etime);
@@ -72,32 +71,55 @@ void parse(string fn) {
       ss.str("");
       ss << linenum;
       temp = ss.str();
-      temp += "(" + ufn + "):";
+      temp += "(" + ufn + "): ";
       temp += so[0] + " " + sm[0] + " Boot Start \n";
       outfile << temp;
       completeboot = 1;
+      startS = 1;
       temp.clear();
+    }
+    if (startS == 1) {
+      s.ServiceStart(lif, linenum);
+      s.ServiceSuccess(lif, linenum);
+    }
+    if (s.SoftloadS(lif, linenum, ufn)) {
+      SoftLoadfound = 1;
+    }
+    if (SoftLoadfound == 1) {
+      s.findOV(lif);
+      s.findNV(lif);
+      SoftLoadfound = s.SoftloadEnd(lif, linenum, ufn);
     }
     if (regex_match(lif, ea)) {
       ss.str("");
       ss << linenum;
       temp = ss.str();
-      temp += "(" + ufn + "):";
+      temp += "(" + ufn + "): ";
       regex_search(lif, sn, f);
       regex_search(lif, sp, getdatea);
       boost::posix_time::time_duration ta(holdval[0], holdval[1], holdval[2]);
       boost::posix_time::time_duration tb(boost::lexical_cast<int>(sn[1]),
                                           boost::lexical_cast<int>(sn[2]),
                                           boost::lexical_cast<int>(sn[3]));
-      //  tb += boost::posix_time::millisec(boost::lexical_cast<int>(sn[4]));
+      // tb += boost::posix_time::millisec(boost::lexical_cast<int>(sn[4]));
       tb = tb - ta;
-      temp += sp[0] + " " + sn[0] + " " + "Boot Completed \n";
+      temp += sp[0] + " " + sn[1] +":" + sn[2] + ":" + sn[3]
+      + " " + "Boot Completed\n";
       outfile << temp;
       ss.str("");
       ss << tb.total_milliseconds();
-      outfile <<"\t"+ boottime + ss.str() + " ms\n\n";
+      outfile <<"\t"+ boottime + ss.str() + "ms\n\n";
       completeboot = 0;
+      startS = 0;
       temp.clear();
+      outfile << "Services\n";
+      outfile << s.Sformat(ufn);
+      isnll = s.LFS();
+      outfile << isnll;
+      if (isnll != "") {
+        outfile << "\n";
+      }
+      s.setNegvalues();
     }
   }
   outfile.close();

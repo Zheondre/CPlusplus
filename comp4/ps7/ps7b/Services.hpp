@@ -1,6 +1,6 @@
 //  Copyright 2015 Zheondre Calcano
-#ifndef _Kronos_
-#define _kronos_
+#ifndef _Services_
+#define _Services_
 
 #include <boost/regex.hpp>
 #include <boost/date_time.hpp>
@@ -12,15 +12,19 @@
 #include <string>
 #include <vector>
 
-using namespace std;
-using namespace boost;
+using namespace std; //NOLINT
+using namespace boost; //NOLINT
+
 class services{
-  //vector< bool > CpServ;
-  vector< string > sname;
-  string startservice, GoodStart, allfs, rs;
+  vector< int > start, end;
+  vector< string > sname, StartLN, CompleteLN, ElapsedT;
+  string startservice, GoodStart, allfs, fSM, startSoftload, EndSoftload;
+  string l1, l2, l3, l4, l5;
+  regex rs;
   int sofV;
-public:
-  services(){
+
+ public:
+  services() {
     sname.push_back("Logging");
     sname.push_back("DatabaseInitialize");
     sname.push_back("MessagingService");
@@ -37,6 +41,7 @@ public:
     sname.push_back("GateService");
     sname.push_back("ReaderDataService");
     sname.push_back("BiometricService");
+    sname.push_back("StateManager");
     sname.push_back("OfflineSmartviewService");
     sname.push_back("AVFeedbackService");
     sname.push_back("DatabaseThreads");
@@ -46,43 +51,54 @@ public:
     sname.push_back("DiagnosticsService");
     startservice = ".*Starting Service.  ";
     GoodStart = "Service started successfully.  ";
-    
     sofV = sname.size();
-    //throw an error if vector is empty
-    for( int i = 0; i < sofV; i++)
-      allfs += sname[i]+", ";
+    fSM = "\t*** Services not successfully started: ";
+    allfs = "\t*** Services not successfully started: ";
+    startSoftload = ".*SOFTLOADSERVICE;Install started.*";
+    EndSoftload =".*ExitValue from install command : 0.*";
+    for (int i; i < 3; i++) {
+      start.push_back(0);
+      end.push_back(0);
+    }
+    for (int i = 0; i < sofV; i++) {
+      StartLN.push_back("-1");
+      CompleteLN.push_back("-1");
+      ElapsedT.push_back("-1");
+      if (i == sofV - 1) {
+        allfs += sname[i] + " ";
+      } else {
+        allfs += sname[i]+", ";
+      }
+    }
     allfs += "\n";
-    rs = "([0-9]{3})";
-  //might have to hadd .* at the beginnning..
+    // rs ="\\(([0-9]{1,})\\)";
+    rs = "\\(([^()]*)\\)";
   }
-
-  string getsr(int);
+  void makeLsNull();
+  void setNegvalues();
+  void ServiceSuccess(string, int);
+  void ServiceStart(string, int);
+  void findOV(string);
+  void findNV(string);
+  bool SoftloadS(string, int, string);
+  int SoftloadEnd(string, int, string);
+  string Sformat(string);
+  string LFS();
+  string getfSM();
+  string getCompleteLN(int x);
+  string getStartLN(int x);
+  string getElapsedT(int x);
+  string getsr(int x);
   string AFail();
   string getSta();
   string getGS();
-  string getRS();
+  void GetEtime();
+  string getL1();
+  string getL2();
+  string getL3();
+  string getL4();
+  string getL5();
+  regex getRS();
   int sz();
 };
-string services::getRS() { 
-  return rs;
-}
-string services::AFail() {
-  return allfs;
-}
-string services::getsr(int x) {
-  if(x < 0)
-    throw std::invalid_argument( "Value is less than 0");
-  if(x > sofV)
-    throw std::invalid_argument( "Value is greater than vector size");
-  return sname[x];
-}
-string services::getSta() {
-  return startservice;
-}
-string services::getGS() {
-  return GoodStart;
-}
-int services::sz() {
-  return sofV;
-}
 #endif
