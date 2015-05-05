@@ -13,4 +13,4 @@ mf.o: mf.cpp space.hpp
 	g++ -c mf.cpp -Wall -Werror -ansi -pedantic -g 
 
 clean: 
-	rm *.o NBody *~ 
+	rm *.o NBody *~ *#
