@@ -13,11 +13,11 @@ class RingBuffer{
  public:
   explicit RingBuffer(int x): _size(x) {
     if (x < 1)
-      throw std::invalid_argument("Constructor capacity must be > than 0");
+      throw std::runtime_error("Constructor capacity must be > than 0");
     _first = _last = _currentcapacity = 0;
     for (int i = 0 ; i < x; i++)
       _buffer.push_back(100);
-  }
+   }
   void RB();
   int size();
   bool isEmpty();

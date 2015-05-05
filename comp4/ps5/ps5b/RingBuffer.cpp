@@ -1,9 +1,12 @@
 // Copyright 2015 <Angel Z'heondre Calcano>
 #include <stdint.h>
+#include <cstdlib>
+#include <stdint.h>
 #include <stdexcept>
 #include <iostream>
 #include <string>
 #include <vector>
+#include <SFML/System.hpp>
 #include "RingBuffer.hpp"
 
 int RingBuffer::size() { return _currentcapacity; }
@@ -20,11 +23,14 @@ bool RingBuffer::isFull() {
 }
 
 void RingBuffer::enqueue(int16_t x) {
-  std::cout << x << std::endl;
   if (_currentcapacity == _size) {
     throw
       std::runtime_error("Can't enqueue on a full ring");
   }
+  if( _currentcapacity > _size) { 
+    throw
+      std::runtime_error("Can't enqueue on a full ring");
+  } 
   _buffer[_last] = x;
   _last++;
   _currentcapacity++;
