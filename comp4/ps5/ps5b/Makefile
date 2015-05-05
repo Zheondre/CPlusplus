@@ -12,5 +12,5 @@ RingBuffer.o: RingBuffer.cpp RingBuffer.hpp
 GuitarString.o: GuitarString.cpp GuitarString.hpp
 	g++ -c GuitarString.cpp -Wall -Werror -ansi -pedantic -lboost_unit_test_framework -lsfml-system -lsfml-audio -lsfml-graphics -lsfml-window -g
 
-clean:
-	 rm *.o GuitarHero *~
+clean:	
+	 rm *.o GuitarHero *~ a.out

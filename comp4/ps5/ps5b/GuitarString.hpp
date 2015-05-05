@@ -17,11 +17,10 @@ class GuitarString{
   RingBuffer *_j; int _size, _ticCount;
 
  public:
-  explicit GuitarString(int freq) {
-    // use resize ?
+  explicit GuitarString(double freq) {
     if (freq < 1)
-      throw std::invalid_argument("Constructor frequency must be > than 0");
-    _size = ceil((44100/freq));
+      throw std::runtime_error("Constructor frequency must be > than 0");
+    _size = ceil((48400/freq)); //48400
     _j = new RingBuffer(_size);
     _ticCount = 0;
      for (int i = 0 ; i < _size; i++)
@@ -30,20 +29,15 @@ class GuitarString{
   explicit GuitarString(std::vector< sf::Int16 > j) {
     _size = j.size();
     if (_size < 1)
-      throw std::invalid_argument("Empty Vector, Size must be > than 0 ");
-    std::cout << _size << std::endl;
+      throw std::runtime_error("Empty Vector, Size must be > than 0 ");
     _j = new RingBuffer(_size);
-     // works
     _ticCount = 0;
     for (int i = 0; i < _size; i++) {
       _j->enqueue((int16_t)j[i]);
-      std::cout << i << std::endl;
     }
-    // works but segfaults afterwards.
   }
   ~GuitarString() {
-    // make sure to free bytes for the pointer.
-    delete[] _j;
+    delete _j; // delete *_j made it fail the test.
   }
   void pluck();
   int time();
