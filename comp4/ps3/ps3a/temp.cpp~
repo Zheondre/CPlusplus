@@ -1,0 +1,12 @@
+#include <cmath> 
+#include <iostream> 
+
+using namespace std ; 
+
+int main( int argc, char *argv[] ) { 
+
+  cout << sin(1) << endl  ; 
+  cout << sin(1*(M_PI/180) ) << endl  ; 
+
+
+} 

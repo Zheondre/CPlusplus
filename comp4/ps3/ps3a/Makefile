@@ -1,0 +1,11 @@
+all: NBody 
+
+NBody: main.o space.o
+	g++ main.o space.o -o NBody -lsfml-graphics -lsfml-window -lsfml-system 
+
+NBody.o: main.cpp space.hpp 
+	g++ -c main.cpp 
+
+Space.o: space.cpp space.hpp 
+	g++ -c space.cpp
+clean: rm *.o NBody *~ *.gch 

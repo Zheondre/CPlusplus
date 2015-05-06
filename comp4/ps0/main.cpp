@@ -1,46 +1,35 @@
 #include <SFML/Graphics.hpp>
 
-int main() { 
-
-
+int main(int argc, char *argv[]) { 
   sf::RenderWindow window(sf::VideoMode(700, 700), "Angel Calcano");
-   sf::Texture texture; 
-  texture.loadFromFile("sprite.png"); 
-
-  sf::Sprite sprite ; 
-  sprite.setTexture(texture) ; 
- 
+  sf::Texture texture;
+  texture.loadFromFile("sprite.png");
+  sf::Sprite sprite;
+  sprite.setTexture(texture);
   sprite.setColor(sf::Color(255, 255, 255, 200));
   sprite.setPosition(100, 25);
-
-  while (window.isOpen()){
-
-
-    if( sf::Mouse::isButtonPressed(sf::Mouse::Left))
-      sprite.rotate(10) ; 
-
-    if( sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
-      sprite.move(-5,0) ; 
-    if( sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
-      sprite.move(0,-5) ;
-    if( sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
-      sprite.move(0,5) ;
-    if( sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
-      sprite.move(5,0) ;
-
-    else 
-      sprite.move(0.5,0.5) ; 
-      sf::Event event;
-      while (window.pollEvent(event)) {
-	  if (event.type == sf::Event::Closed)
-	    window.close();
-        }
-
-      window.clear();
-      window.draw(sprite);
-      /* window.draw(shape); */
-      window.display();
+  while (window.isOpen()) {
+    if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
+      sprite.rotate(10);
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+      sprite.move(-5,0);
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+      sprite.move(0,-5);
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+      sprite.move(0,5);
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+      sprite.move(5,0);
+    else
+      sprite.move(0.5,0.5); 
+    sf::Event event;
+    while (window.pollEvent(event)) {
+      if (event.type == sf::Event::Closed)
+	window.close();
     }
-
+    window.clear();
+    window.draw(sprite);
+    /* window.draw(shape); */
+    window.display();
+  }
   return 0;
 }
