@@ -1,3 +1,5 @@
+// Angel Zheondre Calcano 
+
 #include <iostream> 
 #include <string> 
 #include <vector> 
@@ -6,11 +8,11 @@
 #include <SFML/Window.hpp> 
 #include "space.hpp" 
 
-using namespace std ; 
-using namespace sf ; 
+using namespace std;
+using namespace sf;
 
 int main( int argc, char *argv[] ) { 
-
+  
   int n, i, ws ; double spcrdi; vector< body* > space ; 
   cin >> n ; cin >> spcrdi ; ws = 900 ; 
 
@@ -33,6 +35,5 @@ int main( int argc, char *argv[] ) {
     for( i = 0 ; i < n ; i++ ) window.draw(*space[i]) ; 
     window.display();
   }
- 
   return 0 ; 
 } 

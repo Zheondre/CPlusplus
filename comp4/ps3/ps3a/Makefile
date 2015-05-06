@@ -8,4 +8,5 @@ NBody.o: main.cpp space.hpp
 
 Space.o: space.cpp space.hpp 
 	g++ -c space.cpp
-clean: rm *.o NBody *~ *.gch 
+clean: 
+	rm *.o NBody *~ *.gch 
