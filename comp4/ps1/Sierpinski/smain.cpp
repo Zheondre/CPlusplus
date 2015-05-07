@@ -1,4 +1,5 @@
-/* Angel Zheondre Calcano */
+// Angel Zheondre Calcano 
+// Sierpinski PS1
 
 #include <SFML/Graphics.hpp> 
 #include <SFML/Window.hpp>

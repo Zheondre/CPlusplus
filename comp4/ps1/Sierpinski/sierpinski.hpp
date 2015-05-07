@@ -1,3 +1,6 @@
+// Angel Zheondre Calcano
+// Sierpinkski.cpp PS1
+
 #ifndef _sierpinski
 #define _sierpinski
 

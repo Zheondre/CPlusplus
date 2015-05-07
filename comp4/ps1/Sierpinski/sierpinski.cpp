@@ -1,3 +1,5 @@
+// Angel Calcano 
+// Sierpinkski.cpp PS1
 
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
