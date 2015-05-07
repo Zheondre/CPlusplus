@@ -1,5 +1,5 @@
 // Copyright 2015 <Angel Z'heondre Calcano>
-// PS2a
+// PS2b
 #include <iostream> 
 #include <string> 
 #include "LFSR.hpp" 
