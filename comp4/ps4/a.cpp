@@ -1,3 +1,6 @@
+// Angel Zheondre Calcano
+// PS4
+
 #include <vector> 
 #include <string> 
 #include <iostream> 
@@ -7,7 +10,6 @@
 using namespace std; 
 
 int Edist::penalty( char temp, char tb ){
-
   if( temp == tb && temp == '-' ) return 0 ; 
   if( temp == tb ) return 0 ; 
   if( temp != tb && ((temp == '-') || (tb == '-'))) return 2 ; 
@@ -16,16 +18,14 @@ int Edist::penalty( char temp, char tb ){
 
 int Edist::min( int x, int y, int z ) { 
 
-  vector< int > in ; int low ;  
+  vector< int > in; int low;
  
-  in.push_back(x); in.push_back(y); in.push_back(z) ; 
-  
-  low = *min_element(in.begin(), in.end()) ; 
+  in.push_back(x); in.push_back(y); in.push_back(z); 
+  low = *min_element(in.begin(), in.end());
   //cout<< low << " Lowest value found" << endl ; 
-  in.clear() ; 
- 
-  return low ; 
-  } 
+  in.clear(); 
+  return low; 
+}
 
 int Edist::OptDistance(){ 
 
@@ -38,13 +38,11 @@ int Edist::OptDistance(){
     else  cost =  cost + penalty( '-', b[i] ) ; 
     opt[maxRL - 1][i] = cost ;
   }
-  
   for( i = maxRL -1 ; i > -1 ; i--){
     if( i == maxRL - 1 ) cost = penalty( '-','-') ;
     else  cost =  cost + penalty( '-', b[i] ) ;
     opt[i][maxCL - 1] = cost ;
   }
-  
   for(i = maxRL - 2 ; i > -1 ; i--)
     for( j = maxCL - 2 ; j > -1 ; j-- ) {  
      
@@ -53,7 +51,6 @@ int Edist::OptDistance(){
   
       opt[i][j] = min(hold, opt[i+1][j] + 2, opt[i][j+1] + 2 ) ; 
     }
-
   return opt[0][0] ; 
 } 
 
@@ -99,5 +96,4 @@ int Edist::Alignment(int i, int j ){
     Alignment( i , j ) ; 
   }
   return 0 ; 
-
 } 
