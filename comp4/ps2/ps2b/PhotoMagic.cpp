@@ -1,3 +1,5 @@
+// Copyright 2015 <Angel Z'heondre Calcano>
+// PS2b
 /*#include <iostream>
 #include <string>
 #include "LFSR.hpp"
@@ -71,8 +73,7 @@ int main(int argc, char *argv[] ) {
 	while (window2.pollEvent(event)) {
 	  if (event.type == sf::Event::Closed)
 	    window.close();
-	}
-	
+	}	
       window.clear();
       window.draw(sprite);
       window.display();
@@ -80,9 +81,6 @@ int main(int argc, char *argv[] ) {
       window2.draw(s2);
       window2.display();
     }
-
-  // fredm: saving a PNG segfaults for me, though it does properly
-  //   write the file
   if (!image.saveToFile(argv[2]))
     return -1;
 delete pow ;  

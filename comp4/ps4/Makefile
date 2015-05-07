@@ -4,9 +4,10 @@ ED: main.o a.o
 	g++ main.o a.o -o ED -Wall -Werror -ansi -pedantic -lsfml-system -g
 
 ED.o: main.cpp a.hpp 
-	g++ -c main.cpp -g
+	g++ -c main.cpp -g -Wall -Werror -ansi -pedantic -lsfml-system -g
 
 a.o: a.cpp a.hpp 
-	g++ -c a.cpp -g 
+	g++ -c a.cpp -g -Wall -Werror -ansi -pedantic -lsfml-system -g
 
-clean: rm *.o ED *~ 
+clean: 
+	rm *.o ED *~ *.gch
