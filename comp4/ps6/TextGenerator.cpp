@@ -1,4 +1,5 @@
 //  Copyright 2015 Zheondre Calcano
+//  PS6
 #include <map>
 #include <exception>
 #include <stdexcept>
@@ -11,7 +12,7 @@
 int main(int argc, char *argv[]) {
 std::string a;
 std::cin >> a;
-MarkovModel temp(a, 1);
-temp.gen("g", 10);
+MarkovModel temp(a, 2);
+temp.gen("ag", 10);
 std::cout << temp << std::endl;
 }

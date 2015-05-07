@@ -1,6 +1,8 @@
 #ifndef _MarkovModel_
 #define _MarkovModel_
+
 //  Copyright 2015 Z'heondre Calcano
+//  PS6
 /*
  * MarkovModel.hpp
  * Copyright Fred Martin, fredm@cs.uml.edu

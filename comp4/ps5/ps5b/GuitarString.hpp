@@ -1,4 +1,5 @@
 // Copyright 2015 <Angel Zheondre Calcano>
+// PS5b
 #ifndef _GuitarString_
 #define _GuitarString_
 #include <math.h>
